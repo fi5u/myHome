@@ -103,4 +103,25 @@
         }
     ],
     "dateAdded": 1417516798987
+}, {
+    "address": "Kissakatu",
+    "area": "Porvoo",
+    "rentalCost": 1249.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi perferendis adipisci rem aspernatur earum praesentium, vitae veritatis id nulla sapiente, voluptatibus. Dignissimos impedit magnam autem. Tenetur maxime enim, libero labore?",
+    "images": [
+        {
+            "full": "http://placehold.it/450",
+            "thumb": "http://placehold.it/200"
+        }
+    ],
+    "available": true,
+    "extras": [
+        {
+            "sauna": false,
+            "pets": true,
+            "balcony": false,
+            "garden": true
+        }
+    ],
+    "dateAdded": 1417516784200
 }]

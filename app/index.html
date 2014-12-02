@@ -11,38 +11,64 @@
     <body ng-controller="MyHomeController as myhome">
         <main class="main" ng-controller="SearchController as searchCtrl">
             <form class="search" name="seachForm" novalidate>
-                <label for="available">Available</label><input type="checkbox" id="available" ng-model="searchCtrl.searchAvailability">
-                <label for="balcony">Has balcony:</label>
-                <select id="balcony" ng-model="searchCtrl.hasBalcony">
-                    <option value="" selected>No preference</option>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-                <label for="garden">Has garden:</label>
-                <select id="garden" ng-model="searchCtrl.hasGarden">
-                    <option value="" selected>No preference</option>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-                <label for="pets">Pets allowed:</label>
-                <select id="pets" ng-model="searchCtrl.allowsPets">
-                    <option value="" selected>No preference</option>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-                <label for="sauna">Has sauna:</label>
-                <select id="sauna" ng-model="searchCtrl.hasSauna">
-                    <option value="" selected>No preference</option>
-                    <option value="true">Yes</option>
-                    <option value="false">No</option>
-                </select>
-                <select ng-model="searchCtrl.orderby">
-                    <option value="">Sort by</option>
-                    <option value="rentalCost">Price</option>
-                    <option value="dateAdded">Date added</option>
-                    <option value="address">Alphabetical</option>
-                </select>
-                <label for="reverse_order">Reverse order</label><input type="checkbox" id="reverse_order" ng-model="searchCtrl.reverseOrder" ng-click="searchCtrl.toggleReverseOrder()">
+
+                <div class="search__input-block">
+                    <label for="available">Available</label>
+                    <select id="available" ng-model="searchCtrl.isAvailable">
+                        <option value="">No preference</option>
+                        <option value="true" selected>Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <div class="search__input-block">
+                    <label for="balcony">Has balcony:</label>
+                    <select id="balcony" ng-model="searchCtrl.hasBalcony">
+                        <option value="" selected>No preference</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <div class="search__input-block">
+                    <label for="garden">Has garden:</label>
+                    <select id="garden" ng-model="searchCtrl.hasGarden">
+                        <option value="" selected>No preference</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <div class="search__input-block">
+                    <label for="pets">Pets allowed:</label>
+                    <select id="pets" ng-model="searchCtrl.allowsPets">
+                        <option value="" selected>No preference</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <div class="search__input-block">
+                    <label for="sauna">Has sauna:</label>
+                    <select id="sauna" ng-model="searchCtrl.hasSauna">
+                        <option value="" selected>No preference</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <div class="search__input-block">
+                    <select ng-model="searchCtrl.orderby">
+                        <option value="">Order by</option>
+                        <option value="rentalCost">Price</option>
+                        <option value="dateAdded">Date added</option>
+                        <option value="address">Alphabetical</option>
+                    </select>
+                </div>
+
+                <div class="search__input-block">
+                    <label for="reverse_order">Reverse order</label><input type="checkbox" id="reverse_order" ng-model="searchCtrl.reverseOrder" ng-click="searchCtrl.toggleReverseOrder()">
+                </div>
             </form>
             <div class="results">
                 <single-result></single-result>

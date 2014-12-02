@@ -11,11 +11,8 @@
     }]);
 
     app.controller('SearchController', function() {
+        this.isAvailable = true;
         this.reverseOrder = false;
-        this.searchAvailability = true;
-        this.searchBalcony = false;
-        this.garden = false;
-
         this.hasBalcony = '';
         this.hasGarden = '';
         this.allowsPets = '';
@@ -28,42 +25,6 @@
         this.toggleSearchAvailability = function() {
             this.searchAvailability != this.searchAvailability;
         };
-
-/*        this.toggleSearchBalcony = function() {
-            this.searchBalcony != this.searchBalcony;
-        };
-
-        this.toggleSearchGarden = function() {
-            this.searchGarden != this.searchGarden;
-        };
-
-        this.toggleSearchPets = function() {
-            this.searchPets != this.searchPets;
-        };
-
-        this.toggleSearchSauna = function() {
-            this.searchSauna != this.searchSauna;
-        };*/
-
-/*        this.isAvailable = function(isAvalailable) {
-            return this.searchAvailability === isAvalailable;
-        };
-
-        this.hasBalcony = function(hasBalcony) {
-            return this.searchBalcony === hasBalcony;
-        };
-
-        this.hasGarden = function(hasGarden) {
-            return this.searchGarden === hasGarden;
-        };
-
-        this.allowsPets = function(allowsPets) {
-            return this.searchPets === allowsPets;
-        };
-
-        this.hasSauna = function(hasSauna) {
-            return this.searchSauna === hasSauna;
-        };*/
     });
 
     app.directive('singleResult', function() {
@@ -73,7 +34,13 @@
             controller: function() {
                 this.resultShow = function(searchCtrl, home) {
 
-                    // Check through each ´extra´ if there's a mismatch hide straight away and don't continue
+                    // Check through each property, if there's a mismatch hide straight away and don't continue
+                    if ((searchCtrl.isAvailable === 'true' || searchCtrl.isAvailable === true) || (searchCtrl.isAvailable === 'false' || searchCtrl.isAvailable === false)) {
+                        if (((searchCtrl.isAvailable === 'true' || searchCtrl.isAvailable === true) && home.available === false) || ((searchCtrl.isAvailable === 'false' || searchCtrl.isAvailable === false) && home.available === true)) {
+                            return false;
+                        }
+                    }
+
                     if (searchCtrl.hasBalcony === 'true' || searchCtrl.hasBalcony === 'false') {
                         if ((searchCtrl.hasBalcony === 'true' && home.extras[0].balcony === false) || (searchCtrl.hasBalcony === 'false' && home.extras[0].balcony === true)) {
                             return false;

@@ -1,0 +1,35 @@
+.result {
+    display: inline-block;
+    width: span(3 of 12);
+    //margin: 0 gutter() gutter() 0;
+    margin: gutter() / 2;
+    padding: 20px;
+
+    color: #eee;
+    background-color: rgba(0,0,0,0.8);
+
+    /* &:nth-of-type(n) {
+        border: 5px solid pink;
+        margin-right: gutter();
+    }
+
+    &:nth-of-type(4n) {
+        border: 5px solid green;
+        margin-right: 0;
+    }
+
+    &:nth-of-type(4n + 1) ~ .ng-hide ~ &:nth-of-type(4n) {
+        border: 5px solid yellow;
+        margin-right: gutter();
+    }
+
+    &:nth-of-type(4n + 1) ~ .ng-hide ~ &:nth-of-type(4n + 1) {
+        border: 5px solid orange;
+        margin-right: 0;
+    }
+
+    &:nth-of-type(4n + 1) ~ .ng-hide ~ .ng-hide ~ &:nth-of-type(4n + 1) {
+        border: 5px solid gray;
+        margin-right: gutter();
+    } */
+}
