@@ -1,0 +1,106 @@
+[{
+    "address": "Karhutie 19",
+    "area": "Pasila",
+    "rentalCost": 700.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nobis unde ipsum recusandae nulla mollitia, ad optio dignissimos provident non odio, incidunt debitis, commodi minima magni! Odit nihil totam, minima.",
+    "images": [
+        {
+            "full": "http://placehold.it/450",
+            "thumb": "http://placehold.it/200"
+        }
+    ],
+    "available": true,
+    "extras": [
+        {
+            "sauna": false,
+            "pets": true,
+            "balcony": true,
+            "garden": false
+        }
+    ],
+    "dateAdded": 1417516772740
+}, {
+    "address": "Lintutie 100",
+    "area": "Bemböle",
+    "rentalCost": 1250.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium odit, ut amet fugit quidem ex, unde quam sapiente obcaecati eveniet delectus est assumenda quisquam, ea laborum ipsa rem eaque.",
+    "images": [
+        {
+            "full": "http://placehold.it/450",
+            "thumb": "http://placehold.it/200"
+        }
+    ],
+    "available": true,
+    "extras": [
+        {
+            "sauna": false,
+            "pets": false,
+            "balcony": false,
+            "garden": true
+        }
+    ],
+    "dateAdded": 1417516751234
+}, {
+    "address": "Norsumäki 1 d",
+    "area": "Sipoo",
+    "rentalCost": 670.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ab laborum hic molestiae illo quod voluptas! Nam aperiam id eaque, qui dolorem rem quod porro, odit repudiandae. Aperiam, quae eos.",
+    "images": [
+        {
+            "full": "http://placehold.it/450",
+            "thumb": "http://placehold.it/200"
+        }
+    ],
+    "available": true,
+    "extras": [
+        {
+            "sauna": false,
+            "pets": false,
+            "balcony": true,
+            "garden": false
+        }
+    ],
+    "dateAdded": 1417516791889
+}, {
+    "address": "Kanakatu 24",
+    "area": "Järvenpää",
+    "rentalCost": 690.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta, odit quaerat! Corporis, laudantium ab nesciunt mollitia autem quibusdam assumenda delectus dolore architecto accusamus quaerat ut facere quod ea maxime.",
+    "images": [
+        {
+            "full": "http://placehold.it/450",
+            "thumb": "http://placehold.it/200"
+        }
+    ],
+    "available": true,
+    "extras": [
+        {
+            "sauna": true,
+            "pets": true,
+            "balcony": true,
+            "garden": true
+        }
+    ],
+    "dateAdded": 1417516784275
+}, {
+    "address": "Koiratie 269 a",
+    "area": "Hankoo",
+    "rentalCost": 423.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque facere accusantium eligendi, laborum voluptates illo impedit, saepe quo, rem, corrupti suscipit quia. Eius nihil doloribus provident ipsa, similique nobis non.",
+    "images": [
+        {
+            "full": "http://placehold.it/450",
+            "thumb": "http://placehold.it/200"
+        }
+    ],
+    "available": false,
+    "extras": [
+        {
+            "sauna": true,
+            "pets": false,
+            "balcony": true,
+            "garden": true
+        }
+    ],
+    "dateAdded": 1417516798987
+}]

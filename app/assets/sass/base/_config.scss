@@ -1,0 +1,34 @@
+// place variables that are needed by both the system utils and the project here
+
+// Set the standard body font size (in pixels)
+$base-font-size: 16;
+
+// Set the line height multiplier to calculate default line-height (in px and rem)
+$line-height-multiplier: 1.5;
+
+// breakpoints
+$breakpoints: (
+    "xs": 20em,
+    "s": 30em,
+    "m": 48em,
+    "l": 64em,
+    "nav-break": 30em
+);
+
+$local-img-dir: "../images";
+$live-img-dir: "/live/img/dir/not/set";
+$local-font-dir: "../fonts";
+$live-font-dir: "/live/font/dir/not/set";
+$local-htc-dir: "/";
+$live-htc-dir: "/";
+$img-dir: $live-img-dir;
+$font-dir: $live-font-dir;
+$htc-dir: $live-htc-dir;
+
+@if variable-exists(path) {
+    @if $path == 'local' {
+        $img-dir: $local-img-dir;
+        $font-dir: $local-font-dir;
+        $htc-dir: $local-htc-dir;
+    }
+}

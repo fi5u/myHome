@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="myhome">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>myHome</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body ng-controller="MyHomeController as myhome">
+        <main class="main" ng-controller="SearchController as searchCtrl">
+            <form class="search" name="seachForm" novalidate>
+                <label for="available">Available</label><input type="checkbox" id="available" ng-model="searchCtrl.searchAvailability">
+                <label for="balcony">Has balcony:</label>
+                <select id="balcony" ng-model="searchCtrl.hasBalcony">
+                    <option value="" selected>No preference</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+                <label for="garden">Has garden:</label>
+                <select id="garden" ng-model="searchCtrl.hasGarden">
+                    <option value="" selected>No preference</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+                <label for="pets">Pets allowed:</label>
+                <select id="pets" ng-model="searchCtrl.allowsPets">
+                    <option value="" selected>No preference</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+                <label for="sauna">Has sauna:</label>
+                <select id="sauna" ng-model="searchCtrl.hasSauna">
+                    <option value="" selected>No preference</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+                <select ng-model="searchCtrl.orderby">
+                    <option value="">Sort by</option>
+                    <option value="rentalCost">Price</option>
+                    <option value="dateAdded">Date added</option>
+                    <option value="address">Alphabetical</option>
+                </select>
+                <label for="reverse_order">Reverse order</label><input type="checkbox" id="reverse_order" ng-model="searchCtrl.reverseOrder" ng-click="searchCtrl.toggleReverseOrder()">
+            </form>
+            <div class="results">
+                <single-result></single-result>
+            </div>
+        </main>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,237 @@
+/**
+ * @author Tommy Fisher
+ **/
+
+// Breakpoint variables
+$default-breakpoint: root;
+$current-breakpoint: $default-breakpoint;
+$placeholders: ();
+
+/**
+ * Allows use of cross-media query placeholders (when used as `@include _use()`)
+ *
+ * @author DoCSSa
+ * @group Breakpoints
+ * @requires $breakpoints
+ * @requires $default-breakpoint
+ * @requires $current-breakpoint
+ *
+ * @param {String}  $breakpoint Key from the $breakpoints map
+ *
+ * @throws If $breakpoint is not listed in $breakpoints
+ */
+@mixin breakpoint($breakpoint) {
+    // Get the width from the keyword `$breakpoint`
+    // Or `null` if the keyword doesn't exist in `$breakpoints` map
+    $value: map-get($breakpoints, $breakpoint);
+
+    // If `$breakpoint` not exists as a key in `$breakpoints`
+    @if $value == null {
+        @error "`#{$breakpoint}` is not a valid breakpoint.";
+    }
+
+    // Update `$current-breakpoint`
+    $current-breakpoint: $breakpoint !global;
+
+    // Open a media query block
+    @media (min-width: $value) {
+        @content;
+    }
+
+    // Then reset `$current-breakpoint` to `$default-breakpoint` (root)
+    $current-breakpoint: $default-breakpoint !global;
+}
+
+
+/**
+ * Generate a placeholder that can be used across breakpoints
+ *
+ * @author      DoCSSa
+ * @group       Placeholders
+ * @requires    $placeholders
+ * @requires    $breakpoints
+ * @requires    $current-breakpoint
+ * @requires    $default-breakpoint
+ *
+ * @param       {String}    $name   The name of the placeholder to create
+ *
+ * @throws      If $name value has already been used
+ */
+@mixin _add($name) {
+    @if index($placeholders, $name) {
+        // If placeholder already exists
+       @error "Placeholder `#{$name}` already exists.";
+    }
+
+    // Store its name
+    $placeholders: append($placeholders, $name) !global;
+
+    // At root level
+    @at-root {
+        // Looping through `$breakpoints`
+        @each $breakpoint, $value in $breakpoints {
+            // Opening a media query block
+            @media (min-width: $value) {
+
+            // set the current-breakpoint so that nested calls to _use can work
+            $current-breakpoint: $breakpoint !global;
+
+            // Generating a placeholder
+            // Called $name-$breakpoint
+            %#{$name}-#{$breakpoint} {
+                // dump the content
+                @content;
+            }
+
+            // reset current-breakpoint
+            $current-breakpoint: $default-breakpoint !global;
+            }
+        }
+
+        // And dumping a placeholder out of any media query as well
+        // so basically at root level
+        %#{$name} {
+            @content;
+        }
+    }
+}
+
+
+/**
+ * Use the generated placeholder in (or out of) breakpoints
+ *
+ * @author      DoCSSa
+ * @group       Placeholders
+ * @requires    $current-breakpoint
+ * @requires    $default-breakpoint
+ *
+ * @param       {String}    $name   Name of placeholder to use
+ */
+@mixin _use($name) {
+    @if $current-breakpoint == $default-breakpoint {
+        @extend %#{$name} !optional;
+    } @else {
+        @extend %#{$name}-#{$current-breakpoint} !optional;
+    }
+}
+
+
+/**
+ * Get a palette color and tone from $palettes
+ *
+ * @group       Colors
+ * @requires    $palettes
+ *
+ * @param       {String}    $palette        Name of the color
+ * @param       {String}    $tone ("base")  Name of the tone
+ * @returns     {Color}                     Color value
+ *
+ * @throws If $palette or $tone do not exist in $palettes map
+ */
+@function palette($palette, $tone: "base") {
+    $palette-color: map-get($palettes, $palette);
+
+    @if $palette-color == null {
+        @error "`#{$palette}` does not exist in palettes.";
+    }
+    $palette-tone: map-get($palette-color, $tone);
+
+    @if $palette-tone == null {
+        @error "`#{$tone}` does not exist in palettes";
+    }
+
+    @return map-get($palette-color, $tone);
+}
+
+
+/**
+ * Look up font family stack in $font-families map, returns the stack variable
+ *
+ * @group       Typography
+ * @requires    $font-families
+ *
+ * @param       {String}    $name ("f-body")    Name of the key to search for
+ * @returns     {String}                        Font family stack name
+ *
+ * @throws      If $name is not listed in $font-families map
+ */
+@function font-family($name: "f-body") {
+    $font-family: map-get($font-families, $name);
+
+    @if $font-family == null {
+        @warn "`#{$name}` doesn't exist in $font-families map. Please choose from:";
+        @each $font-family in $font-families {
+            @warn " #{$font-family}";
+        }
+        @warn ".";
+    }
+
+    @return $font-family;
+}
+
+
+/**
+ * Converts sizes between px, rem and font size multipliers, can use value from font-size map
+ *
+ * @group       Box-model
+ * @requires    $font-size
+ * @requires    $base-font-size
+ *
+ * @param       {Number | String}    $size              The size to convert (key from $font-size map, unitless value as rem, px value)
+ * @param       {String}             $unit              The size unit to convert to
+ * @param       {Number}             $multiplier ("")   To get a font size multiplier $size should be blank and the multiplication value to be set here
+ * @param       {Bool}               $unitless (false)  When true simply returns size, without a unit
+ * @returns     {Number}                                The converted size
+ *
+ * @throws      If string value is used for size and that key is not listed in $font-size map
+ */
+@function size($size, $unit, $multiplier:'', $unitless:false) {
+    @if $unitless == true {
+        @return $size;
+    } @else {
+        @if $size == "" {
+            @if $multiplier != '' {
+                // Work out rem from px value using multiplier
+                @if $unit == px {
+                    @return ($base-font-size * $multiplier) + px;
+                } @else {
+                    @return ((($base-font-size * $multiplier) / ($base-font-size * 0 + 1)) / $base-font-size) + rem;
+                }
+            } @else {
+                // Work out rem from px value
+                @if $unit == px {
+                    @return $base-font-size + px;
+                } @else {
+                    @return (($base-font-size / ($base-font-size * 0 + 1)) / $base-font-size) + rem;
+                }
+            }
+
+        } @else {
+            $user-font-size: map-get($font-size, $size);
+
+            @if $user-font-size != null {
+                @if $unit == px {
+                    @return ($user-font-size * $base-font-size) + px;
+                } @else {
+                    @return $user-font-size + rem;
+                }
+            } @else if unit($size) == '' or unit($size) == rem {
+                // Rem or no unit treat as rem
+                @if $unit == px {
+                    @return (($size / ($size * 0 + 1)) * $base-font-size) + px;
+                } @else {
+                    @return ($size / ($size * 0 + 1)) + rem;
+                }
+            } @else if unit($size) == 'px'{
+                // Work out rem from px value
+                @if $unit == px {
+                    @return $size;
+                } @else {
+                    @return (($size / ($size * 0 + 1)) / $base-font-size) + rem;
+                }
+            } @else {
+                @error "Font size error: use a value from the size map, a unitless rem value or a px value";
+            }
+        }
+    }
+}

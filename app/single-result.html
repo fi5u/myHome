@@ -1,0 +1,11 @@
+<div class="results__result" ng-repeat="home in myhome.homes | orderBy : searchCtrl.orderby : searchCtrl.reverseOrder" ng-show="singleResCtrl.resultShow(searchCtrl, home)">
+    <h3 class="results__result-title">
+        {{home.address}}
+    </h3>
+    <div class="results__result-area">{{home.area}}</div>
+    <div class="results__result-cost">{{home.rentalCost | currency : "€"}}</div>
+    <div class="results__result-date-added">Added: {{home.dateAdded | date:'mediumDate'}} {{home.dateAdded | date:'mediumTime'}}</div>
+    <div class="results__result-extras">
+        <div class="results__result-extra" ng-repeat="(extra, value) in home.extras[0]">{{extra}}: {{value | boolConvert}}</div>
+    </div>
+</div>

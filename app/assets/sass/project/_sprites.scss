@@ -1,0 +1,19 @@
+$sprite--icon-menu-blk: (2.2*10)+px, (1.8*10)+px, (0*10)+px, (0*10)+px;
+$sprite--icon-menu-wht: (2.2*10)+px, (1.8*10)+px, (0*10)+px, (-1.8*10)+px;
+
+
+/**
+ * Generates cross-breakpoint sprites
+ *
+ * @author  Tommy Fisher
+ * @group   Images
+ *
+ * @param       $sprite The list of sprite attributes
+ */
+@mixin sprite-svg($sprite) {
+    width: nth($sprite,1);
+    height: nth($sprite,2);
+    background-position: nth($sprite,3) nth($sprite,4);
+    background-image: url(#{$img-dir}/sprite.svg);
+    background-repeat: no-repeat;
+}

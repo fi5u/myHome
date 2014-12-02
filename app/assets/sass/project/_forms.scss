@@ -1,0 +1,26 @@
+::-webkit-input-placeholder {
+   color: $placeholder-col;
+}
+
+:-moz-placeholder {
+   color: $placeholder-col;
+}
+
+::-moz-placeholder {
+   color: $placeholder-col;
+}
+
+:-ms-input-placeholder {
+   color: $placeholder-col;
+}
+
+// Custom checkbox/radio
+//*[type="checkbox"] {
+//    @include _use(customCheck);
+//    @include _use(customCheckSkin);
+//}
+//
+//*[type="radio"] {
+//    @include _use(customRadio);
+//    @include _use(customRadioSkin);
+//}

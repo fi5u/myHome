@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+// PATHS
+$path: "live"; // live or local
+
+
+// BASE
+// config and utils
+@import "base/__base";
+
+
+// LIBS
+@import "lib/__lib";
+
+
+// PROJECT
+// specifics to this project
+@import "project/__project";
+
+
+// COMPONENTS
+// reusable/framework components
+@import "components/__components";
+
+
+// SPECIFICS
+// more specific declarations, may be built on a per page basis
+@import "specifics/__specifics";

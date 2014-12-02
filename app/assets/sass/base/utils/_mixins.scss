@@ -1,0 +1,93 @@
+/**
+ * @author Tommy Fisher
+ **/
+
+/**
+ * Generate @font-face import
+ *
+ * @author  DoCSSa
+ * @group   Typography
+ *
+ * @param   {String}    $fontname           Name to reference the font by
+ * @param   {String}    $filename           Filename of font (without extension)
+ * @param   {String}    $svgLabel           SVG label to reference font
+ * @param   {Bool}      $isBold (false)     Should the font weight be set to bold
+ * @param   {Bool}      $isItalic (false)   Should the font style be set to italic
+ */
+@mixin importFont($fontname, $filename, $svgLabel, $isBold: false, $isItalic: false) {
+    @font-face {
+        font-family: $fontname;
+
+        // IE9 Compat Modes
+        src: url('#{$font-dir}/#{$filename}.eot');
+        // IE6-IE8
+        src: url('#{$font-dir}/#{$filename}.eot?#iefix') format('embedded-opentype'),
+        // Modern Browsers
+        url('#{$font-dir}/#{$filename}.woff') format('woff'),
+        // Safari, Android, iOS
+        url('#{$font-dir}/#{$filename}.ttf') format('truetype'),
+        // Legacy iOS
+        url('#{$font-dir}/#{$filename}.svg##{$svgLabel}') format('svg');
+
+        @if $isBold {
+            font-weight: bold;
+        } @else {
+            font-weight: normal;
+        }
+
+        @if $isItalic {
+            font-style: italic;
+        } @else {
+            font-style: normal;
+        }
+    }
+}
+
+
+/**
+ * Sets opacity
+ *
+ * @group   Appearance
+ *
+ * @param   {Number}    $opacity (0)    Number between 0 and 1
+ */
+@mixin opacity($opacity: 0) {
+    opacity: $opacity;
+    }
+
+
+/**
+ * Sets font-size in rem
+ *
+ * @group       Typography
+ * @requires    size
+ *
+ * @param       {Number | String}   $size ("")  Accepts value from $font-size map / rem / px / unitless [treated as rem] / empty [base font size]
+ */
+@mixin font-size($size: "") {
+    font-size: size($size, rem);
+}
+
+
+/**
+ * Sets line-height in rem or without units sets line height as a multiplier
+ *
+ * @group       Typography
+ * @requires    size
+ * @requires    $line-height-multiplier
+ *
+ * @param {Number | String}    $size ("")  Accepts value from $font-size map / rem / px / unitless [treated as multiplier] / empty [$base-font-size * $line-height-multiplier]
+ */
+@mixin line-height($size: "") {
+    $unitless: false;
+    @if $size != '' and type-of($size) != string and unit($size) == '' {
+        $unitless: true;
+    }
+    @if $unitless == false {
+        line-height: size($size, rem, $line-height-multiplier, $unitless);
+    } @else {
+        line-height: size($size, null, null, $unitless);
+    }
+}
+
+
