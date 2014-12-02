@@ -65,10 +65,12 @@
                         }
                     }
 
-
-
                     // Otherwise return true
                     return true;
+                };
+
+                this.hasExtra = function(hasExtra) {
+                    return hasExtra;
                 };
             },
             controllerAs: 'singleResCtrl'

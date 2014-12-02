@@ -20,7 +20,7 @@
                         <option value="false">No</option>
                     </select>
                 </div>
-
+                <hr>
                 <div class="search__input-block">
                     <label for="balcony">Has balcony:</label>
                     <select id="balcony" ng-model="searchCtrl.hasBalcony">
@@ -57,9 +57,12 @@
                     </select>
                 </div>
 
+                <hr>
+
                 <div class="search__input-block">
-                    <select ng-model="searchCtrl.orderby">
-                        <option value="">Order by</option>
+                    <label for="orderby">Order by</label>
+                    <select id="orderby" ng-model="searchCtrl.orderby">
+                        <option value="">Select order</option>
                         <option value="rentalCost">Price</option>
                         <option value="dateAdded">Date added</option>
                         <option value="address">Alphabetical</option>
