@@ -35,35 +35,30 @@
                 this.resultShow = function(searchCtrl, home) {
 
                     // Check through each property, if there's a mismatch hide straight away and don't continue
+
+                    // Store extra properties on an array to loop through
+                    // [0] = searchCtrl, [1] = home.extras[0]
+                    var extrasProp = [
+                        ['hasBalcony', 'balcony'],
+                        ['hasGarden', 'garden'],
+                        ['allowsPets', 'pets'],
+                        ['hasSauna', 'sauna']
+                    ];
+
                     if ((searchCtrl.isAvailable === 'true' || searchCtrl.isAvailable === true) || (searchCtrl.isAvailable === 'false' || searchCtrl.isAvailable === false)) {
                         if (((searchCtrl.isAvailable === 'true' || searchCtrl.isAvailable === true) && home.available === false) || ((searchCtrl.isAvailable === 'false' || searchCtrl.isAvailable === false) && home.available === true)) {
                             return false;
                         }
                     }
 
-                    if (searchCtrl.hasBalcony === 'true' || searchCtrl.hasBalcony === 'false') {
-                        if ((searchCtrl.hasBalcony === 'true' && home.extras[0].balcony === false) || (searchCtrl.hasBalcony === 'false' && home.extras[0].balcony === true)) {
-                            return false;
+                    // Loop through the extrasProp array to remove elements that do not match the search
+                    for (var i = 0; i < extrasProp.length; i++) {
+                        if (searchCtrl[extrasProp[i][0]] === 'true' || searchCtrl[extrasProp[i][0]] === 'false') {
+                            if ((searchCtrl[extrasProp[i][0]] === 'true' && home.extras[0][extrasProp[i][1]] === false) || (searchCtrl[extrasProp[i][0]] === 'false' && home.extras[0][extrasProp[i][1]] === true)) {
+                                return false;
+                            }
                         }
-                    }
-
-                    if (searchCtrl.hasGarden === 'true' || searchCtrl.hasGarden === 'false') {
-                        if ((searchCtrl.hasGarden === 'true' && home.extras[0].garden === false) || (searchCtrl.hasGarden === 'false' && home.extras[0].garden === true)) {
-                            return false;
-                        }
-                    }
-
-                    if (searchCtrl.allowsPets === 'true' || searchCtrl.allowsPets === 'false') {
-                        if ((searchCtrl.allowsPets === 'true' && home.extras[0].pets === false) || (searchCtrl.allowsPets === 'false' && home.extras[0].pets === true)) {
-                            return false;
-                        }
-                    }
-
-                    if (searchCtrl.hasSauna === 'true' || searchCtrl.hasSauna === 'false') {
-                        if ((searchCtrl.hasSauna === 'true' && home.extras[0].sauna === false) || (searchCtrl.hasSauna === 'false' && home.extras[0].sauna === true)) {
-                            return false;
-                        }
-                    }
+                    };
 
                     // Otherwise return true
                     return true;
