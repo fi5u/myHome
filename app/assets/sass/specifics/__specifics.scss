@@ -4,5 +4,7 @@
 @import "result";
 
 .main {
+    @include clearfix;
+
     padding: 30px;
 }
