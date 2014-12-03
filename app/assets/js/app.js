@@ -12,6 +12,7 @@
 
     app.controller('SearchController', function() {
         this.isAvailable = true;
+        this.orderby = 'rentalCost';
         this.reverseOrder = false;
         this.hasBalcony = '';
         this.hasGarden = '';
@@ -20,10 +21,6 @@
 
         this.toggleReverseOrder = function() {
             this.reverseOrder != this.reverseOrder;
-        };
-
-        this.toggleSearchAvailability = function() {
-            this.searchAvailability != this.searchAvailability;
         };
     });
 

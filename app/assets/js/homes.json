@@ -5,8 +5,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nobis unde ipsum recusandae nulla mollitia, ad optio dignissimos provident non odio, incidunt debitis, commodi minima magni! Odit nihil totam, minima.",
     "images": [
         {
-            "full": "http://placehold.it/450",
-            "thumb": "http://placehold.it/200"
+            "full": "http://placehold.it/450&text=Karhutie19+full",
+            "thumb": "http://placehold.it/200&text=Karhutie19+thumb"
         }
     ],
     "available": true,
@@ -26,8 +26,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium odit, ut amet fugit quidem ex, unde quam sapiente obcaecati eveniet delectus est assumenda quisquam, ea laborum ipsa rem eaque.",
     "images": [
         {
-            "full": "http://placehold.it/450",
-            "thumb": "http://placehold.it/200"
+            "full": "http://placehold.it/450&text=Lintutie100+full",
+            "thumb": "http://placehold.it/200&text=Lintutie100+thumb"
         }
     ],
     "available": true,
@@ -47,8 +47,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ab laborum hic molestiae illo quod voluptas! Nam aperiam id eaque, qui dolorem rem quod porro, odit repudiandae. Aperiam, quae eos.",
     "images": [
         {
-            "full": "http://placehold.it/450",
-            "thumb": "http://placehold.it/200"
+            "full": "http://placehold.it/450&text=Norsumäki1d+full",
+            "thumb": "http://placehold.it/200&text=Norsumäki1d+thumb"
         }
     ],
     "available": true,
@@ -68,8 +68,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta, odit quaerat! Corporis, laudantium ab nesciunt mollitia autem quibusdam assumenda delectus dolore architecto accusamus quaerat ut facere quod ea maxime.",
     "images": [
         {
-            "full": "http://placehold.it/450",
-            "thumb": "http://placehold.it/200"
+            "full": "http://placehold.it/450&text=Kanakatu24+full",
+            "thumb": "http://placehold.it/200&text=Kanakatu24+thumb"
         }
     ],
     "available": true,
@@ -89,8 +89,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque facere accusantium eligendi, laborum voluptates illo impedit, saepe quo, rem, corrupti suscipit quia. Eius nihil doloribus provident ipsa, similique nobis non.",
     "images": [
         {
-            "full": "http://placehold.it/450",
-            "thumb": "http://placehold.it/200"
+            "full": "http://placehold.it/450&text=Koiratie269a+full",
+            "thumb": "http://placehold.it/200&text=Koiratie269a+thumb"
         }
     ],
     "available": false,
@@ -104,14 +104,14 @@
     ],
     "dateAdded": 1417516798987
 }, {
-    "address": "Kissakatu",
+    "address": "Kissakatu 293",
     "area": "Porvoo",
     "rentalCost": 1249.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi perferendis adipisci rem aspernatur earum praesentium, vitae veritatis id nulla sapiente, voluptatibus. Dignissimos impedit magnam autem. Tenetur maxime enim, libero labore?",
     "images": [
         {
-            "full": "http://placehold.it/450",
-            "thumb": "http://placehold.it/200"
+            "full": "http://placehold.it/450&text=Kissakatu293+full",
+            "thumb": "http://placehold.it/200&text=Kissakatu293+thumb"
         }
     ],
     "available": true,
