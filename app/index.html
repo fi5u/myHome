@@ -20,42 +20,13 @@
                         <option value="false">No</option>
                     </select>
                 </div>
+
                 <hr>
-                <div class="search__input-block">
-                    <label for="balcony">Has balcony:</label>
-                    <select id="balcony" ng-model="searchCtrl.hasBalcony" class="search__select--balcony">
-                        <option value="" selected>No preference</option>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
 
-                <div class="search__input-block">
-                    <label for="garden">Has garden:</label>
-                    <select id="garden" ng-model="searchCtrl.hasGarden" class="search__select--garden">
-                        <option value="" selected>No preference</option>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
-
-                <div class="search__input-block">
-                    <label for="pets">Pets allowed:</label>
-                    <select id="pets" ng-model="searchCtrl.allowsPets" class="search__select--pets">
-                        <option value="" selected>No preference</option>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
-
-                <div class="search__input-block">
-                    <label for="sauna">Has sauna:</label>
-                    <select id="sauna" ng-model="searchCtrl.hasSauna" class="search__select--sauna">
-                        <option value="" selected>No preference</option>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
+                <search-input-block type="has" type-pos="before" property="balcony" ng-model="searchCtrl.hasBalcony"></search-input-block>
+                <search-input-block type="has" type-pos="before" property="garden" ng-model="searchCtrl.hasGarden"></search-input-block>
+                <search-input-block type="allowed" type-pos="after" property="pets" ng-model="searchCtrl.allowsPets"></search-input-block>
+                <search-input-block type="has" type-pos="before" property="sauna" ng-model="searchCtrl.hasSauna"></search-input-block>
 
                 <hr>
 
@@ -70,7 +41,8 @@
                 </div>
 
                 <div class="search__input-block">
-                    <label for="reverse_order">Reverse order</label><input type="checkbox" class="search__check--reverse" id="reverse_order" ng-model="searchCtrl.reverseOrder" ng-click="searchCtrl.toggleReverseOrder()">
+                    <label for="reverse_order">Reverse order</label>
+                    <input type="checkbox" class="search__check--reverse" id="reverse_order" ng-model="searchCtrl.reverseOrder" ng-click="searchCtrl.toggleReverseOrder()">
                 </div>
             </form>
             <div class="results">

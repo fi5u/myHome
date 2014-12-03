@@ -24,6 +24,19 @@
         };
     });
 
+    app.directive('searchInputBlock', function() {
+        return {
+            restrict: 'E',
+            scope: {
+                type: '@type', // 'has', 'allowed'
+                pos: '@typePos', // position of type in relation to prop: 'before', 'after'
+                prop: '@property',
+                bindModel: '=ngModel'
+            },
+            templateUrl: 'search-input-block.html'
+        }
+    });
+
     app.directive('singleResult', function() {
         return {
             restrict: 'E',
@@ -31,7 +44,7 @@
             controller: function() {
                 this.resultShow = function(searchCtrl, home) {
 
-                    // Check through each property, if there's a mismatch hide straight away and don't continue
+                    // Check through each property, if there's a mismatch remove from DOM straight away and don't continue
 
                     // Store extra properties on an array to loop through
                     // [0] = searchCtrl, [1] = home.extras[0]
@@ -79,6 +92,18 @@
                 output = 'no';
             }
             return output === '' ? input : output;
+        };
+    });
+
+    app.filter('upperFirst', function() {
+        return function(input) {
+            return input.charAt(0).toUpperCase() + input.slice(1);
+        };
+    });
+
+    app.filter('removeSpace', function() {
+        return function(input) {
+            return input.replace(' ', '');
         };
     });
 
