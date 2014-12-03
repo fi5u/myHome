@@ -14,7 +14,7 @@
 
                 <div class="search__input-block">
                     <label for="available">Available</label>
-                    <select id="available" ng-model="searchCtrl.isAvailable">
+                    <select id="available" ng-model="searchCtrl.isAvailable" class="search__select--available">
                         <option value="">No preference</option>
                         <option value="true" selected>Yes</option>
                         <option value="false">No</option>
@@ -23,7 +23,7 @@
                 <hr>
                 <div class="search__input-block">
                     <label for="balcony">Has balcony:</label>
-                    <select id="balcony" ng-model="searchCtrl.hasBalcony">
+                    <select id="balcony" ng-model="searchCtrl.hasBalcony" class="search__select--balcony">
                         <option value="" selected>No preference</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
@@ -32,7 +32,7 @@
 
                 <div class="search__input-block">
                     <label for="garden">Has garden:</label>
-                    <select id="garden" ng-model="searchCtrl.hasGarden">
+                    <select id="garden" ng-model="searchCtrl.hasGarden" class="search__select--garden">
                         <option value="" selected>No preference</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
@@ -41,7 +41,7 @@
 
                 <div class="search__input-block">
                     <label for="pets">Pets allowed:</label>
-                    <select id="pets" ng-model="searchCtrl.allowsPets">
+                    <select id="pets" ng-model="searchCtrl.allowsPets" class="search__select--pets">
                         <option value="" selected>No preference</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
@@ -50,7 +50,7 @@
 
                 <div class="search__input-block">
                     <label for="sauna">Has sauna:</label>
-                    <select id="sauna" ng-model="searchCtrl.hasSauna">
+                    <select id="sauna" ng-model="searchCtrl.hasSauna" class="search__select--sauna">
                         <option value="" selected>No preference</option>
                         <option value="true">Yes</option>
                         <option value="false">No</option>
@@ -61,7 +61,7 @@
 
                 <div class="search__input-block">
                     <label for="orderby">Order by</label>
-                    <select id="orderby" ng-model="searchCtrl.orderby">
+                    <select id="orderby" ng-model="searchCtrl.orderby" class="search__select--orderby">
                         <option value="">Select order</option>
                         <option value="rentalCost">Price</option>
                         <option value="dateAdded">Date added</option>
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="search__input-block">
-                    <label for="reverse_order">Reverse order</label><input type="checkbox" id="reverse_order" ng-model="searchCtrl.reverseOrder" ng-click="searchCtrl.toggleReverseOrder()">
+                    <label for="reverse_order">Reverse order</label><input type="checkbox" class="search__check--reverse" id="reverse_order" ng-model="searchCtrl.reverseOrder" ng-click="searchCtrl.toggleReverseOrder()">
                 </div>
             </form>
             <div class="results">

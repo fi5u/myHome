@@ -1,3 +1,8 @@
 .search {
     @include span(3 of 12);
 }
+
+[class^="search__select"],
+[class^="search__check"] {
+    float: right;
+}
