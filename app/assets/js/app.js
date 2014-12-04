@@ -6,7 +6,7 @@
     });
 
     app.controller('SearchController', ['$scope', function($scope) {
-        $scope.params = {
+        var paramsInit = {
             isAvailable: true,
             orderby: 'dateAdded',
             reverseOrder: true,
@@ -14,6 +14,12 @@
             hasGarden: '',
             allowsPets: '',
             hasSauna: ''
+        };
+
+        $scope.params = angular.copy(paramsInit);
+
+        $scope.resetSearch = function() {
+            $scope.params = angular.copy(paramsInit);
         };
     }]);
 

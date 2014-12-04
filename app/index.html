@@ -37,6 +37,10 @@
                     <label for="reverse_order">Reverse order</label>
                     <input type="checkbox" class="search__check--reverse" id="reverse_order" ng-model="params.reverseOrder">
                 </div>
+
+                <hr>
+
+                <a href="" ng-click="resetSearch()">Reset search</a>
             </form>
             <div class="results" ng-controller="SearchResultsController as resCtrl">
                 <single-result></single-result>
