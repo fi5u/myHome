@@ -40,6 +40,12 @@
                     background: palette(primary);
                 }
             }
+
+            &.active {
+                &:after {
+                    background: palette(primary);
+                }
+            }
         }
     }
 
