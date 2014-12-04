@@ -6,7 +6,7 @@
     });
 
     app.controller('SearchController', ['$scope', function($scope) {
-        var paramsInit = {
+        $scope.paramsInit = {
             isAvailable: true,
             orderby: 'dateAdded',
             reverseOrder: true,
@@ -23,10 +23,10 @@
             }
         };
 
-        $scope.params = angular.copy(paramsInit);
+        $scope.params = angular.copy($scope.paramsInit);
 
         $scope.resetSearch = function() {
-            $scope.params = angular.copy(paramsInit);
+            $scope.params = angular.copy($scope.paramsInit);
         };
 
         $scope.reverseOrder = function() {
@@ -58,6 +58,8 @@
                     maxPrice = search.homes[i].rentalCost;
                 }
             };
+            $scope.paramsInit.priceRange.max = maxPrice;
+            $scope.paramsInit.priceRange.ceil = maxPrice;
             $scope.params.priceRange.max = maxPrice;
             $scope.params.priceRange.ceil = maxPrice;
         };
