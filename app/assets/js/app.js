@@ -41,6 +41,7 @@
         $http.get('assets/js/homes.json').success(function(data) {
             search.homes = data;
             search.filteredHomes = resultsFilter(search.homes, $scope.params);
+            $scope.getMaxPrice();
         });
 
         $scope.$watch('params', function (newParams) {
@@ -48,6 +49,18 @@
                 search.filteredHomes = resultsFilter(search.homes, newParams);
             }
         }, true); // true needed for watching objects
+
+        // Set the slider's max price to be the maximum available
+        $scope.getMaxPrice = function() {
+            var maxPrice = 0;
+            for (var i = 0; i < search.homes.length; i++) {
+                if (search.homes[i].rentalCost > maxPrice) {
+                    maxPrice = search.homes[i].rentalCost;
+                }
+            };
+            $scope.params.priceRange.max = maxPrice;
+            $scope.params.priceRange.ceil = maxPrice;
+        };
     }]);
 
     app.directive('searchInputBlock', function() {
