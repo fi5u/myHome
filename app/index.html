@@ -12,14 +12,7 @@
         <main class="main" ng-controller="SearchController as searchCtrl">
             <form class="search" name="seachForm" novalidate>
 
-                <div class="search__input-block">
-                    <label for="available">Available</label>
-                    <select id="available" ng-model="params.isAvailable" class="search__select--available">
-                        <option value="">No preference</option>
-                        <option value="true" selected>Yes</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
+                <search-input-block type="is" type-pos="before" property="available" ng-model="params.isAvailable"></search-input-block>
 
                 <hr>
 
