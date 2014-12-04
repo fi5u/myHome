@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module('myhome', []);
+    var app = angular.module('myhome', ['rzModule']);
 
     app.controller('MyHomeController', function() {
 
@@ -13,7 +13,14 @@
             hasBalcony: '',
             hasGarden: '',
             allowsPets: '',
-            hasSauna: ''
+            hasSauna: '',
+            priceRange: {
+                min: 0,
+                max: 2000,
+                ceil: 2000,
+                floor: 0,
+                step: 50
+            }
         };
 
         $scope.params = angular.copy(paramsInit);
@@ -107,10 +114,18 @@
                 // Array to store filtered results
                 filteredResults = [];
 
+            // Remove availability mismatches
             // Loop through results and place keys to remove on toRemove[]
             for (var i = 0; i < input.length; i++) {
                 if (((params.isAvailable === 'true' || params.isAvailable === true) && input[i].available === false) ||
                     ((params.isAvailable === 'false' || params.isAvailable === false) && input[i].available === true)) {
+                    toRemove.push(i);
+                }
+            };
+
+            // Remove price range mismatches
+            for (var i = 0; i < input.length; i++) {
+                if (params.priceRange.min > input[i].rentalCost || params.priceRange.max < input[i].rentalCost) {
                     toRemove.push(i);
                 }
             };
