@@ -8,8 +8,8 @@
     app.controller('SearchController', ['$scope', function($scope) {
         $scope.params = {
             isAvailable: true,
-            orderby: 'rentalCost',
-            reverseOrder: false,
+            orderby: 'dateAdded',
+            reverseOrder: true,
             hasBalcony: '',
             hasGarden: '',
             allowsPets: '',
@@ -122,8 +122,16 @@
      */
     app.filter('results', function() {
         return function(input, params) {
+                // Store search properties on an array to loop through
+                // [0] = searchCtrl, [1] = home.extras[0]
+            var searchProps = [
+                    ['hasBalcony', 'balcony'],
+                    ['hasGarden', 'garden'],
+                    ['allowsPets', 'pets'],
+                    ['hasSauna', 'sauna']
+                ],
                 // Array to store keys to be removed
-            var toRemove = [],
+                toRemove = [],
                 // Array to store filtered results
                 filteredResults = [];
 
@@ -133,6 +141,17 @@
                     ((params.isAvailable === 'false' || params.isAvailable === false) && input[i].available === true)) {
                     toRemove.push(i);
                 }
+            };
+
+            // Loop through searchProps[]
+            for (var searchPropsIt = 0; searchPropsIt < searchProps.length; searchPropsIt++) {
+                // Loop through results
+                for (var resIt = 0; resIt < input.length; resIt++) {
+                    if (((params[searchProps[searchPropsIt][0]] === 'true' || params[searchProps[searchPropsIt][0]] === true) && input[resIt].extras[0][searchProps[searchPropsIt][1]] === false) ||
+                        ((params[searchProps[searchPropsIt][0]] === 'false' || params[searchProps[searchPropsIt][0]] === false) && input[resIt].extras[0][searchProps[searchPropsIt][1]] === true)) {
+                        toRemove.push(resIt);
+                    }
+                };
             };
 
             // Loop through results adding to filteredResults[] only if not in toRemove[]
