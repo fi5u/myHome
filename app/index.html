@@ -49,6 +49,8 @@
             </form>
             <div class="results" ng-controller="SearchResultsController as resCtrl">
                 <single-result></single-result>
+                <p ng-show="results.count === 0">No homes match your search requirements,<br>
+                try <a href ng-click="resetSearch()">broadening your search</a>.</p>
             </div>
         </main>
 
