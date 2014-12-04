@@ -138,6 +138,10 @@
 
             // Remove price range mismatches
             for (var i = 0; i < input.length; i++) {
+                // Don't do anything if already in toRemove[]
+                if (toRemove.indexOf(i) > -1) {
+                    continue;
+                }
                 if (params.priceRange.min > input[i].rentalCost || params.priceRange.max < input[i].rentalCost) {
                     toRemove.push(i);
                 }
@@ -147,6 +151,10 @@
             for (var searchPropsIt = 0; searchPropsIt < searchProps.length; searchPropsIt++) {
                 // Loop through results
                 for (var resIt = 0; resIt < input.length; resIt++) {
+                    // Don't do anything if already in toRemove[]
+                    if (toRemove.indexOf(resIt) > -1) {
+                        continue;
+                    }
                     if (((params[searchProps[searchPropsIt][0]] === 'true' || params[searchProps[searchPropsIt][0]] === true) && input[resIt].extras[0][searchProps[searchPropsIt][1]] === false) ||
                         ((params[searchProps[searchPropsIt][0]] === 'false' || params[searchProps[searchPropsIt][0]] === false) && input[resIt].extras[0][searchProps[searchPropsIt][1]] === true)) {
                         toRemove.push(resIt);
@@ -160,6 +168,7 @@
                     filteredResults.push(input[i]);
                 }
             };
+            console.log(toRemove);
             return filteredResults;
         };
     });
