@@ -1,4 +1,4 @@
-<div class="result" ng-repeat="home in resCtrl.filteredHomes | orderBy : params.orderby : params.reverseOrder">
+<div class="result" ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : params.orderby : params.reverseOrder)">
     <h3 class="result__title">
         {{home.address}}
     </h3>

@@ -41,6 +41,10 @@
 
                 <hr>
 
+                <strong ng-show="results.count > 0">{{results.count}}</strong><span ng-show="results.count === 0">No</span> results found
+
+                <hr>
+
                 <a href="" ng-click="resetSearch()">Reset search</a>
             </form>
             <div class="results" ng-controller="SearchResultsController as resCtrl">

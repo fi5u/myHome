@@ -25,6 +25,9 @@
 
         $scope.params = angular.copy($scope.paramsInit);
 
+        $scope.results = {};
+        $scope.results.count = 0;
+
         $scope.resetSearch = function() {
             $scope.params = angular.copy($scope.paramsInit);
         };
@@ -47,6 +50,7 @@
         $scope.$watch('params', function (newParams) {
             if (newParams) {
                 search.filteredHomes = resultsFilter(search.homes, newParams);
+                $scope.results.count = search.filteredHomes.length;
             }
         }, true); // true needed for watching objects
 
