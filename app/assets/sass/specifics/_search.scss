@@ -1,6 +1,48 @@
 .search {
     @include span(3 of 12);
 
+    &__price-range {
+        font-size: smaller;
+
+        span.bar {
+            background: #eee;
+
+            &.selection {
+                background: palette(primary);
+            }
+        }
+
+        span.bubble {
+            color: #000;
+
+            &.limit {
+                color: #ddd;
+            }
+        }
+
+        span.pointer {
+            top: -7px;
+            width: 16px;
+            height: 16px;
+
+            background-color: #ccc;
+            border-radius: 0;
+
+            &:after {
+                top: 4px;
+                left: 4px;
+
+                background: #eee;
+            }
+
+            &:hover {
+                &:after {
+                    background: palette(primary);
+                }
+            }
+        }
+    }
+
     &__orderby-toggle {
         float: right;
 
