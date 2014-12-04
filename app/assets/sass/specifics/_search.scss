@@ -1,6 +1,10 @@
 .search {
     @include span(3 of 12);
 
+    &__input-block {
+        @include clearfix;
+    }
+
     &__price-range {
         font-size: smaller;
 
