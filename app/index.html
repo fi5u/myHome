@@ -24,18 +24,13 @@
                 <hr>
 
                 <div class="search__input-block">
-                    <label for="orderby">Order by</label>
+                    <label for="orderby">Order by:</label><a href class="search__orderby-toggle" ng-click="reverseOrder()"><span ng-hide="params.reverseOrder">⬆︎</span><span ng-show="params.reverseOrder">⬇︎</span></a>
                     <select id="orderby" ng-model="params.orderby" class="search__select--orderby">
                         <option value="">Select order</option>
                         <option value="rentalCost">Price</option>
                         <option value="dateAdded">Date added</option>
                         <option value="address">Alphabetical</option>
                     </select>
-                </div>
-
-                <div class="search__input-block">
-                    <label for="reverse_order">Reverse order</label>
-                    <input type="checkbox" class="search__check--reverse" id="reverse_order" ng-model="params.reverseOrder">
                 </div>
 
                 <hr>

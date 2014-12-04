@@ -21,6 +21,10 @@
         $scope.resetSearch = function() {
             $scope.params = angular.copy(paramsInit);
         };
+
+        $scope.reverseOrder = function() {
+            $scope.params.reverseOrder = !$scope.params.reverseOrder;
+        };
     }]);
 
     app.controller('SearchResultsController', ['$scope', '$http', 'resultsFilter', function($scope, $http, resultsFilter) {

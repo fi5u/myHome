@@ -1,5 +1,12 @@
 .search {
     @include span(3 of 12);
+
+    &__orderby-toggle {
+        float: right;
+
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 [class^="search__select"],
