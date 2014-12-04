@@ -14,7 +14,7 @@
 
                 <div class="search__input-block">
                     <label for="available">Available</label>
-                    <select id="available" ng-model="searchCtrl.isAvailable" class="search__select--available">
+                    <select id="available" ng-model="params.isAvailable" class="search__select--available">
                         <option value="">No preference</option>
                         <option value="true" selected>Yes</option>
                         <option value="false">No</option>
@@ -23,16 +23,16 @@
 
                 <hr>
 
-                <search-input-block type="has" type-pos="before" property="balcony" ng-model="searchCtrl.hasBalcony"></search-input-block>
-                <search-input-block type="has" type-pos="before" property="garden" ng-model="searchCtrl.hasGarden"></search-input-block>
-                <search-input-block type="allowed" type-pos="after" property="pets" ng-model="searchCtrl.allowsPets"></search-input-block>
-                <search-input-block type="has" type-pos="before" property="sauna" ng-model="searchCtrl.hasSauna"></search-input-block>
+                <search-input-block type="has" type-pos="before" property="balcony" ng-model="params.hasBalcony"></search-input-block>
+                <search-input-block type="has" type-pos="before" property="garden" ng-model="params.hasGarden"></search-input-block>
+                <search-input-block type="allowed" type-pos="after" property="pets" ng-model="params.allowsPets"></search-input-block>
+                <search-input-block type="has" type-pos="before" property="sauna" ng-model="params.hasSauna"></search-input-block>
 
                 <hr>
 
                 <div class="search__input-block">
                     <label for="orderby">Order by</label>
-                    <select id="orderby" ng-model="searchCtrl.orderby" class="search__select--orderby">
+                    <select id="orderby" ng-model="params.orderby" class="search__select--orderby">
                         <option value="">Select order</option>
                         <option value="rentalCost">Price</option>
                         <option value="dateAdded">Date added</option>
@@ -42,10 +42,10 @@
 
                 <div class="search__input-block">
                     <label for="reverse_order">Reverse order</label>
-                    <input type="checkbox" class="search__check--reverse" id="reverse_order" ng-model="searchCtrl.reverseOrder" ng-click="searchCtrl.toggleReverseOrder()">
+                    <input type="checkbox" class="search__check--reverse" id="reverse_order" ng-model="params.reverseOrder">
                 </div>
             </form>
-            <div class="results">
+            <div class="results" ng-controller="SearchResultsController as resCtrl">
                 <single-result></single-result>
             </div>
         </main>

@@ -1,4 +1,5 @@
-<div class="result" ng-repeat="home in myhome.homes | orderBy : searchCtrl.orderby : searchCtrl.reverseOrder" ng-if="singleResCtrl.resultShow(searchCtrl, home)">
+<!-- ng-if="singleResCtrl.resultShow(searchCtrl, home)" -->
+<div class="result" ng-repeat="home in resCtrl.filteredHomes | orderBy : params.orderby : params.reverseOrder">
     <h3 class="result__title">
         {{home.address}}
     </h3>
