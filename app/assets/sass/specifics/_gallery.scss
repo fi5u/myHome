@@ -3,6 +3,7 @@
 
     display: block;
     position: relative;
+    margin-bottom: 50px;
 
     &__main {
         @include span(6 of 9);
@@ -20,6 +21,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 1;
         overflow: hidden;
         height: 100%;
 

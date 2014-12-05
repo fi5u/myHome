@@ -9,7 +9,14 @@
     </section>
     <section class="single__main">
         <gallery class="gallery"></gallery>
-        <h2>Description</h2>
-        <p>{{home.description}}</p>
+        <div class="single__description">
+            <h2>Description</h2>
+            <p>{{home.description}}</p>
+        </div>
+        <div class="single__map">
+            <ui-gmap-google-map center="map.center" zoom="map.zoom">
+                <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id"></ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
     </section>
 </article>

@@ -24,4 +24,15 @@
         @include span(9 of 12);
         @include last;
     }
+
+        &__description {
+            @include span(5 of 9);
+        }
+
+        &__map {
+            @include span(4 of 9);
+            @include last;
+        }
 }
+
+.angular-google-map-container { height: 240px; }

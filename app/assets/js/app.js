@@ -1,11 +1,11 @@
 (function () {
-    var app = angular.module('myhome', ['ngRoute', 'rzModule']);
+    var app = angular.module('myhome', ['ngRoute', 'rzModule', 'uiGmapgoogle-maps']);
 
     app.controller('MyHomeController', function() {
 
     });
 
-    app.config(['$routeProvider', function($routeProvider) {
+    app.config(['$routeProvider', 'uiGmapGoogleMapApiProvider', function($routeProvider, uiGmapGoogleMapApiProvider) {
         $routeProvider.when('/homes', {
             templateUrl: 'home-search.html',
             controller: 'SearchController'
@@ -15,6 +15,13 @@
         }).otherwise({
             redirectTo: '/homes'
         });
+
+        uiGmapGoogleMapApiProvider.configure({
+            //    key: 'your api key',
+            v: '3.17',
+            libraries: 'weather,geometry,visualization'
+        });
+
     }]);
 
     app.controller('SearchController', ['$scope', function($scope) {
@@ -81,15 +88,28 @@
         };
     }]);
 
-    app.controller('SingleResultController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+    app.controller('SingleResultController', ['$scope', '$routeParams', '$http', 'uiGmapGoogleMapApi', function($scope, $routeParams, $http, uiGmapGoogleMapApi) {
         $http.get('assets/js/homes.json').success(function(data) {
             // Pass the single property's details to the single view
             $scope.home = {};
             for (var i = 0; i < data.length; i++) {
                 if (data[i].homeId === $routeParams.homeId) {
                     $scope.home = data[i];
+                    break;
                 }
             };
+
+            uiGmapGoogleMapApi.then(function(maps) {
+                $scope.map = { center: $scope.home.location, zoom: 14 };
+                $scope.options = {scrollwheel: false};
+                $scope.marker = {
+                    id: $scope.home.homeId,
+                    coords: {
+                        latitude: $scope.home.location.latitude,
+                        longitude: $scope.home.location.longitude
+                    }
+                };
+            });
         });
     }]);
 

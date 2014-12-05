@@ -32,7 +32,11 @@
             "garden": false
         }
     ],
-    "dateAdded": 1417516772740
+    "dateAdded": 1417516772740,
+    "location": {
+        "latitude": 60.199513,
+        "longitude": 24.932759
+    }
 }, {
     "homeId": "a0001",
     "address": "Lintutie 100",
@@ -59,7 +63,11 @@
             "garden": true
         }
     ],
-    "dateAdded": 1417516751234
+    "dateAdded": 1417516751234,
+    "location": {
+        "latitude": 60.223388,
+        "longitude": 24.675168
+    }
 }, {
     "homeId": "a0002",
     "address": "Norsumäki 1 d",
@@ -102,7 +110,11 @@
             "garden": false
         }
     ],
-    "dateAdded": 1417516791889
+    "dateAdded": 1417516791889,
+    "location": {
+        "latitude": 60.377326,
+        "longitude": 25.269149
+    }
 }, {
     "homeId": "a0003",
     "address": "Kanakatu 24",
@@ -133,7 +145,11 @@
             "garden": true
         }
     ],
-    "dateAdded": 1417516784275
+    "dateAdded": 1417516784275,
+    "location": {
+        "latitude": 60.474536,
+        "longitude": 25.090451
+    }
 }, {
     "homeId": "a0004",
     "address": "Koiratie 269 a",
@@ -168,7 +184,11 @@
             "garden": true
         }
     ],
-    "dateAdded": 1417516798987
+    "dateAdded": 1417516798987,
+    "location": {
+        "latitude": 59.828928,
+        "longitude": 22.965556
+    }
 }, {
     "homeId": "a0005",
     "address": "Kissakatu 293",
@@ -215,5 +235,9 @@
             "garden": true
         }
     ],
-    "dateAdded": 1417516784200
+    "dateAdded": 1417516784200,
+    "location": {
+        "latitude": 60.392975,
+        "longitude": 25.664579
+    }
 }]
