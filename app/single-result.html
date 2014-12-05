@@ -1,4 +1,4 @@
-<article class="result" ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : params.orderby : params.reverseOrder)">
+<article class="result" ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : $storage.params.orderby : $storage.params.reverseOrder)">
     <h3 class="result__title">
         <a href="#/homes/{{home.homeId}}">{{home.address}}</a>
     </h3>

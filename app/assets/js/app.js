@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module('myhome', ['ngRoute', 'rzModule', 'uiGmapgoogle-maps']);
+    var app = angular.module('myhome', ['ngRoute', 'rzModule', 'uiGmapgoogle-maps', 'ngStorage']);
 
     app.controller('MyHomeController', function() {
 
@@ -17,7 +17,7 @@
         });
     }]);
 
-    app.controller('SearchController', ['$scope', function($scope) {
+    app.controller('SearchController', ['$scope', '$sessionStorage', function($scope, $sessionStorage) {
         $scope.paramsInit = {
             isAvailable: true,
             orderby: 'dateAdded',
@@ -37,15 +37,19 @@
 
         $scope.params = angular.copy($scope.paramsInit);
 
+        $scope.$storage = $sessionStorage.$default({
+            params: angular.copy($scope.paramsInit)
+        });
+
         $scope.results = {};
         $scope.results.count = 0;
 
         $scope.resetSearch = function() {
-            $scope.params = angular.copy($scope.paramsInit);
+            $scope.$storage.params = angular.copy($scope.paramsInit);
         };
 
         $scope.reverseOrder = function() {
-            $scope.params.reverseOrder = !$scope.params.reverseOrder;
+            $scope.$storage.params.reverseOrder = !$scope.$storage.params.reverseOrder;
         };
     }]);
 
@@ -55,11 +59,12 @@
 
         $http.get('assets/js/homes.json').success(function(data) {
             search.homes = data;
-            search.filteredHomes = resultsFilter(search.homes, $scope.params);
+            search.filteredHomes = resultsFilter(search.homes, $scope.$storage.params);
             $scope.getMaxPrice();
+            $scope.results.count = search.filteredHomes.length;
         });
 
-        $scope.$watch('params', function (newParams) {
+        $scope.$watch('$storage.params', function (newParams) {
             if (newParams) {
                 search.filteredHomes = resultsFilter(search.homes, newParams);
                 $scope.results.count = search.filteredHomes.length;
@@ -76,8 +81,8 @@
             };
             $scope.paramsInit.priceRange.max = maxPrice;
             $scope.paramsInit.priceRange.ceil = maxPrice;
-            $scope.params.priceRange.max = maxPrice;
-            $scope.params.priceRange.ceil = maxPrice;
+            $scope.$storage.params.priceRange.max = maxPrice;
+            $scope.$storage.params.priceRange.ceil = maxPrice;
         };
     }]);
 
