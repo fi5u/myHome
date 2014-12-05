@@ -15,13 +15,6 @@
         }).otherwise({
             redirectTo: '/homes'
         });
-
-        uiGmapGoogleMapApiProvider.configure({
-            //    key: 'your api key',
-            v: '3.17',
-            libraries: 'weather,geometry,visualization'
-        });
-
     }]);
 
     app.controller('SearchController', ['$scope', function($scope) {

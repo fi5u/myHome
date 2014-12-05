@@ -16,6 +16,15 @@
             font-size: larger;
         }
 
+        &__back {
+            clear: both;
+            padding-top: 20px;
+        }
+
+            &__back-link {
+                font-size: smaller;
+            }
+
     &__extras {
         @include span(3 of 12);
     }
