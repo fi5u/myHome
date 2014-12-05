@@ -1,0 +1,8 @@
+<div class="gallery__main">
+    <img ng-src="{{home.images[index.active].full}}" alt="{{home.address}}">
+</div>
+<div class="gallery__thumbs">
+    <a href class="gallery__thumb-wrap" ng-repeat="image in home.images" ng-click="index.active = $index">
+        <img ng-src="{{image.thumb}}" alt="{{home.address}}">
+    </a>
+</div>

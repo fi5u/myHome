@@ -1,0 +1,14 @@
+.single {
+    &__title-block {
+        @include full;
+    }
+
+    &__extras {
+        @include span(3 of 12);
+    }
+
+    &__main {
+        @include span(9 of 12);
+        @include last;
+    }
+}

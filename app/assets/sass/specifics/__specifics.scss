@@ -2,9 +2,12 @@
 @import "search";
 @import "results";
 @import "result";
+@import "single";
 
 .main {
-    @include clearfix;
-
     padding: 30px;
+}
+
+[class^="main-wrap"] {
+    @include clearfix;
 }

@@ -1,9 +1,21 @@
 (function () {
-    var app = angular.module('myhome', ['rzModule']);
+    var app = angular.module('myhome', ['ngRoute', 'rzModule']);
 
     app.controller('MyHomeController', function() {
 
     });
+
+    app.config(['$routeProvider', function($routeProvider) {
+        $routeProvider.when('/homes', {
+            templateUrl: 'home-search.html',
+            controller: 'SearchController'
+        }).when('/homes/:homeId', {
+            templateUrl: 'home-detail.html',
+            controller: 'SingleResultController'
+        }).otherwise({
+            redirectTo: '/homes'
+        });
+    }]);
 
     app.controller('SearchController', ['$scope', function($scope) {
         $scope.paramsInit = {
@@ -69,6 +81,18 @@
         };
     }]);
 
+    app.controller('SingleResultController', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+        $http.get('assets/js/homes.json').success(function(data) {
+            // Pass the single property's details to the single view
+            $scope.home = {};
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].homeId === $routeParams.homeId) {
+                    $scope.home = data[i];
+                }
+            };
+        });
+    }]);
+
     app.directive('searchInputBlock', function() {
         return {
             restrict: 'E',
@@ -79,14 +103,26 @@
                 bindModel: '=ngModel'
             },
             templateUrl: 'search-input-block.html'
-        }
+        };
     });
 
     app.directive('singleResult', function() {
         return {
             restrict: 'E',
             templateUrl: 'single-result.html'
-        }
+        };
+    });
+
+    app.directive('gallery', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'gallery.html',
+            controller: ['$scope', function($scope) {
+                $scope.index = {};
+                $scope.index.active = 0;
+            }],
+            controllerAs: 'gallery'
+        };
     });
 
     app.filter('boolConvert', function() {
@@ -174,7 +210,6 @@
                     filteredResults.push(input[i]);
                 }
             };
-            console.log(toRemove);
             return filteredResults;
         };
     });

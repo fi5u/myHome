@@ -1,0 +1,12 @@
+<div class="main-wrap--single">
+    <div class="single__title-block">
+        <h1>{{home.address}}, {{home.area}}</h1>
+    </div>
+    <div class="single__extras">
+        <h2>Home features</h2>
+        <div class="single__extra" ng-class="{ 'single__extra--has':value }" ng-repeat="(extra, value) in home.extras[0]">{{extra}}: {{value | boolConvert}}</div>
+    </div>
+    <article class="single__main">
+        <gallery class="gallery"></gallery>
+    </article>
+</div>
