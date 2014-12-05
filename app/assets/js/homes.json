@@ -6,17 +6,21 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nobis unde ipsum recusandae nulla mollitia, ad optio dignissimos provident non odio, incidunt debitis, commodi minima magni! Odit nihil totam, minima.",
     "images": [
         {
-            "full": "http://placehold.it/450&text=Karhutie19_1+full",
-            "thumb": "http://placehold.it/200&text=Karhutie19_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Karhutie19_1+full",
+            "medium": "http://placehold.it/600x450&text=Karhutie19_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Karhutie19_1+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Karhutie19_2+full",
-            "thumb": "http://placehold.it/200&text=Karhutie19_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Karhutie19_2+full",
+            "medium": "http://placehold.it/600x450&text=Karhutie19_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Karhutie19_2+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Karhutie19_3+full",
-            "thumb": "http://placehold.it/200&text=Karhutie19_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Karhutie19_3+full",
+            "medium": "http://placehold.it/600x450&text=Karhutie19_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Karhutie19_3+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Karhutie19_4+full",
-            "thumb": "http://placehold.it/200&text=Karhutie19_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Karhutie19_4+full",
+            "medium": "http://placehold.it/600x450&text=Karhutie19_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Karhutie19_4+thumb"
         }
     ],
     "available": true,
@@ -37,11 +41,13 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium odit, ut amet fugit quidem ex, unde quam sapiente obcaecati eveniet delectus est assumenda quisquam, ea laborum ipsa rem eaque.",
     "images": [
         {
-            "full": "http://placehold.it/450&text=Lintutie100_1+full",
-            "thumb": "http://placehold.it/200&text=Lintutie100_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Lintutie100_1+full",
+            "medium": "http://placehold.it/600x450&text=Lintutie100_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Lintutie100_1+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Lintutie100_2+full",
-            "thumb": "http://placehold.it/200&text=Lintutie100_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Lintutie100_2+full",
+            "medium": "http://placehold.it/600x450&text=Lintutie100_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Lintutie100_2+thumb"
         }
     ],
     "available": true,
@@ -62,23 +68,29 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ab laborum hic molestiae illo quod voluptas! Nam aperiam id eaque, qui dolorem rem quod porro, odit repudiandae. Aperiam, quae eos.",
     "images": [
         {
-            "full": "http://placehold.it/450&text=Norsumäki1d_1+full",
-            "thumb": "http://placehold.it/200&text=Norsumäki1d_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Norsumäki1d_1+full",
+            "medium": "http://placehold.it/600x450&text=Norsumäki1d_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Norsumäki1d_1+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Norsumäki1d_2+full",
-            "thumb": "http://placehold.it/200&text=Norsumäki1d_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Norsumäki1d_2+full",
+            "medium": "http://placehold.it/600x450&text=Norsumäki1d_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Norsumäki1d_2+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Norsumäki1d_3+full",
-            "thumb": "http://placehold.it/200&text=Norsumäki1d_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Norsumäki1d_3+full",
+            "medium": "http://placehold.it/600x450&text=Norsumäki1d_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Norsumäki1d_3+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Norsumäki1d_4+full",
-            "thumb": "http://placehold.it/200&text=Norsumäki1d_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Norsumäki1d_4+full",
+            "medium": "http://placehold.it/600x450&text=Norsumäki1d_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Norsumäki1d_4+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Norsumäki1d_5+full",
-            "thumb": "http://placehold.it/200&text=Norsumäki1d_5+thumb"
+            "full": "http://placehold.it/1200x900&text=Norsumäki1d_5+full",
+            "medium": "http://placehold.it/600x450&text=Norsumäki1d_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Norsumäki1d_5+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Norsumäki1d_6+full",
-            "thumb": "http://placehold.it/200&text=Norsumäki1d_6+thumb"
+            "full": "http://placehold.it/1200x900&text=Norsumäki1d_6+full",
+            "medium": "http://placehold.it/600x450&text=Norsumäki1d_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Norsumäki1d_6+thumb"
         }
     ],
     "available": true,
@@ -99,14 +111,17 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta, odit quaerat! Corporis, laudantium ab nesciunt mollitia autem quibusdam assumenda delectus dolore architecto accusamus quaerat ut facere quod ea maxime.",
     "images": [
         {
-            "full": "http://placehold.it/450&text=Kanakatu24_1+full",
-            "thumb": "http://placehold.it/200&text=Kanakatu24_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Kanakatu24_1+full",
+            "medium": "http://placehold.it/600x450&text=Kanakatu24_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Kanakatu24_1+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Kanakatu24_2+full",
-            "thumb": "http://placehold.it/200&text=Kanakatu24_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Kanakatu24_2+full",
+            "medium": "http://placehold.it/600x450&text=Kanakatu24_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Kanakatu24_2+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Kanakatu24_3+full",
-            "thumb": "http://placehold.it/200&text=Kanakatu24_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Kanakatu24_3+full",
+            "medium": "http://placehold.it/600x450&text=Kanakatu24_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Kanakatu24_3+thumb"
         }
     ],
     "available": true,
@@ -127,17 +142,21 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque facere accusantium eligendi, laborum voluptates illo impedit, saepe quo, rem, corrupti suscipit quia. Eius nihil doloribus provident ipsa, similique nobis non.",
     "images": [
         {
-            "full": "http://placehold.it/450&text=Koiratie269a_1+full",
-            "thumb": "http://placehold.it/200&text=Koiratie269a_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Koiratie269a_1+full",
+            "medium": "http://placehold.it/600x450&text=Koiratie269a_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Koiratie269a_1+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Koiratie269a_2+full",
-            "thumb": "http://placehold.it/200&text=Koiratie269a_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Koiratie269a_2+full",
+            "medium": "http://placehold.it/600x450&text=Koiratie269a_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Koiratie269a_2+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Koiratie269a_3+full",
-            "thumb": "http://placehold.it/200&text=Koiratie269a_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Koiratie269a_3+full",
+            "medium": "http://placehold.it/600x450&text=Koiratie269a_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Koiratie269a_3+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Koiratie269a_4+full",
-            "thumb": "http://placehold.it/200&text=Koiratie269a_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Koiratie269a_4+full",
+            "medium": "http://placehold.it/600x450&text=Koiratie269a_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Koiratie269a_4+thumb"
         }
     ],
     "available": false,
@@ -158,26 +177,33 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi perferendis adipisci rem aspernatur earum praesentium, vitae veritatis id nulla sapiente, voluptatibus. Dignissimos impedit magnam autem. Tenetur maxime enim, libero labore?",
     "images": [
         {
-            "full": "http://placehold.it/450&text=Kissakatu293_1+full",
-            "thumb": "http://placehold.it/200&text=Kissakatu293_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Kissakatu293_1+full",
+            "medium": "http://placehold.it/600x450&text=Kissakatu293_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Kissakatu293_1+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Kissakatu293_2+full",
-            "thumb": "http://placehold.it/200&text=Kissakatu293_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Kissakatu293_2+full",
+            "medium": "http://placehold.it/600x450&text=Kissakatu293_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Kissakatu293_2+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Kissakatu293_3+full",
-            "thumb": "http://placehold.it/200&text=Kissakatu293_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Kissakatu293_3+full",
+            "medium": "http://placehold.it/600x450&text=Kissakatu293_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Kissakatu293_3+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Kissakatu293_4+full",
-            "thumb": "http://placehold.it/200&text=Kissakatu293_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Kissakatu293_4+full",
+            "medium": "http://placehold.it/600x450&text=Kissakatu293_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Kissakatu293_4+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Kissakatu293_5+full",
-            "thumb": "http://placehold.it/200&text=Kissakatu293_5+thumb"
+            "full": "http://placehold.it/1200x900&text=Kissakatu293_5+full",
+            "medium": "http://placehold.it/600x450&text=Kissakatu293_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Kissakatu293_5+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Kissakatu293_6+full",
-            "thumb": "http://placehold.it/200&text=Kissakatu293_6+thumb"
+            "full": "http://placehold.it/1200x900&text=Kissakatu293_6+full",
+            "medium": "http://placehold.it/600x450&text=Kissakatu293_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Kissakatu293_6+thumb"
         }, {
-            "full": "http://placehold.it/450&text=Kissakatu293_7+full",
-            "thumb": "http://placehold.it/200&text=Kissakatu293_7+thumb"
+            "full": "http://placehold.it/1200x900&text=Kissakatu293_7+full",
+            "medium": "http://placehold.it/600x450&text=Kissakatu293_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Kissakatu293_7+thumb"
         }
     ],
     "available": true,

@@ -1,7 +1,20 @@
 .single {
     &__header {
         @include full;
+        @include clearfix;
+
+        margin-bottom: 50px;
     }
+
+        &__title {
+            float: left;
+        }
+
+        &__price {
+            float: right;
+
+            font-size: larger;
+        }
 
     &__extras {
         @include span(3 of 12);

@@ -1,8 +1,16 @@
 <div class="gallery__main">
-    <img ng-src="{{home.images[index.active].full}}" alt="{{home.address}}">
+    <img class="gallery__main-img" ng-src="{{home.images[index.active].medium}}" alt="{{home.address}}">
 </div>
 <div class="gallery__thumbs">
-    <a href class="gallery__thumb-wrap" ng-repeat="image in home.images" ng-click="index.active = $index">
-        <img ng-src="{{image.thumb}}" alt="{{home.address}}">
-    </a>
+    <!-- <a href class="gallery__thumb-scroll--up">
+        <span class="gallery__scroll-icon--up">❯</span>
+    </a> -->
+    <div class="gallery__thumb-scroller">
+        <a href class="gallery__thumb-wrap" ng-repeat="image in home.images" ng-click="index.active = $index">
+            <img ng-src="{{image.thumb}}" alt="{{home.address}}">
+        </a>
+    </div>
+    <!-- <a href class="gallery__thumb-scroll--down">
+        <span class="gallery__scroll-icon--down">❯</span>
+    </a> -->
 </div>
