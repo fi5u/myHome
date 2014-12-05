@@ -5,7 +5,9 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
     $http.get('app/shared/data/homes.json').success(function(data) {
         search.homes = data;
         search.filteredHomes = resultsFilter(search.homes, $scope.$storage.params);
-        $scope.getMaxPrice();
+        if ($scope.$storage.searchReset === false) {
+            $scope.setMaxPrice();
+        }
         $scope.results.count = search.filteredHomes.length;
     });
 
@@ -17,7 +19,7 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
     }, true); // true needed for watching objects
 
     // Set the slider's max price to be the maximum available
-    $scope.getMaxPrice = function() {
+    $scope.setMaxPrice = function() {
         var maxPrice = 0;
         for (var i = 0; i < search.homes.length; i++) {
             if (search.homes[i].rentalCost > maxPrice) {

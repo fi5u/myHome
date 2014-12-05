@@ -3,7 +3,7 @@
         <h1 class="single__title">{{home.address}}, {{home.area}}</h1>
         <div class="single__price">{{home.rentalCost | currency : "€"}}</div>
         <div class="single__back">
-            <a href="#/homes/" class="single__back-link">Back to search results</a>
+            <a href="#/homes/" class="single__back-link" ng-click="$storage.searchReset = true">Back to search results</a>
         </div>
     </header>
     <section class="single__extras">
