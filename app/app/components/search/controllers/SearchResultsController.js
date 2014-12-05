@@ -26,8 +26,8 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
                 maxPrice = search.homes[i].rentalCost;
             }
         };
-        $scope.paramsInit.priceRange.max = maxPrice;
-        $scope.paramsInit.priceRange.ceil = maxPrice;
+        $scope.$storage.paramsInit.priceRange.max = maxPrice;
+        $scope.$storage.paramsInit.priceRange.ceil = maxPrice;
         $scope.$storage.params.priceRange.max = maxPrice;
         $scope.$storage.params.priceRange.ceil = maxPrice;
     };
