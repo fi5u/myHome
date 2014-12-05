@@ -57,7 +57,7 @@
         var search = this;
         search.homes = [];
 
-        $http.get('assets/js/homes.json').success(function(data) {
+        $http.get('app/data/homes.json').success(function(data) {
             search.homes = data;
             search.filteredHomes = resultsFilter(search.homes, $scope.$storage.params);
             $scope.getMaxPrice();
@@ -87,7 +87,7 @@
     }]);
 
     app.controller('SingleResultController', ['$scope', '$routeParams', '$http', 'uiGmapGoogleMapApi', function($scope, $routeParams, $http, uiGmapGoogleMapApi) {
-        $http.get('assets/js/homes.json').success(function(data) {
+        $http.get('app/data/homes.json').success(function(data) {
             // Pass the single property's details to the single view
             $scope.home = {};
             for (var i = 0; i < data.length; i++) {
