@@ -1,6 +1,6 @@
 <article class="result" ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : $storage.params.orderby : $storage.params.reverseOrder)">
     <h3 class="result__title">
-        <a href="#/homes/{{home.homeId}}">{{home.address}}</a>
+        <a href="#/homes/{{home.homeId}}" class="result__title-link">{{home.address}}</a>
     </h3>
     <div class="result__area">{{home.area}}</div>
     <div class="result__cost">{{home.rentalCost | currency : "€"}}</div>

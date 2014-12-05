@@ -15,6 +15,15 @@
         margin-bottom: 0;
     }
 
+    &__title-link {
+        text-decoration: none;
+        color: #eee;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     &__extra--has {
         font-weight: bold;
     }
