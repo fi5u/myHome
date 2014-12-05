@@ -1,6 +1,6 @@
-<div class="result" ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : params.orderby : params.reverseOrder)">
+<article class="result" ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : params.orderby : params.reverseOrder)">
     <h3 class="result__title">
-        {{home.address}}
+        <a href="#/homes/{{home.homeId}}">{{home.address}}</a>
     </h3>
     <div class="result__area">{{home.area}}</div>
     <div class="result__cost">{{home.rentalCost | currency : "€"}}</div>
@@ -12,4 +12,4 @@
     <div class="result__extras">
         <div class="result__extra" ng-class="{ 'result__extra--has':value }" ng-repeat="(extra, value) in home.extras[0]">{{extra}}: {{value | boolConvert}}</div>
     </div>
-</div>
+</article>

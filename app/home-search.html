@@ -1,0 +1,43 @@
+<div class="main-wrap--search" ng-controller="SearchController as searchCtrl">
+    <form class="search" name="seachForm" novalidate>
+
+        <search-input-block type="is" type-pos="before" property="available" ng-model="params.isAvailable"></search-input-block>
+
+        <hr>
+
+        <label>Price range:</label>
+        <rzslider class="search__price-range" rz-slider-floor="params.priceRange.floor" rz-slider-ceil="params.priceRange.ceil" rz-slider-model="params.priceRange.min" rz-slider-high="params.priceRange.max" rz-slider-step="{{params.priceRange.step}}"></rzslider>
+
+        <hr>
+
+        <search-input-block type="has" type-pos="before" property="balcony" ng-model="params.hasBalcony"></search-input-block>
+        <search-input-block type="has" type-pos="before" property="garden" ng-model="params.hasGarden"></search-input-block>
+        <search-input-block type="allowed" type-pos="after" property="pets" ng-model="params.allowsPets"></search-input-block>
+        <search-input-block type="has" type-pos="before" property="sauna" ng-model="params.hasSauna"></search-input-block>
+
+        <hr>
+
+        <div class="search__input-block">
+            <label for="orderby">Order by:</label><a href class="search__orderby-toggle" ng-click="reverseOrder()"><span ng-hide="params.reverseOrder">⬆︎</span><span ng-show="params.reverseOrder">⬇︎</span></a>
+            <select id="orderby" ng-model="params.orderby" class="search__select--orderby">
+                <option value="">Select order</option>
+                <option value="rentalCost">Price</option>
+                <option value="dateAdded">Date added</option>
+                <option value="address">Alphabetical</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <strong ng-show="results.count > 0">{{results.count}}</strong><span ng-show="results.count === 0">No</span> results found
+
+        <hr>
+
+        <a href="" ng-click="resetSearch()">Reset search</a>
+    </form>
+    <div class="results" ng-controller="SearchResultsController as resCtrl">
+        <single-result></single-result>
+        <p ng-show="results.count === 0">No homes match your search requirements,<br>
+        try <a href ng-click="resetSearch()">broadening your search</a>.</p>
+    </div>
+</div>
