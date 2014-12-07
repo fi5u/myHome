@@ -31,4 +31,24 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
         $scope.$storage.params.priceRange.max = maxPrice;
         $scope.$storage.params.priceRange.ceil = maxPrice;
     };
+
+    $scope.hasLike = function(homeId) {
+        if ($scope.$storage.local.likes.indexOf(homeId) > -1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
+    $scope.toggleLike = function(homeId) {
+        var newLikeArray = [],
+            homeIdIndex = $scope.$storage.local.likes.indexOf(homeId);
+        if (homeIdIndex > -1) {
+            // Remove the array value at
+            $scope.$storage.local.likes.splice(homeIdIndex, 1);
+        } else {
+            // Add to the likes array
+            $scope.$storage.local.likes.push(homeId);
+        }
+    };
 }]);

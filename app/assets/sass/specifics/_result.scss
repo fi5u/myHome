@@ -15,6 +15,23 @@
         margin-bottom: 0;
     }
 
+    &__like {
+        color: #ddd;
+        text-decoration: none;
+
+        &:hover {
+            color: palette(primary, lighter);
+        }
+
+        &--has {
+            color: palette(primary);
+        }
+    }
+
+        &__like-symbol {
+
+        }
+
     &__title-link {
         text-decoration: none;
         color: #eee;
