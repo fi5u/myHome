@@ -1,4 +1,4 @@
-myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilter', function($scope, $http, resultsFilter) {
+myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilter', 'Likes', function($scope, $http, resultsFilter, Likes) {
     var search = this;
     search.homes = [];
 
@@ -33,22 +33,11 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
     };
 
     $scope.hasLike = function(homeId) {
-        if ($scope.$storage.local.likes.indexOf(homeId) > -1) {
-            return true;
-        } else {
-            return false;
-        }
+        return Likes.check(homeId);
     };
 
-    $scope.toggleLike = function(homeId) {
-        var newLikeArray = [],
-            homeIdIndex = $scope.$storage.local.likes.indexOf(homeId);
-        if (homeIdIndex > -1) {
-            // Remove the array value at
-            $scope.$storage.local.likes.splice(homeIdIndex, 1);
-        } else {
-            // Add to the likes array
-            $scope.$storage.local.likes.push(homeId);
-        }
+    $scope.toggleLike = function(homeId, area, address) {
+        Likes.toggle(homeId, area, address);
+        $scope.$storage.local.likes = Likes.get();
     };
 }]);

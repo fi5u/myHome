@@ -1,4 +1,4 @@
-myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', function($scope, $sessionStorage) {
+myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Likes', function($scope, $sessionStorage, Likes) {
     $scope.paramsInit = {
         isAvailable: true,
         orderby: 'dateAdded',
@@ -41,6 +41,8 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', function(
 
     $scope.results = {};
     $scope.results.count = 0;
+
+    $scope.likes = $scope.$storage.local.likes;
 
     $scope.resetSearch = function() {
         $scope.$storage.params = angular.copy($scope.$storage.paramsInit);

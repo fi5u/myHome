@@ -34,6 +34,13 @@
         <hr>
 
         <a href="" ng-click="resetSearch()">Reset search</a>
+
+        <hr ng-show="$storage.local.likes.length">
+
+        <section class="favorites" ng-show="$storage.local.likes.length">
+            <h3>My favourites</h3>
+            <a href="#/homes/{{like}}" ng-repeat="like in $storage.local.likes">I like {{like.address}}<br></a>
+        </section>
     </form>
     <div class="results" ng-controller="SearchResultsController as resCtrl">
         <single-result></single-result>
