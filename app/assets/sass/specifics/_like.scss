@@ -1,0 +1,31 @@
+.like {
+    float: right;
+
+    font-family: "fontello";
+    text-decoration: none;
+
+    &__symbol {
+        @include hide-text;
+        display: inline-block;
+        height: 2em;
+
+        color: palette(primary, lighter);
+
+        &:before {
+            content: "";
+        }
+
+        /* .result:hover &:before {
+            content: "\e801";
+        } */
+
+        &:hover:before,
+        .like--has &:before {
+            content: "\e800" !important;
+        }
+
+        .like--has &:before {
+            color: palette(primary);
+        }
+    }
+}

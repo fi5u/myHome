@@ -1,4 +1,4 @@
-myHomeApp.controller('SingleController', ['$scope', '$routeParams', '$http', 'uiGmapGoogleMapApi', function($scope, $routeParams, $http, uiGmapGoogleMapApi) {
+myHomeApp.controller('SingleController', ['$scope', '$routeParams', '$http', 'uiGmapGoogleMapApi', 'Likes', function($scope, $routeParams, $http, uiGmapGoogleMapApi, Likes) {
     $http.get('app/shared/data/homes.json').success(function(data) {
         // Pass the single property's details to the single view
         $scope.home = {};

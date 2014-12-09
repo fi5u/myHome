@@ -1,5 +1,5 @@
 <article class="result" ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : $storage.params.orderby : $storage.params.reverseOrder)">
-    <a href class="result__like" ng-class="{ 'result__like--has':hasLike(home.homeId) }" ng-click="toggleLike(home.homeId, home.area, home.address)"><span class="result__like-symbol">Like</span></a>
+    <a href class="like" ng-class="{ 'like--has':hasLike(home.homeId) }" ng-click="toggleLike(home.homeId, home.area, home.address)"><span class="like__symbol">Like</span></a>
     <h3 class="result__title">
         <a href="#/homes/{{home.homeId}}" class="result__title-link">{{home.address}}</a>
     </h3>

@@ -31,14 +31,4 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
         $scope.$storage.params.priceRange.max = maxPrice;
         $scope.$storage.params.priceRange.ceil = maxPrice;
     };
-
-    $scope.hasLike = function(homeId) {
-        return Likes.check(homeId);
-    };
-
-    $scope.toggleLike = function(homeId, area, address) {
-        Likes.toggle(homeId, area, address);
-        $scope.$storage.local.likes = Likes.get();
-    };
-
 }]);

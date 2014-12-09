@@ -15,38 +15,11 @@
         margin-bottom: 0;
     }
 
-    &__like {
-        float: right;
-
-        font-family: "fontello";
-        color: #ddd;
-        text-decoration: none;
-    }
-
-        &__like-symbol {
-            @include hide-text;
-            display: inline-block;
-            height: 2em;
-
-            color: palette(primary, lighter);
-
-            &:before {
-                content: "";
-            }
-
-            .result:hover &:before {
-                content: "\e801";
-            }
-
-            &:hover:before,
-            .result__like--has &:before {
-                content: "\e800" !important;
-            }
-
-            .result__like--has &:before {
-                color: palette(primary);
-            }
+    &:hover {
+        .like__symbol:before {
+            content: "\e801";
         }
+    }
 
     &__title-link {
         text-decoration: none;
