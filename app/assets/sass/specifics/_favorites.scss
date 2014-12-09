@@ -1,0 +1,38 @@
+.favorites {
+    &__header {
+        @include clearfix;
+    }
+
+        &__title {
+            float: left;
+        }
+
+        &__reset {
+            float: right;
+
+            font-size: smaller;
+        }
+
+    &__init-msg {
+        font-size: smaller;
+    }
+
+    &__areas {
+        margin-top: 20px;
+    }
+
+        &__area-data {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+            &__area {
+                width: 50%;
+
+                vertical-align: top;
+            }
+
+            &__address {
+
+            }
+}

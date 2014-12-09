@@ -30,17 +30,31 @@
         <hr>
 
         <div class="search__results-block">
-            <span class="search__results"><strong ng-show="results.count > 0">{{results.count}}</strong><span ng-show="results.count === 0">No</span> results found</span>
+            <span class="search__results"><strong ng-show="results.count > 0">{{results.count}}</strong><span ng-show="results.count === 0">No</span> homes found</span>
             <a href="" ng-click="resetSearch()" class="search__reset">Reset search</a>
         </div>
 
-        <hr ng-show="$storage.local.likes.length">
+        <hr>
 
-        <section class="favorites" ng-show="$storage.local.likes.length">
-            <h3>My favourites</h3>
-            <section class="favorites__area" ng-repeat="(area, areaData) in sortedLikes">
-                <h4>{{area}}</h4>
-                <a href="#/homes/{{homeData.homeId}}" ng-repeat="homeData in areaData">{{homeData.address}}<br></a>
+        <section class="favorites">
+            <div class="favorites__header">
+                <h3 class="favorites__title">My favorites</h3>
+                <a href class="favorites__reset" ng-click="resetLikes()" ng-show="$storage.local.likes.length">Clear favorites</a>
+            </div>
+
+            <p class="favorites__init-msg" ng-hide="$storage.local.likes.length">Click the heart on your favorite homes to save them here.</p>
+
+            <section class="favorites__areas">
+                <table class="favorites__area-data" ng-repeat="(area, areaData) in sortedLikes">
+                    <tr ng-repeat="homeData in areaData">
+                        <td class="favorites__area" rowspan="{{areaData.length}}" ng-if="$index === 0">
+                            <h4>{{area}}</h4>
+                        </td>
+                        <td class="favorites__address">
+                            <a href="#/homes/{{homeData.homeId}}">{{homeData.address}}</a>
+                        </td>
+                    </tr>
+                </table>
             </section>
         </section>
     </form>

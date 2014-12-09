@@ -35,4 +35,8 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Likes', 
     $scope.reverseOrder = function() {
         $scope.$storage.params.reverseOrder = !$scope.$storage.params.reverseOrder;
     };
+
+    $scope.resetLikes = function() {
+        $scope.$storage.local.likes = [];
+    }
 }]);
