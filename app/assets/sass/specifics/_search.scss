@@ -59,6 +59,18 @@
         color: #000;
         text-decoration: none;
     }
+
+    &__results-block {
+        @include clearfix;
+    }
+
+        &__results {
+            float: left;
+        }
+
+        &__reset {
+            float: right;
+        }
 }
 
 [class^="search__select"],
