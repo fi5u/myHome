@@ -57,7 +57,7 @@ myHomeApp.service('Likes', function() {
 
             if (!_.has(sorted, thisArea)) {
                 // Add all homes that match thisArea
-                sorted[thisArea] = _.where(this.likes, {area: thisArea});
+                sorted[thisArea] = _.where(_.sortBy(this.likes, 'address'), {area: thisArea}, 'address');
             }
         }
         return sorted;
