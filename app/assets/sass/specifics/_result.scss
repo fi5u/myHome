@@ -17,7 +17,7 @@
 
     &:hover {
         .like__symbol:before {
-            content: "\e801";
+            @include symbol-like(false);;
         }
     }
 

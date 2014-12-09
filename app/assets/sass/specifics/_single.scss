@@ -4,6 +4,24 @@
         @include clearfix;
 
         margin-bottom: 50px;
+
+        .like__symbol {
+            &:before {
+                @include symbol-like(false);
+
+                color: #ddd;
+            }
+
+            &:hover {
+                &:before {
+                    color: palette(primary);
+                }
+            }
+
+            @at-root .like--has .like__symbol:before  {
+                color: palette(primary);
+            }
+        }
     }
 
         &__title {

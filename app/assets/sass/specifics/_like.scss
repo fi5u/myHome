@@ -1,3 +1,23 @@
+$like-symbol: "\e800";
+$no-like-symbol: "\e801";
+
+@mixin symbol-like($like, $important: false) {
+    $symbol: "";
+    $importantStr: "";
+
+    @if $like == true {
+        $symbol: $like-symbol;
+    } @else {
+        $symbol: $no-like-symbol;
+    }
+
+    @if $important == true {
+        content: $symbol !important;
+    } @else {
+        content: $symbol;
+    }
+}
+
 .like {
     float: right;
 
@@ -15,13 +35,9 @@
             content: "";
         }
 
-        /* .result:hover &:before {
-            content: "\e801";
-        } */
-
         &:hover:before,
         .like--has &:before {
-            content: "\e800" !important;
+            @include symbol-like(true, true);
         }
 
         .like--has &:before {
