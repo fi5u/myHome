@@ -30,7 +30,7 @@
         <hr>
 
         <div class="search__results-block">
-            <span class="search__results"><strong ng-show="results.count > 0">{{results.count}}</strong><span ng-show="results.count === 0">No</span> homes found</span>
+            <span class="search__results" ng-pluralize count="results.count" when="{'0': 'No homes found', '1': '1 home found', 'other': '{} homes found'}"></span>
             <a href="" ng-click="resetSearch()" class="search__reset">Reset search</a>
         </div>
 
