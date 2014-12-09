@@ -240,4 +240,55 @@
         "latitude": 60.392975,
         "longitude": 25.664579
     }
+}, {
+    "homeId": "a0006",
+    "address": "Hevonenkatu 205",
+    "area": "Porvoo",
+    "rentalCost": 2200.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolor quam esse, velit, sit non consectetur! Illo, possimus deleniti aliquam deserunt explicabo suscipit voluptatibus, repudiandae animi cum accusantium maiores facere.",
+    "images": [
+        {
+            "full": "http://placehold.it/1200x900&text=Hevonenkatu_1+full",
+            "medium": "http://placehold.it/600x450&text=Hevonenkatu_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Hevonenkatu_1+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Hevonenkatu_2+full",
+            "medium": "http://placehold.it/600x450&text=Hevonenkatu_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Hevonenkatu_2+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Hevonenkatu_3+full",
+            "medium": "http://placehold.it/600x450&text=Hevonenkatu_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Hevonenkatu_3+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Hevonenkatu_4+full",
+            "medium": "http://placehold.it/600x450&text=Hevonenkatu_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Hevonenkatu_4+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Hevonenkatu_5+full",
+            "medium": "http://placehold.it/600x450&text=Hevonenkatu_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Hevonenkatu_5+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Hevonenkatu_6+full",
+            "medium": "http://placehold.it/600x450&text=Hevonenkatu_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Hevonenkatu_6+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Hevonenkatu_7+full",
+            "medium": "http://placehold.it/600x450&text=Hevonenkatu_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Hevonenkatu_7+thumb"
+        }
+    ],
+    "available": true,
+    "extras": [
+        {
+            "sauna": true,
+            "pets": true,
+            "balcony": false,
+            "garden": true
+        }
+    ],
+    "dateAdded": 1417516786200,
+    "location": {
+        "latitude": 60.399800,
+        "longitude": 25.666236
+    }
 }]

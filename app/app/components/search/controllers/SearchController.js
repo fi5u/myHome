@@ -1,21 +1,4 @@
 myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Likes', function($scope, $sessionStorage, Likes) {
-    $scope.paramsInit = {
-        isAvailable: true,
-        orderby: 'dateAdded',
-        reverseOrder: true,
-        hasBalcony: '',
-        hasGarden: '',
-        allowsPets: '',
-        hasSauna: '',
-        priceRange: {
-            min: 0,
-            max: 2000,
-            ceil: 2000,
-            floor: 0,
-            step: 50
-        }
-    };
-
     $scope.$storage = $sessionStorage.$default({
         paramsInit: {
             isAvailable: true,

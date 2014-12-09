@@ -40,4 +40,5 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
         Likes.toggle(homeId, area, address);
         $scope.$storage.local.likes = Likes.get();
     };
+
 }]);

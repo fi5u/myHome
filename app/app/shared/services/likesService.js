@@ -1,12 +1,16 @@
 myHomeApp.service('Likes', function() {
     this.likes = [];
 
-    this.get = function() {
+    this.get = function(sorted) {
+        if (sorted) {
+            return this.sort();
+        }
         return this.likes;
     };
 
     this.set = function(likes) {
         this.likes = likes;
+        this.sort();
     };
 
     this.check = function(homeId) {
@@ -40,5 +44,22 @@ myHomeApp.service('Likes', function() {
         } else {
             this.add(homeId, area, address);
         }
+        this.sort();
+    };
+
+    this.sort = function() {
+        var thisArea;
+        var thisAreaHomes;
+        var sorted = {};
+        // Loop through areas
+        for (var i = 0; i < this.likes.length; i++) {
+            thisArea = this.likes[i].area;
+
+            if (!_.has(sorted, thisArea)) {
+                // Add all homes that match thisArea
+                sorted[thisArea] = _.where(this.likes, {area: thisArea});
+            }
+        }
+        return sorted;
     };
 });

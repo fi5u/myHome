@@ -17,9 +17,11 @@ myHomeApp.controller('MyHomeController', ['$scope', '$sessionStorage', '$localSt
 */
     // Set the likes
     Likes.set($scope.$storage.local.likes);
+    $scope.sortedLikes = Likes.get(true);
     $scope.$watch('$storage.local.likes', function (newParams) {
         if (newParams) {
             Likes.set($scope.$storage.local.likes);
+            $scope.sortedLikes = Likes.get(true);
         }
     }, true);
 }]);

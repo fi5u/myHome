@@ -39,7 +39,10 @@
 
         <section class="favorites" ng-show="$storage.local.likes.length">
             <h3>My favourites</h3>
-            <a href="#/homes/{{like}}" ng-repeat="like in $storage.local.likes">I like {{like.address}}<br></a>
+            <section class="favorites__area" ng-repeat="(area, areaData) in sortedLikes">
+                <h4>{{area}}</h4>
+                <a href="#/homes/{{homeData.homeId}}" ng-repeat="homeData in areaData">{{homeData.address}}<br></a>
+            </section>
         </section>
     </form>
     <div class="results" ng-controller="SearchResultsController as resCtrl">
