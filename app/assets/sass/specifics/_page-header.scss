@@ -1,0 +1,10 @@
+.page-header {
+    padding: 10px 30px;
+
+    border-bottom: 1px solid palette(primary);
+
+    &__title {
+        font-size: larger;
+        font-weight: bold;
+    }
+}
