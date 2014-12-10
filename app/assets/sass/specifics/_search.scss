@@ -86,7 +86,7 @@
             top: 0;
             right: 0;
             z-index: 1;
-            padding: 20px;
+            min-width: 180px;
 
             background: #fff;
             box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
@@ -102,13 +102,18 @@
 
                 &:after {
                     position: absolute;
-                    top: 10px;
-                    right: 10px;
+                    top: 5px;
+                    right: 5px;
                 }
             }
 
             &__area {
+                display: block;
+                padding: 0 10px;
 
+                &:hover {
+                    background: palette(gray, lightest);
+                }
             }
 
         &__area-results {
@@ -120,11 +125,34 @@
             }
 
             &__result-area {
+                @include clearfix;
 
+                display: block;
+                position: relative;
+
+                &:hover {
+                    background-color: #eee;
+                }
             }
 
             &__result-area-remove {
+                @include icon("\e804");
 
+                display: none;
+                float: right;
+                width: 0;
+                height: 1em;
+                overflow: hidden;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                .search__result-area:hover & {
+                    display: inline-block;
+                }
             }
 
     &__orderby-toggle {

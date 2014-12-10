@@ -9,7 +9,13 @@ $palettes: (
         // darkest:
     ),
     gray: (
-        base: #999
+        lightest: #eee,
+        lighter: #ccc,
+        light: #aaa,
+        base: #777,
+        dark: #555,
+        darker: #333,
+        darkest: #111
     ),
     white: (
         base: #fff
