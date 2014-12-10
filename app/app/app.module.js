@@ -6,6 +6,7 @@ myHomeApp.controller('MyHomeController', ['$scope', '$sessionStorage', '$localSt
         searchReset: false
     });
 //$localStorage.$reset();
+//$sessionStorage.$reset();
     $scope.$storage.local = $localStorage.$default({
         likes: []
     });

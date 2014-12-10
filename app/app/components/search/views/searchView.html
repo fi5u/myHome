@@ -17,6 +17,23 @@
 
         <hr>
 
+        <section class="search__areas">
+            <div class="search__areas-header">
+                <h3 class="search__areas-title">Areas</h3>
+                <a href class="search__add-area" ng-click="choose = !choose">Add area</a>
+            </div>
+            <div class="search__area-choose" ng-show="choose && toSelectAreas.length">
+                <a href ng-click="choose = !choose">close</a>
+                <span class="search__area" ng-repeat="area in toSelectAreas"><a href ng-click="addArea(area)">{{area}}</a><br></span>
+            </div>
+            <div class="search__area-results">
+                <p class="search__result-init-msg" ng-hide="selectedAreas.length">Currently searching all areas, narrow your search down by adding areas.</p>
+                <span class="search__result-area" ng-repeat="area in selectedAreas">{{area}}</a> <a href class="search__result-area-remove" ng-click="removeArea(area)">remove</a><br></span>
+            </div>
+        </section>
+
+        <hr>
+
         <div class="search__input-block">
             <label for="orderby">Order by:</label><a href class="search__orderby-toggle" ng-click="reverseOrder()"><span ng-hide="$storage.params.reverseOrder">⬆︎</span><span ng-show="$storage.params.reverseOrder">⬇︎</span></a>
             <select id="orderby" ng-model="$storage.params.orderby" class="search__select--orderby">

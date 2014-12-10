@@ -53,6 +53,52 @@
         }
     }
 
+    &__areas {
+        position: relative;
+    }
+
+        &__areas-header {
+            @include clearfix;
+        }
+
+            &__areas-title {
+                float: left;
+            }
+
+            &__add-area {
+                float: right;
+            }
+
+        &__area-choose {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+
+            background: #fff;
+            box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+        }
+
+            &__area {
+
+            }
+
+        &__area-results {
+
+        }
+
+            &__result-init-msg {
+                font-size: smaller;
+            }
+
+            &__result-area {
+
+            }
+
+            &__result-area-remove {
+
+            }
+
     &__orderby-toggle {
         float: right;
 

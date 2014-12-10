@@ -1,9 +1,12 @@
-myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilter', 'Likes', function($scope, $http, resultsFilter, Likes) {
+myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilter', 'Homes', 'Likes', function($scope, $http, resultsFilter, Homes, Likes) {
     var search = this;
     search.homes = [];
 
     $http.get('app/shared/data/homes.json').success(function(data) {
+        Homes.set(data);
+        Homes.getUnique('area');
         search.homes = data;
+        $scope.results.homes = data;
         search.filteredHomes = resultsFilter(search.homes, $scope.$storage.params);
         if ($scope.$storage.searchReset === false) {
             $scope.setMaxPrice();
