@@ -23,7 +23,7 @@
                 <a href class="search__add-area" ng-click="choose = !choose">Add area</a>
             </div>
             <div class="search__area-choose" ng-show="choose && toSelectAreas.length">
-                <a href ng-click="choose = !choose">close</a>
+                <a href class="search__area-choose-close" ng-click="choose = !choose">close</a>
                 <span class="search__area" ng-repeat="area in toSelectAreas"><a href ng-click="addArea(area)">{{area}}</a><br></span>
             </div>
             <div class="search__area-results">
