@@ -1,0 +1,86 @@
+<div class="main-wrap--search" ng-controller="SearchController as searchCtrl">
+    <form class="search" name="seachForm" novalidate>
+
+        <search-input-block type="is" type-pos="before" property="available" ng-model="$storage.params.isAvailable"></search-input-block>
+
+        <hr>
+
+        <label>Price range:</label>
+        <rzslider class="search__price-range" rz-slider-floor="$storage.params.priceRange.floor" rz-slider-ceil="$storage.params.priceRange.ceil" rz-slider-model="$storage.params.priceRange.min" rz-slider-high="$storage.params.priceRange.max" rz-slider-step="{{$storage.params.priceRange.step}}"></rzslider>
+
+        <hr>
+
+        <search-input-block type="has" type-pos="before" property="balcony" ng-model="$storage.params.hasBalcony"></search-input-block>
+        <search-input-block type="has" type-pos="before" property="garden" ng-model="$storage.params.hasGarden"></search-input-block>
+        <search-input-block type="allowed" type-pos="after" property="pets" ng-model="$storage.params.allowsPets"></search-input-block>
+        <search-input-block type="has" type-pos="before" property="sauna" ng-model="$storage.params.hasSauna"></search-input-block>
+
+        <hr>
+
+        <section class="search__areas">
+            <div class="search__areas-header">
+                <h3 class="search__areas-title">Areas</h3>
+                <a href class="search__add-area" ng-show="toSelectAreas.length" ng-click="choose = !choose">Add area</a>
+                <a href ng-hide="toSelectAreas.length" ng-click="resetSelectedAreas()">Clear all selected areas</a>
+            </div>
+
+            <div class="search__area-choose" ng-show="choose && toSelectAreas.length">
+                <a href class="search__area-choose-close" ng-click="choose = !choose">close</a>
+                <span class="search__area" ng-repeat="area in toSelectAreas"><a href ng-click="addArea(area)">{{area}}</a><br></span>
+            </div>
+            <div class="search__area-results">
+                <p class="search__result-init-msg" ng-hide="selectedAreas.length">Currently searching all areas, narrow your search down by adding areas.</p>
+                <span class="search__result-area" ng-repeat="area in selectedAreas">{{area}}</a> <a href class="search__result-area-remove" ng-click="removeArea(area)">remove</a><br></span>
+            </div>
+        </section>
+
+        <hr>
+
+        <div class="search__input-block">
+            <label for="orderby">Order by:</label>
+            <a href class="search__orderby-toggle" ng-class="{ 'search__orderby-toggle--reversed':isReversed() }" ng-click="reverseOrder()"></a>
+            <select id="orderby" ng-model="$storage.params.orderby" class="search__select--orderby">
+                <option value="">Select order</option>
+                <option value="rentalCost">Price</option>
+                <option value="dateAdded">Date added</option>
+                <option value="address">Alphabetical</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <div class="search__results-block">
+            <span class="search__results" ng-pluralize count="results.count" when="{'0': 'No homes found', '1': '1 home found', 'other': '{} homes found'}"></span>
+            <a href="" ng-click="resetSearch()" class="search__reset">Reset search</a>
+        </div>
+
+        <hr>
+
+        <section class="favorites">
+            <div class="favorites__header">
+                <h3 class="favorites__title">My favorites</h3>
+                <a href class="favorites__reset" ng-click="resetLikes()" ng-show="$storage.local.likes.length">Clear favorites</a>
+            </div>
+
+            <p class="favorites__init-msg" ng-hide="$storage.local.likes.length">Click the heart on your favorite homes to save them here.</p>
+
+            <section class="favorites__areas">
+                <table class="favorites__area-data" ng-repeat="(area, areaData) in sortedLikes">
+                    <tr ng-repeat="homeData in areaData">
+                        <td class="favorites__area" rowspan="{{areaData.length}}" ng-if="$index === 0">
+                            <h4>{{area}}</h4>
+                        </td>
+                        <td class="favorites__address">
+                            <a href="#/homes/{{homeData.homeId}}">{{homeData.address}}</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </form>
+    <div class="results" ng-controller="SearchResultsController as resCtrl">
+        <single-result></single-result>
+        <p ng-show="results.count === 0">No homes match your search requirements,<br>
+        try <a href ng-click="resetSearch()">broadening your search</a>.</p>
+    </div>
+</div>
