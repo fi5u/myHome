@@ -35,7 +35,8 @@
         <hr>
 
         <div class="search__input-block">
-            <label for="orderby">Order by:</label><a href class="search__orderby-toggle" ng-click="reverseOrder()"><span ng-hide="$storage.params.reverseOrder">⬆︎</span><span ng-show="$storage.params.reverseOrder">⬇︎</span></a>
+            <label for="orderby">Order by:</label>
+            <a href class="search__orderby-toggle" ng-class="{ 'search__orderby-toggle--reversed':isReversed() }" ng-click="reverseOrder()"></a>
             <select id="orderby" ng-model="$storage.params.orderby" class="search__select--orderby">
                 <option value="">Select order</option>
                 <option value="rentalCost">Price</option>

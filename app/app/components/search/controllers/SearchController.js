@@ -66,6 +66,10 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         $scope.$storage.params.reverseOrder = !$scope.$storage.params.reverseOrder;
     };
 
+    $scope.isReversed = function() {
+        return $scope.$storage.params.reverseOrder;
+    };
+
     // Search reset
     $scope.resetSearch = function() {
         $scope.$storage.params = angular.copy($scope.$storage.paramsInit);

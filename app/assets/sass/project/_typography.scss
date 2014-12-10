@@ -1,3 +1,23 @@
+@mixin icon($code) {
+    &:before {
+        display: inline-block;
+        width: 1em;
+        margin-right: .2em;
+        margin-left: .2em;
+
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-decoration: inherit;
+        text-align: center;
+        text-transform: none;
+        line-height: 1em;
+        speak: none;
+        content: $code;
+    }
+}
+
 h1,
 h2,
 h3,

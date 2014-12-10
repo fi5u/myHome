@@ -100,11 +100,27 @@
             }
 
     &__orderby-toggle {
+        @include icon("\e805");
+        @include transform(rotate(180deg));
+
         float: right;
 
         color: #000;
         text-decoration: none;
+
+        &--reversed {
+            @include transform(rotate(0deg));
+        }
     }
+
+        /* [class^="search__orderby-symbol--"] {
+            @include icon("\e805");
+            @include transform(rotate(0deg));
+        }
+
+        &__orderby-symbol--up {
+            @include transform(rotate(180deg));
+        } */
 
     &__results-block {
         @include clearfix;
