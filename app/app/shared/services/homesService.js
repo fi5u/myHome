@@ -2,8 +2,7 @@ myHomeApp.service('Homes', ['$sessionStorage', function($sessionStorage) {
     this.homes = [];
     $storage = $sessionStorage.$default({
         homes: {
-            toSelect: [],
-            selected: []
+            toSelect: []
         }
     });
 
@@ -13,6 +12,8 @@ myHomeApp.service('Homes', ['$sessionStorage', function($sessionStorage) {
 
     this.set = function(homes) {
         this.homes = homes;
+        var areas = this.getUnique('area');
+        $sessionStorage.homes.toSelect = areas;
     };
 
     this.getUnique = function(key) {

@@ -95,5 +95,10 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
      * CONTROLLER FUNCTION CALLS
      */
 
-    $scope.setSelected();
+    $scope.$watch('$storage.homes.toSelect', function (newVal, oldVal, scope) {
+        if (newVal) {
+            $scope.setSelected();
+        }
+    }, true);
+
 }]);
