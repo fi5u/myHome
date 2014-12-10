@@ -6,7 +6,7 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
         search.homes = data;
         $scope.results.homes = data;
         search.filteredHomes = resultsFilter(search.homes, $scope.$storage.params);
-        if ($scope.$storage.searchReset === false) {
+        if (!('searchReset' in $scope.$storage) || $scope.$storage.searchReset === false) {
             Homes.set(data);
             Homes.getUnique('area');
             $scope.setMaxPrice();
