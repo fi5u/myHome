@@ -61,6 +61,11 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         $scope.setSelected();
     };
 
+    $scope.resetSelectedAreas = function() {
+        Homes.resetSelected();
+        $scope.setSelected();
+    };
+
     // Order
     $scope.reverseOrder = function() {
         $scope.$storage.params.reverseOrder = !$scope.$storage.params.reverseOrder;

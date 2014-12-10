@@ -51,7 +51,6 @@ myHomeApp.service('Homes', ['$sessionStorage', function($sessionStorage) {
         return $sessionStorage.params.areas;
     };
 
-
     this.resetSelected = function() {
         $sessionStorage.params.areas = [];
         $sessionStorage.homes.toSelect = this.getUnique('area');

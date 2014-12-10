@@ -20,8 +20,10 @@
         <section class="search__areas">
             <div class="search__areas-header">
                 <h3 class="search__areas-title">Areas</h3>
-                <a href class="search__add-area" ng-click="choose = !choose">Add area</a>
+                <a href class="search__add-area" ng-show="toSelectAreas.length" ng-click="choose = !choose">Add area</a>
+                <a href ng-hide="toSelectAreas.length" ng-click="resetSelectedAreas()">Clear all selected areas</a>
             </div>
+
             <div class="search__area-choose" ng-show="choose && toSelectAreas.length">
                 <a href class="search__area-choose-close" ng-click="choose = !choose">close</a>
                 <span class="search__area" ng-repeat="area in toSelectAreas"><a href ng-click="addArea(area)">{{area}}</a><br></span>
