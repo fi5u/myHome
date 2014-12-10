@@ -79,7 +79,6 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     $scope.resetSearch = function() {
         $scope.$storage.params = angular.copy($scope.$storage.paramsInit);
         $scope.$storage.searchReset = false;
-        //$scope.$storage.sortedAreas = Homes.getUnique('area');
         Homes.resetSelected();
         $scope.setSelected();
         $scope.choose = false;
@@ -100,5 +99,4 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
             $scope.setSelected();
         }
     }, true);
-
 }]);

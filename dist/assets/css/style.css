@@ -734,6 +734,9 @@ img {
       position: absolute;
       top: 0;
       right: 0; }
+  .search__reset-areas {
+    float: right;
+    font-size: smaller; }
   .search__area-choose {
     position: absolute;
     top: 0;

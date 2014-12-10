@@ -3,12 +3,12 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
     search.homes = [];
 
     $http.get('app/shared/data/homes.json').success(function(data) {
-        Homes.set(data);
-        Homes.getUnique('area');
         search.homes = data;
         $scope.results.homes = data;
         search.filteredHomes = resultsFilter(search.homes, $scope.$storage.params);
         if ($scope.$storage.searchReset === false) {
+            Homes.set(data);
+            Homes.getUnique('area');
             $scope.setMaxPrice();
         }
         $scope.results.count = search.filteredHomes.length;

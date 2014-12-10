@@ -14,6 +14,7 @@ myHomeApp.service('Homes', ['$sessionStorage', function($sessionStorage) {
         this.homes = homes;
         var areas = this.getUnique('area');
         $sessionStorage.homes.toSelect = areas;
+        $sessionStorage.params.areas = [];
     };
 
     this.getUnique = function(key) {

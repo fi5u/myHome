@@ -21,7 +21,7 @@
             <div class="search__areas-header">
                 <h3 class="search__areas-title">Areas</h3>
                 <a href class="search__add-area" ng-show="toSelectAreas.length" ng-click="choose = !choose">Add area</a>
-                <a href ng-hide="toSelectAreas.length" ng-click="resetSelectedAreas()">Clear all selected areas</a>
+                <a href class="search__reset-areas" ng-hide="toSelectAreas.length" ng-click="resetSelectedAreas()">Clear all selected areas</a>
             </div>
 
             <div class="search__area-choose" ng-show="choose && toSelectAreas.length">

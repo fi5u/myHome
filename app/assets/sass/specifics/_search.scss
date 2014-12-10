@@ -81,6 +81,12 @@
                 }
             }
 
+            &__reset-areas {
+                float: right;
+
+                font-size: smaller;
+            }
+
         &__area-choose {
             position: absolute;
             top: 0;
