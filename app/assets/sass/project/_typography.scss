@@ -1,5 +1,8 @@
 @mixin icon($code) {
-    &:before {
+    color: inherit;
+    text-decoration: none;
+
+    &:after {
         display: inline-block;
         width: 1em;
         margin-right: .2em;
@@ -15,6 +18,10 @@
         line-height: 1em;
         speak: none;
         content: $code;
+    }
+
+    &:hover {
+        color: palette(primary);
     }
 }
 
