@@ -14,7 +14,7 @@
         }
 
     &__init-msg {
-        font-size: smaller;
+        @extend %subline;
     }
 
     &__areas {

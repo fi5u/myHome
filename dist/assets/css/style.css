@@ -605,6 +605,10 @@ body {
 body ::selection, body ::-moz-selection {
   color: #fff;
   background: #e44e69; }
+.search__types-init-msg, .search__result-init-msg, .favorites__init-msg {
+  font-size: smaller;
+  line-height: 1.1; }
+
 h1,
 h2,
 h3,
@@ -651,7 +655,8 @@ img {
   .like__symbol {
     overflow: hidden;
     display: inline-block;
-    height: 2em;
+    width: 1em;
+    height: 1.2em;
     padding-right: 1px;
     color: #e44e69; }
     .like__symbol:before {
@@ -665,6 +670,16 @@ img {
       content: "" !important; }
     .like--has .like__symbol:before {
       color: #d24; }
+
+.search__types-reset, .search__reset-areas, .search__area-link, .search__reset {
+  font-size: smaller;
+  text-decoration: none;
+  color: #d24; }
+  .search__types-reset:hover, .search__reset-areas:hover, .search__area-link:hover, .search__reset:hover {
+    text-decoration: underline; }
+
+.search__input-label {
+  font-size: smaller; }
 
 .search {
   width: 23.07692%;
@@ -683,14 +698,11 @@ img {
   .search__types-title {
     float: left; }
   .search__types-reset {
-    float: right;
-    font-size: smaller; }
+    float: right; }
   .search__types-inputs {
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2; }
-  .search__types-init-msg {
-    font-size: smaller; }
   .search__price-range-slider {
     font-size: smaller; }
     .search__price-range-slider span.bar {
@@ -753,8 +765,7 @@ img {
       top: 0;
       right: 0; }
   .search__reset-areas {
-    float: right;
-    font-size: smaller; }
+    float: right; }
   .search__area-choose {
     position: absolute;
     top: 0;
@@ -763,6 +774,8 @@ img {
     min-width: 180px;
     background: #fff;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); }
+  .search__area-choose-title {
+    padding: 3px 10px; }
   .search__area-choose-close {
     color: inherit;
     text-decoration: none;
@@ -796,11 +809,10 @@ img {
     padding: 0 10px; }
     .search__area:hover {
       background: #eee; }
-  .search__result-init-msg {
-    font-size: smaller; }
   .search__result-area {
     display: block;
-    position: relative; }
+    position: relative;
+    padding-left: 2px; }
     .search__result-area:after {
       content: "";
       display: table;
@@ -879,8 +891,7 @@ img {
   .search__results {
     float: left; }
   .search__reset {
-    float: right;
-    font-size: smaller; }
+    float: right; }
 
 [class^="search__select"],
 [class^="search__check"] {
@@ -897,7 +908,7 @@ img {
   display: inline-block;
   width: 23.07692%;
   margin: 0 2.5641% 2.5641% 0;
-  padding: 20px;
+  padding: 10px;
   color: #eee;
   background-color: rgba(0, 0, 0, 0.8); }
   .result:nth-child(4n) {
@@ -1008,8 +1019,6 @@ img {
   float: left; }
 .favorites__reset {
   float: right;
-  font-size: smaller; }
-.favorites__init-msg {
   font-size: smaller; }
 .favorites__areas {
   margin-top: 20px; }
