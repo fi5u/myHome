@@ -5,6 +5,28 @@
         @include clearfix;
     }
 
+    &__types {
+
+    }
+
+        &__types-header {
+            @include clearfix;
+        }
+
+            &__types-title {
+                float: left;
+            }
+
+            &__types-reset {
+                float: right;
+
+                font-size: smaller;
+            }
+
+        &__types-inputs {
+            @include columns(2);
+        }
+
     &__price-range {
         font-size: smaller;
 

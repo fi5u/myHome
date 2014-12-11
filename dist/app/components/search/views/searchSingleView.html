@@ -4,6 +4,7 @@
         <a href="#/homes/{{home.homeId}}" class="result__title-link">{{home.address}}</a>
     </h3>
     <div class="result__area">{{home.area}}</div>
+    <div class="result__type">{{home.type | upperFirst}}</div>
     <div class="result__cost">{{home.rentalCost | currency : "€"}}</div>
     <div class="result__date-added">Added:<br>
     {{home.dateAdded | date:'mediumDate'}} {{home.dateAdded | date:'mediumTime'}}</div>

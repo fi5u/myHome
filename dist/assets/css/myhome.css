@@ -674,6 +674,19 @@ img {
     content: "";
     display: table;
     clear: both; }
+  .search__types-header:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .search__types-title {
+    float: left; }
+  .search__types-reset {
+    float: right;
+    font-size: smaller; }
+  .search__types-inputs {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2; }
   .search__price-range {
     font-size: smaller; }
     .search__price-range span.bar {

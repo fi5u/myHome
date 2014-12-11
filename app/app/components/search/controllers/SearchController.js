@@ -8,6 +8,7 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         paramsInit: {
             areas: [],
             isAvailable: true,
+            types: [],
             orderby: 'dateAdded',
             reverseOrder: true,
             hasBalcony: '',
