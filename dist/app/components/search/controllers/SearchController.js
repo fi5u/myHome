@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 'Likes', function($scope, $sessionStorage, Homes, Likes) {
-=======
 myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', function($scope, $sessionStorage, Homes) {
->>>>>>> gh-pages
 
     /**
      * CONTROLLER VARIABLE DEFINITIONS
@@ -83,10 +79,6 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     $scope.resetSearch = function() {
         $scope.$storage.params = angular.copy($scope.$storage.paramsInit);
         $scope.$storage.searchReset = false;
-<<<<<<< HEAD
-        //$scope.$storage.sortedAreas = Homes.getUnique('area');
-=======
->>>>>>> gh-pages
         Homes.resetSelected();
         $scope.setSelected();
         $scope.choose = false;
@@ -97,25 +89,18 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         $scope.$storage.local.likes = [];
     };
 
-<<<<<<< HEAD
-=======
     // Price slider
     $scope.translate = function(value) {
         return value + ' €';
     }
->>>>>>> gh-pages
 
     /**
      * CONTROLLER FUNCTION CALLS
      */
 
-<<<<<<< HEAD
-    $scope.setSelected();
-=======
     $scope.$watch('$storage.homes.toSelect', function (newVal, oldVal, scope) {
         if (newVal) {
             $scope.setSelected();
         }
     }, true);
->>>>>>> gh-pages
 }]);

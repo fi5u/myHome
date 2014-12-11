@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-myHomeApp.service('Homes', ['$sessionStorage', function($sessionStorage) {
-    this.homes = [];
-    $storage = $sessionStorage.$default({
-        homes: {
-            toSelect: [],
-            selected: []
-        }
-    });
-
-=======
 myHomeApp.service('Homes', ['$http', '$sessionStorage', function($http, $sessionStorage) {
 
     var self = this;
@@ -25,22 +14,16 @@ myHomeApp.service('Homes', ['$http', '$sessionStorage', function($http, $session
         });
     };
 
->>>>>>> gh-pages
     this.get = function() {
         return this.homes;
     };
 
-<<<<<<< HEAD
-    this.set = function(homes) {
-        this.homes = homes;
-=======
     this.set = function(homes, cb) {
         this.homes = homes;
         var areas = this.getUnique('area');
         $sessionStorage.homes.toSelect = areas;
         $sessionStorage.params.areas = [];
         cb();
->>>>>>> gh-pages
     };
 
     this.getUnique = function(key) {

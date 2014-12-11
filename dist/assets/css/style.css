@@ -637,6 +637,13 @@ img {
  *
  * @param       $sprite The list of sprite attributes
  */
+.page-header {
+  padding: 10px 30px;
+  border-bottom: 2px solid #d24; }
+  .page-header__title {
+    font-size: larger;
+    font-weight: bold; }
+
 .like {
   float: right;
   font-family: "fontello";
@@ -727,6 +734,9 @@ img {
       position: absolute;
       top: 0;
       right: 0; }
+  .search__reset-areas {
+    float: right;
+    font-size: smaller; }
   .search__area-choose {
     position: absolute;
     top: 0;
@@ -960,17 +970,12 @@ img {
     margin-right: 3.44828%;
     float: right;
     margin-right: 0;
-    -webkit-transition: all 2s;
-    -moz-transition: all 2s;
-    transition: all 2s;
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
+    overflow: auto;
     height: 100%; }
-    .gallery__thumbs:hover {
-      overflow: visible; }
   .gallery__thumb-scroller {
     position: absolute;
     top: 0;
