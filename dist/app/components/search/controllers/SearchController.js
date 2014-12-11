@@ -37,6 +37,7 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     // Homes
     $scope.results = {};
     $scope.results.count = 0;
+    $scope.filteredHomes = {};
 
     // Areas
     $scope.choose = false;
@@ -103,7 +104,7 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     // Price slider
     $scope.translate = function(value) {
         return value + ' €';
-    }
+    };
 
     /**
      * CONTROLLER FUNCTION CALLS
@@ -114,4 +115,8 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
             $scope.setSelected();
         }
     }, true);
+
+    $scope.$on('filteredHomes', function(event, data) {
+        $scope.filteredHomes = data;
+    });
 }]);

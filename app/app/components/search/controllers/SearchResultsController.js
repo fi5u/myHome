@@ -8,7 +8,6 @@ myHomeApp.controller('SearchResultsController', ['$scope', 'resultsFilter', 'Hom
     searchSelf.filteredHomes = [];
     $scope.results.count = 0;
 
-
     /**
      * CONTROLLER FUNCTIONS
      */
@@ -35,6 +34,9 @@ myHomeApp.controller('SearchResultsController', ['$scope', 'resultsFilter', 'Hom
     Homes.fetch(function() {
         searchSelf.filteredHomes = resultsFilter(Homes.homes, $scope.$storage.params);
         $scope.results.count = searchSelf.filteredHomes.length;
+
+        // Emit the filtered homes upward
+        $scope.$emit('filteredHomes', searchSelf.filteredHomes);
     });
 
     $scope.$watch('$storage.params', function (newParams) {
