@@ -12,16 +12,16 @@
             </div>
             <div class="search__types-inputs">
                 <div class="search__input-block">
-                    <input type="checkbox" name="search-types" id="search-types-studio" value="studio"> <label for="search-types-studio">Studio</label>
+                    <input type="checkbox" name="search-types" id="search-types-studio" ng-model="$storage.params.types.studio"> <label for="search-types-studio">Studio</label>
                 </div>
                 <div class="search__input-block">
-                    <input type="checkbox" name="search-types" id="search-types-apartment" value="apartment"> <label for="search-types-apartment">Apartment</label>
+                    <input type="checkbox" name="search-types" id="search-types-apartment" ng-model="$storage.params.types.apartment"> <label for="search-types-apartment">Apartment</label>
                 </div>
                 <div class="search__input-block">
-                    <input type="checkbox" name="search-types" id="search-types-rowhouse" value="rowhouse"> <label for="search-types-rowhouse">Row house</label>
+                    <input type="checkbox" name="search-types" id="search-types-rowhouse" ng-model="$storage.params.types.rowhouse"> <label for="search-types-rowhouse">Row house</label>
                 </div>
                 <div class="search__input-block">
-                    <input type="checkbox" name="search-types" id="search-types-house" value="house"> <label for="search-types-house">House</label>
+                    <input type="checkbox" name="search-types" id="search-types-house" ng-model="$storage.params.types.house"> <label for="search-types-house">House</label>
                 </div>
             </div>
         </section>
