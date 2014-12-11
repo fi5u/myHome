@@ -6,7 +6,11 @@
         <hr>
 
         <label>Price range:</label>
+<<<<<<< HEAD
         <rzslider class="search__price-range" rz-slider-floor="$storage.params.priceRange.floor" rz-slider-ceil="$storage.params.priceRange.ceil" rz-slider-model="$storage.params.priceRange.min" rz-slider-high="$storage.params.priceRange.max" rz-slider-step="{{$storage.params.priceRange.step}}"></rzslider>
+=======
+        <rzslider class="search__price-range" rz-slider-floor="$storage.params.priceRange.floor" rz-slider-ceil="$storage.params.priceRange.ceil" rz-slider-model="$storage.params.priceRange.min" rz-slider-high="$storage.params.priceRange.max" rz-slider-step="{{$storage.params.priceRange.step}}" rz-slider-translate="translate"></rzslider>
+>>>>>>> gh-pages
 
         <hr>
 
@@ -21,7 +25,11 @@
             <div class="search__areas-header">
                 <h3 class="search__areas-title">Areas</h3>
                 <a href class="search__add-area" ng-show="toSelectAreas.length" ng-click="choose = !choose">Add area</a>
+<<<<<<< HEAD
                 <a href ng-hide="toSelectAreas.length" ng-click="resetSelectedAreas()">Clear all selected areas</a>
+=======
+                <a href class="search__reset-areas" ng-hide="toSelectAreas.length" ng-click="resetSelectedAreas()">Clear all selected areas</a>
+>>>>>>> gh-pages
             </div>
 
             <div class="search__area-choose" ng-show="choose && toSelectAreas.length">

@@ -1,18 +1,29 @@
-myHomeApp.service('Homes', ['$sessionStorage', function($sessionStorage) {
+myHomeApp.service('Homes', ['$http', '$sessionStorage', function($http, $sessionStorage) {
+
+    var self = this;
     this.homes = [];
     $storage = $sessionStorage.$default({
         homes: {
-            toSelect: [],
-            selected: []
+            toSelect: []
         }
     });
+
+    this.fetch = function(cb) {
+        $http.get('app/shared/data/homes.json').success(function(data) {
+            self.set(data, cb);
+        });
+    };
 
     this.get = function() {
         return this.homes;
     };
 
-    this.set = function(homes) {
+    this.set = function(homes, cb) {
         this.homes = homes;
+        var areas = this.getUnique('area');
+        $sessionStorage.homes.toSelect = areas;
+        $sessionStorage.params.areas = [];
+        cb();
     };
 
     this.getUnique = function(key) {

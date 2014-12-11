@@ -16,18 +16,13 @@
     &__thumbs {
         @include span(3 of 9);
         @include last;
-        @include transition(all 2s);
 
         position: absolute;
         top: 0;
         right: 0;
         z-index: 1;
-        overflow: hidden;
+        overflow: auto;
         height: 100%;
-
-        &:hover {
-            overflow: visible;
-        }
     }
 
         &__thumb-scroller {
