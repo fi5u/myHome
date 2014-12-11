@@ -44,6 +44,11 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
      * CONTROLLER FUNCTIONS
      */
 
+    // Home types
+    $scope.resetHomeTypes = function() {
+        $scope.$storage.params.types = [];
+    };
+
     // Areas
     $scope.setSelected = function() {
         $scope.toSelectAreas = Homes.getToSelect();
