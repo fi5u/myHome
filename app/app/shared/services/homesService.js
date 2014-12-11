@@ -1,4 +1,5 @@
 myHomeApp.service('Homes', ['$http', '$sessionStorage', function($http, $sessionStorage) {
+
     var self = this;
     this.homes = [];
     $storage = $sessionStorage.$default({

@@ -89,6 +89,10 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         $scope.$storage.local.likes = [];
     };
 
+    // Price slider
+    $scope.translate = function(value) {
+        return value + ' €';
+    }
 
     /**
      * CONTROLLER FUNCTION CALLS
