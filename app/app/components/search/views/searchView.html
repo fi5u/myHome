@@ -12,16 +12,16 @@
             </div>
             <div class="search__types-inputs">
                 <div class="search__input-block">
-                    <input type="checkbox" name="search-types" id="search-types-studio" ng-model="$storage.params.types.studio"> <label for="search-types-studio">Studio</label> ({{liveCount.studio}})
+                    <input type="checkbox" name="search-types" id="search-types-studio" ng-model="$storage.params.types.studio"> <label for="search-types-studio" class="search__input-label" ng-class="{ 'search__input-label--null':liveCount.studio === 0 }">Studio ({{liveCount.studio}})</label>
                 </div>
                 <div class="search__input-block">
-                    <input type="checkbox" name="search-types" id="search-types-apartment" ng-model="$storage.params.types.apartment"> <label for="search-types-apartment">Apartment</label> ({{liveCount.apartment}})
+                    <input type="checkbox" name="search-types" id="search-types-apartment" ng-model="$storage.params.types.apartment"> <label for="search-types-apartment" class="search__input-label" ng-class="{ 'search__input-label--null':liveCount.apartment === 0 }">Apartment ({{liveCount.apartment}})</label>
                 </div>
                 <div class="search__input-block">
-                    <input type="checkbox" name="search-types" id="search-types-rowhouse" ng-model="$storage.params.types.rowhouse"> <label for="search-types-rowhouse">Row house</label> ({{liveCount.rowhouse}})
+                    <input type="checkbox" name="search-types" id="search-types-rowhouse" ng-model="$storage.params.types.rowhouse"> <label for="search-types-rowhouse" class="search__input-label" ng-class="{ 'search__input-label--null':liveCount.rowhouse === 0 }">Row house ({{liveCount.rowhouse}})</label>
                 </div>
                 <div class="search__input-block">
-                    <input type="checkbox" name="search-types" id="search-types-house" ng-model="$storage.params.types.house"> <label for="search-types-house">House</label> ({{liveCount.house}})
+                    <input type="checkbox" name="search-types" id="search-types-house" ng-model="$storage.params.types.house"> <label for="search-types-house" class="search__input-label" ng-class="{ 'search__input-label--null':liveCount.house === 0 }">House ({{liveCount.house}})</label>
                 </div>
             </div>
         </section>

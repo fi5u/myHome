@@ -674,6 +674,8 @@ img {
     content: "";
     display: table;
     clear: both; }
+  .search__input-label--null {
+    color: #aaa; }
   .search__types-header:after {
     content: "";
     display: table;

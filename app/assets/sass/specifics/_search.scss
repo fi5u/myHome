@@ -5,6 +5,12 @@
         @include clearfix;
     }
 
+        &__input-label {
+            &--null {
+                color: palette(gray, light);
+            }
+        }
+
     &__types {
 
     }
