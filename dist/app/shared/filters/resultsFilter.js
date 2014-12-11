@@ -32,6 +32,10 @@ myHomeApp.filter('results', function(removeSpaceFilter) {
         if (params.areas.length > 0) {
             // If at least one area is selected
             for (var i = 0; i < input.length; i++) {
+                // Don't do anything if already in toRemove[]
+                if (toRemove.indexOf(i) > -1) {
+                    continue;
+                }
                 if (!_.contains(params.areas, input[i].area)) {
                     toRemove.push(i);
                 }

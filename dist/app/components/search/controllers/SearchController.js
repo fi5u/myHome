@@ -1,8 +1,10 @@
-myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', function($scope, $sessionStorage, Homes) {
+myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 'removeSpaceFilter', function($scope, $sessionStorage, Homes, removeSpaceFilter) {
 
     /**
      * CONTROLLER VARIABLE DEFINITIONS
      */
+
+    var searchSelf = this;
 
     $scope.$storage = $sessionStorage.$default({
         paramsInit: {
@@ -39,6 +41,9 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     $scope.results.count = 0;
     $scope.filteredHomes = {};
 
+    // Types
+    $scope.liveCount = {};
+
     // Areas
     $scope.choose = false;
 
@@ -52,7 +57,16 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
 
     // Home types
     $scope.resetHomeTypes = function() {
-        $scope.$storage.params.types = [];
+        $scope.$storage.params.types = {
+            studio: false,
+            apartment: false,
+            rowhouse: false,
+            house: false
+        };
+    };
+
+    $scope.countFilteredHomeType = function(filteredHomes, type) {
+        return _.countBy(filteredHomes, type);
     };
 
     // Areas
@@ -106,6 +120,11 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         return value + ' €';
     };
 
+    this.populateTypeCount = function(data, type) {
+        var typeCount = $scope.countFilteredHomeType(data, {type: type});
+        $scope.liveCount[removeSpaceFilter(type)] = typeCount.true ? typeCount.true : 0;
+    };
+
     /**
      * CONTROLLER FUNCTION CALLS
      */
@@ -118,5 +137,9 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
 
     $scope.$on('filteredHomes', function(event, data) {
         $scope.filteredHomes = data;
+        searchSelf.populateTypeCount(data, 'studio');
+        searchSelf.populateTypeCount(data, 'apartment');
+        searchSelf.populateTypeCount(data, 'row house');
+        searchSelf.populateTypeCount(data, 'house');
     });
 }]);

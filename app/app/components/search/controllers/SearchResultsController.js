@@ -43,6 +43,9 @@ myHomeApp.controller('SearchResultsController', ['$scope', 'resultsFilter', 'Hom
         if (newParams) {
             searchSelf.filteredHomes = resultsFilter(Homes.homes, newParams);
             $scope.results.count = searchSelf.filteredHomes.length;
+
+            // Emit the filtered homes upward
+            $scope.$emit('filteredHomes', searchSelf.filteredHomes);
         }
     }, true); // true needed for watching objects
 
