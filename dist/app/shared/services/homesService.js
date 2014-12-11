@@ -8,9 +8,9 @@ myHomeApp.service('Homes', ['$http', '$sessionStorage', function($http, $session
         }
     });
 
-    this.fetch = function(cb) {
+    this.fetch = function(searchReset, cb) {
         $http.get('app/shared/data/homes.json').success(function(data) {
-            self.set(data, cb);
+            self.set(searchReset, data, cb);
         });
     };
 
@@ -18,11 +18,14 @@ myHomeApp.service('Homes', ['$http', '$sessionStorage', function($http, $session
         return this.homes;
     };
 
-    this.set = function(homes, cb) {
+    this.set = function(searchReset, homes, cb) {
         this.homes = homes;
         var areas = this.getUnique('area');
-        $sessionStorage.homes.toSelect = areas;
-        $sessionStorage.params.areas = [];
+        // Only reset toSelect areas if search/areas have been reset by user
+        if (!searchReset) {
+            $sessionStorage.homes.toSelect = areas;
+            $sessionStorage.params.areas = [];
+        }
         cb();
     };
 

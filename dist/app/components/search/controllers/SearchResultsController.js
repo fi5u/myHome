@@ -8,6 +8,7 @@ myHomeApp.controller('SearchResultsController', ['$scope', 'resultsFilter', 'Hom
     searchSelf.filteredHomes = [];
     $scope.results.count = 0;
 
+
     /**
      * CONTROLLER FUNCTIONS
      */
@@ -31,14 +32,16 @@ myHomeApp.controller('SearchResultsController', ['$scope', 'resultsFilter', 'Hom
      * CONTROLLER FUNCTION CALLS
      */
 
-    Homes.fetch(function() {
+    Homes.fetch($scope.$storage.searchReset, function() {
         searchSelf.filteredHomes = resultsFilter(Homes.homes, $scope.$storage.params);
         $scope.results.count = searchSelf.filteredHomes.length;
 
         // Emit the filtered homes upward
         $scope.$emit('filteredHomes', searchSelf.filteredHomes);
 
-        $scope.setMaxPrice();
+        if (!$scope.$storage.searchReset) {
+            $scope.setMaxPrice();
+        }
     });
 
     $scope.$watch('$storage.params', function (newParams) {

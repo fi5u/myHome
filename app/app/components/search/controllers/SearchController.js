@@ -58,6 +58,21 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
      */
 
     // Home types
+    $scope.countFilteredProp = function(filteredHomes, matchObj) {
+        return _.countBy(filteredHomes, matchObj);
+    };
+
+    this.populateTypeCount = function(data, type) {
+        var typeCount = $scope.countFilteredProp(data, {type: type});
+        $scope.liveCount[removeSpaceFilter(type)] = typeCount.true ? typeCount.true : 0;
+    };
+
+    this.populatePropCount = function(data, matchObj) {
+        var propCount = $scope.countFilteredProp(data, matchObj);
+        var keys = Object.keys(matchObj);
+        $scope.liveCount[removeSpaceFilter(matchObj[keys[0]])] = propCount.true ? propCount.true : 0;
+    };
+
     $scope.resetHomeTypes = function() {
         $scope.$storage.params.types = {
             studio: false,
@@ -65,10 +80,6 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
             rowhouse: false,
             house: false
         };
-    };
-
-    $scope.countFilteredHomeType = function(filteredHomes, type) {
-        return _.countBy(filteredHomes, type);
     };
 
     $scope.isSearchAllTypes = function() {
@@ -130,10 +141,6 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         return value + ' €';
     };
 
-    this.populateTypeCount = function(data, type) {
-        var typeCount = $scope.countFilteredHomeType(data, {type: type});
-        $scope.liveCount[removeSpaceFilter(type)] = typeCount.true ? typeCount.true : 0;
-    };
 
     /**
      * CONTROLLER FUNCTION CALLS
@@ -154,5 +161,9 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         searchSelf.populateTypeCount(data, 'apartment');
         searchSelf.populateTypeCount(data, 'row house');
         searchSelf.populateTypeCount(data, 'house');
+
+        searchSelf.populatePropCount(data, {area: 'Porvoo'});
+        searchSelf.populatePropCount(data, {area: 'Järvenpää'});
+        searchSelf.populatePropCount(data, {area: 'Bemböle'});
     });
 }]);
