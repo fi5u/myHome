@@ -37,6 +37,8 @@ myHomeApp.controller('SearchResultsController', ['$scope', 'resultsFilter', 'Hom
 
         // Emit the filtered homes upward
         $scope.$emit('filteredHomes', searchSelf.filteredHomes);
+
+        $scope.setMaxPrice();
     });
 
     $scope.$watch('$storage.params', function (newParams) {
