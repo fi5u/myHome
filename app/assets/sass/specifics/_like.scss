@@ -28,6 +28,7 @@ $no-like-symbol: "\e801";
         @include hide-text;
         display: inline-block;
         height: 2em;
+        padding-right: 1px;
 
         color: palette(primary, lighter);
 
