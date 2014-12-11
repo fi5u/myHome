@@ -43,6 +43,8 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
 
     // Types
     $scope.liveCount = {};
+    $scope.allHomeTypes = null;
+
 
     // Areas
     $scope.choose = false;
@@ -67,6 +69,14 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
 
     $scope.countFilteredHomeType = function(filteredHomes, type) {
         return _.countBy(filteredHomes, type);
+    };
+
+    $scope.isSearchAllTypes = function() {
+        if (($scope.$storage.params.types.studio === false && $scope.$storage.params.types.apartment == false && $scope.$storage.params.types.rowhouse == false && $scope.$storage.params.types.house == false) ||
+            ($scope.$storage.params.types.studio === true && $scope.$storage.params.types.apartment == true && $scope.$storage.params.types.rowhouse == true && $scope.$storage.params.types.house == true)) {
+            return true;
+        }
+        return false;
     };
 
     // Areas
@@ -129,6 +139,8 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
      * CONTROLLER FUNCTION CALLS
      */
 
+    $scope.allHomeTypes = $scope.isSearchAllTypes();
+
     $scope.$watch('$storage.homes.toSelect', function (newVal, oldVal, scope) {
         if (newVal) {
             $scope.setSelected();
@@ -137,6 +149,7 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
 
     $scope.$on('filteredHomes', function(event, data) {
         $scope.filteredHomes = data;
+        $scope.allHomeTypes = $scope.isSearchAllTypes();
         searchSelf.populateTypeCount(data, 'studio');
         searchSelf.populateTypeCount(data, 'apartment');
         searchSelf.populateTypeCount(data, 'row house');

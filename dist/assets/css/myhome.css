@@ -689,29 +689,31 @@ img {
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2; }
-  .search__price-range {
+  .search__types-init-msg {
     font-size: smaller; }
-    .search__price-range span.bar {
+  .search__price-range-slider {
+    font-size: smaller; }
+    .search__price-range-slider span.bar {
       background: #eee; }
-      .search__price-range span.bar.selection {
+      .search__price-range-slider span.bar.selection {
         background: #d24; }
-    .search__price-range span.bubble {
+    .search__price-range-slider span.bubble {
       color: #000; }
-      .search__price-range span.bubble.limit {
+      .search__price-range-slider span.bubble.limit {
         color: #ddd; }
-    .search__price-range span.pointer {
+    .search__price-range-slider span.pointer {
       top: -7px;
       width: 16px;
       height: 16px;
       background-color: #ccc;
       border-radius: 0; }
-      .search__price-range span.pointer:after {
+      .search__price-range-slider span.pointer:after {
         top: 4px;
         left: 4px;
         background: #eee; }
-      .search__price-range span.pointer:hover:after {
+      .search__price-range-slider span.pointer:hover:after {
         background: #d24; }
-      .search__price-range span.pointer.active:after {
+      .search__price-range-slider span.pointer.active:after {
         background: #d24; }
   .search__areas {
     position: relative; }

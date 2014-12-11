@@ -33,7 +33,11 @@
             @include columns(2);
         }
 
-    &__price-range {
+        &__types-init-msg {
+            font-size: smaller;
+        }
+
+    &__price-range-slider {
         font-size: smaller;
 
         span.bar {

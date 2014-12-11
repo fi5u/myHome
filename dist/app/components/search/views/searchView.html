@@ -10,6 +10,7 @@
                 <h3 class="search__types-title">Home types</h3>
                 <a href class="search__types-reset" ng-click="resetHomeTypes()">Reset home types</a>
             </div>
+
             <div class="search__types-inputs">
                 <div class="search__input-block">
                     <input type="checkbox" name="search-types" id="search-types-studio" ng-model="$storage.params.types.studio"> <label for="search-types-studio" class="search__input-label" ng-class="{ 'search__input-label--null':liveCount.studio === 0 }">Studio ({{liveCount.studio}})</label>
@@ -24,19 +25,26 @@
                     <input type="checkbox" name="search-types" id="search-types-house" ng-model="$storage.params.types.house"> <label for="search-types-house" class="search__input-label" ng-class="{ 'search__input-label--null':liveCount.house === 0 }">House ({{liveCount.house}})</label>
                 </div>
             </div>
+
+            <p class="search__types-init-msg" ng-show="allHomeTypes">Currently searching all home types.</p>
         </section>
 
         <hr>
 
-        <label>Price range:</label>
-        <rzslider class="search__price-range" rz-slider-floor="$storage.params.priceRange.floor" rz-slider-ceil="$storage.params.priceRange.ceil" rz-slider-model="$storage.params.priceRange.min" rz-slider-high="$storage.params.priceRange.max" rz-slider-step="{{$storage.params.priceRange.step}}" rz-slider-translate="translate"></rzslider>
+        <section class="search__price-range">
+            <h3>Price range</h3>
+            <rzslider class="search__price-range-slider" rz-slider-floor="$storage.params.priceRange.floor" rz-slider-ceil="$storage.params.priceRange.ceil" rz-slider-model="$storage.params.priceRange.min" rz-slider-high="$storage.params.priceRange.max" rz-slider-step="{{$storage.params.priceRange.step}}" rz-slider-translate="translate"></rzslider>
+        </section>
 
         <hr>
 
-        <search-input-block type="has" type-pos="before" property="balcony" ng-model="$storage.params.hasBalcony"></search-input-block>
-        <search-input-block type="has" type-pos="before" property="garden" ng-model="$storage.params.hasGarden"></search-input-block>
-        <search-input-block type="allowed" type-pos="after" property="pets" ng-model="$storage.params.allowsPets"></search-input-block>
-        <search-input-block type="has" type-pos="before" property="sauna" ng-model="$storage.params.hasSauna"></search-input-block>
+        <section class="search__features">
+            <h3 class="search__features-title">Features</h3>
+            <search-input-block type="has" type-pos="before" property="balcony" ng-model="$storage.params.hasBalcony"></search-input-block>
+            <search-input-block type="has" type-pos="before" property="garden" ng-model="$storage.params.hasGarden"></search-input-block>
+            <search-input-block type="allowed" type-pos="after" property="pets" ng-model="$storage.params.allowsPets"></search-input-block>
+            <search-input-block type="has" type-pos="before" property="sauna" ng-model="$storage.params.hasSauna"></search-input-block>
+        </section>
 
         <hr>
 
