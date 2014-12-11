@@ -912,7 +912,8 @@ img {
   .result__extra--has {
     font-weight: bold; }
   .result__date-added {
-    font-size: smaller; }
+    font-size: x-small;
+    color: #aaa; }
 
 .single__header {
   clear: both;
