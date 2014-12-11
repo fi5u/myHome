@@ -1,32 +1,24 @@
-myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilter', 'Homes', 'Likes', function($scope, $http, resultsFilter, Homes, Likes) {
-    var search = this;
-    search.homes = [];
+myHomeApp.controller('SearchResultsController', ['$scope', 'resultsFilter', 'Homes', function($scope, resultsFilter, Homes) {
 
-    $http.get('app/shared/data/homes.json').success(function(data) {
-        search.homes = data;
-        $scope.results.homes = data;
-        search.filteredHomes = resultsFilter(search.homes, $scope.$storage.params);
-        if (!('searchReset' in $scope.$storage) || $scope.$storage.searchReset === false) {
-            Homes.set(data);
-            Homes.getUnique('area');
-            $scope.setMaxPrice();
-        }
-        $scope.results.count = search.filteredHomes.length;
-    });
+    /**
+     * CONTROLLER VARIABLE DEFINITIONS
+     */
 
-    $scope.$watch('$storage.params', function (newParams) {
-        if (newParams) {
-            search.filteredHomes = resultsFilter(search.homes, newParams);
-            $scope.results.count = search.filteredHomes.length;
-        }
-    }, true); // true needed for watching objects
+    var searchSelf = this;
+    searchSelf.filteredHomes = [];
+    $scope.results.count = 0;
 
-    // Set the slider's max price to be the maximum available
+
+    /**
+     * CONTROLLER FUNCTIONS
+     */
+
+    // Set the slider's max price to be the maximum available from unfiltered homes
     $scope.setMaxPrice = function() {
         var maxPrice = 0;
-        for (var i = 0; i < search.homes.length; i++) {
-            if (search.homes[i].rentalCost > maxPrice) {
-                maxPrice = search.homes[i].rentalCost;
+        for (var i = 0; i < Homes.homes.length; i++) {
+            if (Homes.homes[i].rentalCost > maxPrice) {
+                maxPrice = Homes.homes[i].rentalCost;
             }
         };
         $scope.$storage.paramsInit.priceRange.max = maxPrice;
@@ -34,4 +26,22 @@ myHomeApp.controller('SearchResultsController', ['$scope', '$http', 'resultsFilt
         $scope.$storage.params.priceRange.max = maxPrice;
         $scope.$storage.params.priceRange.ceil = maxPrice;
     };
+
+
+    /**
+     * CONTROLLER FUNCTION CALLS
+     */
+
+    Homes.fetch(function() {
+        searchSelf.filteredHomes = resultsFilter(Homes.homes, $scope.$storage.params);
+        $scope.results.count = searchSelf.filteredHomes.length;
+    });
+
+    $scope.$watch('$storage.params', function (newParams) {
+        if (newParams) {
+            searchSelf.filteredHomes = resultsFilter(Homes.homes, newParams);
+            $scope.results.count = searchSelf.filteredHomes.length;
+        }
+    }, true); // true needed for watching objects
+
 }]);

@@ -1,4 +1,4 @@
-myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 'Likes', function($scope, $sessionStorage, Homes, Likes) {
+myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', function($scope, $sessionStorage, Homes) {
 
     /**
      * CONTROLLER VARIABLE DEFINITIONS
