@@ -1,0 +1,16 @@
+<article class="result" ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : $storage.params.orderby : $storage.params.reverseOrder)">
+    <a href class="like" ng-class="{ 'like--has':hasLike(home.homeId) }" ng-click="toggleLike(home.homeId, home.area, home.address)"><span class="like__symbol">Like</span></a>
+    <h3 class="result__title">
+        <a href="#/homes/{{home.homeId}}" class="result__title-link">{{home.address}}</a>
+    </h3>
+    <div class="result__area">{{home.area}}</div>
+    <div class="result__cost">{{home.rentalCost | currency : "€"}}</div>
+    <div class="result__date-added">Added:<br>
+    {{home.dateAdded | date:'mediumDate'}} {{home.dateAdded | date:'mediumTime'}}</div>
+    <div class="result__image-wrap">
+        <img ng-src="{{home.images[0].thumb}}" alt="{{home.address}}">
+    </div>
+    <div class="result__extras">
+        <div class="result__extra" ng-class="{ 'result__extra--has':value }" ng-repeat="(extra, value) in home.extras[0]">{{extra}}: {{value | boolConvert}}</div>
+    </div>
+</article>

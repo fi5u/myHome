@@ -1,0 +1,26 @@
+<article class="main-wrap--single">
+    <header class="single__header">
+        <h1 class="single__title">{{home.address}}, {{home.area}}</h1>
+        <div class="single__price">{{home.rentalCost | currency : "€"}}</div>
+        <a href class="like" ng-class="{ 'like--has':hasLike(home.homeId) }" ng-click="toggleLike(home.homeId, home.area, home.address)"><span class="like__symbol">Like</span></a>
+        <div class="single__back">
+            <a href="#/homes/" class="single__back-link" ng-click="$storage.searchReset = true">Back to search results</a>
+        </div>
+    </header>
+    <section class="single__extras">
+        <h2>Features</h2>
+        <div class="single__extra" ng-class="{ 'single__extra--has':value }" ng-repeat="(extra, value) in home.extras[0]">{{extra}}: {{value | boolConvert}}</div>
+    </section>
+    <section class="single__main">
+        <gallery class="gallery"></gallery>
+        <div class="single__description">
+            <h2>Description</h2>
+            <p>{{home.description}}</p>
+        </div>
+        <div class="single__map">
+            <ui-gmap-google-map center="map.center" zoom="map.zoom">
+                <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id"></ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+    </section>
+</article>
