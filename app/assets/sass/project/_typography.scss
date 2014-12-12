@@ -1,3 +1,12 @@
+%subline {
+    font-size: smaller;
+    line-height: 1.1;
+}
+
+%null-val {
+    color: palette(gray, light);
+}
+
 @mixin icon($code) {
     color: inherit;
     text-decoration: none;

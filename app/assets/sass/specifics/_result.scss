@@ -2,7 +2,7 @@
     display: inline-block;
     width: span(3 of 12);
     margin: 0 gutter() gutter() 0;
-    padding: 20px;
+    padding: 10px;
 
     color: #eee;
     background-color: rgba(0,0,0,0.8);
@@ -35,6 +35,7 @@
     }
 
     &__date-added {
-        font-size: smaller;
+        font-size: x-small;
+        color: palette(gray, light);
     }
 }

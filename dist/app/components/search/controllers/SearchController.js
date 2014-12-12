@@ -1,4 +1,4 @@
-myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', function($scope, $sessionStorage, Homes) {
+myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 'removeSpaceFilter', function($scope, $sessionStorage, Homes, removeSpaceFilter) {
 
     /**
      * CONTROLLER VARIABLE DEFINITIONS
@@ -8,6 +8,12 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         paramsInit: {
             areas: [],
             isAvailable: true,
+            types: {
+                studio: false,
+                apartment: false,
+                rowhouse: false,
+                house: false
+            },
             orderby: 'dateAdded',
             reverseOrder: true,
             hasBalcony: '',
@@ -31,6 +37,12 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     // Homes
     $scope.results = {};
     $scope.results.count = 0;
+    $scope.filteredHomes = {};
+    $scope.liveCount = Homes.getCounts();
+
+    // Types
+    $scope.allHomeTypes = null;
+
 
     // Areas
     $scope.choose = false;
@@ -42,6 +54,24 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     /**
      * CONTROLLER FUNCTIONS
      */
+
+    // Home types
+    $scope.resetHomeTypes = function() {
+        $scope.$storage.params.types = {
+            studio: false,
+            apartment: false,
+            rowhouse: false,
+            house: false
+        };
+    };
+
+    $scope.isSearchAllTypes = function() {
+        if (($scope.$storage.params.types.studio === false && $scope.$storage.params.types.apartment == false && $scope.$storage.params.types.rowhouse == false && $scope.$storage.params.types.house == false) ||
+            ($scope.$storage.params.types.studio === true && $scope.$storage.params.types.apartment == true && $scope.$storage.params.types.rowhouse == true && $scope.$storage.params.types.house == true)) {
+            return true;
+        }
+        return false;
+    };
 
     // Areas
     $scope.setSelected = function() {
@@ -92,7 +122,8 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     // Price slider
     $scope.translate = function(value) {
         return value + ' €';
-    }
+    };
+
 
     /**
      * CONTROLLER FUNCTION CALLS

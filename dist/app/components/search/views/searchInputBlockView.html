@@ -1,5 +1,5 @@
 <div class="search__input-block">
-    <label for="{{prop | removeSpace}}">{{prop ? (pos === 'before' ? type + ' ' + prop : prop + ' ' + type) : '' | upperFirst }}:</label>
+    <label for="{{prop | removeSpace}}" class="search__input-label">{{prop ? (pos === 'before' ? type + ' ' + prop : prop + ' ' + type) : '' | upperFirst }}:</label>
     <select id="{{prop | removeSpace}}" ng-model="bindModel" class="search__select--{{prop | removeSpace}}">
         <option value="" selected>No preference</option>
         <option value="true">Yes</option>

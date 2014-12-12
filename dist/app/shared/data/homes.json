@@ -1,6 +1,7 @@
 [{
     "homeId": "a0000",
     "address": "Karhutie 19",
+    "type": "apartment",
     "area": "Pasila",
     "rentalCost": 700.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nobis unde ipsum recusandae nulla mollitia, ad optio dignissimos provident non odio, incidunt debitis, commodi minima magni! Odit nihil totam, minima.",
@@ -40,6 +41,7 @@
 }, {
     "homeId": "a0001",
     "address": "Lintutie 100",
+    "type": "house",
     "area": "Bemböle",
     "rentalCost": 1250.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium odit, ut amet fugit quidem ex, unde quam sapiente obcaecati eveniet delectus est assumenda quisquam, ea laborum ipsa rem eaque.",
@@ -71,6 +73,7 @@
 }, {
     "homeId": "a0002",
     "address": "Norsumäki 1 d",
+    "type": "studio",
     "area": "Sipoo",
     "rentalCost": 670.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum ab laborum hic molestiae illo quod voluptas! Nam aperiam id eaque, qui dolorem rem quod porro, odit repudiandae. Aperiam, quae eos.",
@@ -118,6 +121,7 @@
 }, {
     "homeId": "a0003",
     "address": "Kanakatu 24",
+    "type": "house",
     "area": "Järvenpää",
     "rentalCost": 690.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dicta, odit quaerat! Corporis, laudantium ab nesciunt mollitia autem quibusdam assumenda delectus dolore architecto accusamus quaerat ut facere quod ea maxime.",
@@ -153,6 +157,7 @@
 }, {
     "homeId": "a0004",
     "address": "Koiratie 269 a",
+    "type": "row house",
     "area": "Hankoo",
     "rentalCost": 423.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque facere accusantium eligendi, laborum voluptates illo impedit, saepe quo, rem, corrupti suscipit quia. Eius nihil doloribus provident ipsa, similique nobis non.",
@@ -192,6 +197,7 @@
 }, {
     "homeId": "a0005",
     "address": "Kissakatu 293",
+    "type": "row house",
     "area": "Porvoo",
     "rentalCost": 1249.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi perferendis adipisci rem aspernatur earum praesentium, vitae veritatis id nulla sapiente, voluptatibus. Dignissimos impedit magnam autem. Tenetur maxime enim, libero labore?",
@@ -243,6 +249,7 @@
 }, {
     "homeId": "a0006",
     "address": "Hevonentie 3b",
+    "type": "apartment",
     "area": "Porvoo",
     "rentalCost": 2200.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolor quam esse, velit, sit non consectetur! Illo, possimus deleniti aliquam deserunt explicabo suscipit voluptatibus, repudiandae animi cum accusantium maiores facere.",

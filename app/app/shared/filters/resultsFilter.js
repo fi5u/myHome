@@ -2,8 +2,8 @@
  * Iterate through the results, passing back only what is searched for
  * @return {object} Filtered results
  */
-myHomeApp.filter('results', function() {
-    return function(input, params) {
+myHomeApp.filter('results', function(removeSpaceFilter) {
+    return function(input, params, cb) {
             // Store search properties on an array to loop through
             // [0] = searchCtrl, [1] = home.extras[0]
         var searchProps = [
@@ -17,16 +17,30 @@ myHomeApp.filter('results', function() {
             // Array to store filtered results
             filteredResults = [];
 
-        // Remove results not in selected areas
-        if (params.areas.length > 0) {
-            // If at least one area is selected
+        // Filter by home type
+        if (params.types.studio || params.types.apartment || params.types.rowhouse || params.types.house) {
+            // Only filter if at least one is selected
             for (var i = 0; i < input.length; i++) {
-                if (!_.contains(params.areas, input[i].area)) {
+                var thisHomeType = removeSpaceFilter(input[i].type);
+                if (!params.types[thisHomeType]) {
                     toRemove.push(i);
                 }
             }
         }
 
+        // Remove results not in selected areas
+        if (params.areas.length > 0) {
+            // If at least one area is selected
+            for (var i = 0; i < input.length; i++) {
+                // Don't do anything if already in toRemove[]
+                if (toRemove.indexOf(i) > -1) {
+                    continue;
+                }
+                if (!_.contains(params.areas, input[i].area)) {
+                    toRemove.push(i);
+                }
+            }
+        }
 
         // Remove availability mismatches
         // Loop through results and place keys to remove on toRemove[]
@@ -39,7 +53,7 @@ myHomeApp.filter('results', function() {
                 ((params.isAvailable === 'false' || params.isAvailable === false) && input[i].available === true)) {
                 toRemove.push(i);
             }
-        };
+        }
 
         // Remove price range mismatches
         for (var i = 0; i < input.length; i++) {
@@ -50,7 +64,7 @@ myHomeApp.filter('results', function() {
             if (params.priceRange.min > input[i].rentalCost || params.priceRange.max < input[i].rentalCost) {
                 toRemove.push(i);
             }
-        };
+        }
 
         // Loop through searchProps[]
         for (var searchPropsIt = 0; searchPropsIt < searchProps.length; searchPropsIt++) {
@@ -64,15 +78,15 @@ myHomeApp.filter('results', function() {
                     ((params[searchProps[searchPropsIt][0]] === 'false' || params[searchProps[searchPropsIt][0]] === false) && input[resIt].extras[0][searchProps[searchPropsIt][1]] === true)) {
                     toRemove.push(resIt);
                 }
-            };
-        };
+            }
+        }
 
         // Loop through results adding to filteredResults[] only if not in toRemove[]
         for (var i = 0; i < input.length; i++) {
             if (toRemove.indexOf(i) === -1) {
                 filteredResults.push(input[i]);
             }
-        };
+        }
         return filteredResults;
     };
 });
