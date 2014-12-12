@@ -4,8 +4,6 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
      * CONTROLLER VARIABLE DEFINITIONS
      */
 
-    var searchSelf = this;
-
     $scope.$storage = $sessionStorage.$default({
         paramsInit: {
             areas: [],
@@ -40,7 +38,7 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     $scope.results = {};
     $scope.results.count = 0;
     $scope.filteredHomes = {};
-    $scope.liveCount = {};
+    $scope.liveCount = Homes.getCounts();
 
     // Types
     $scope.allHomeTypes = null;
@@ -131,23 +129,9 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
      * CONTROLLER FUNCTION CALLS
      */
 
-    $scope.allHomeTypes = $scope.isSearchAllTypes();
-
     $scope.$watch('$storage.homes.toSelect', function (newVal, oldVal, scope) {
         if (newVal) {
             $scope.setSelected();
         }
     }, true);
-
-    $scope.$on('filteredHomes', function(event, data) {
-        $scope.filteredHomes = data;
-        $scope.allHomeTypes = $scope.isSearchAllTypes();
-
-        /*$scope.setPropCounts(data, 'area');
-        $scope.setPropCounts(data, 'type');*/
-
-        Homes.setCounts(data, 'area');
-        Homes.setCounts(data, 'type');
-        $scope.liveCount = Homes.getCounts();
-    });
 }]);

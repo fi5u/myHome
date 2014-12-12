@@ -3,7 +3,7 @@
  * @return {object} Filtered results
  */
 myHomeApp.filter('results', function(removeSpaceFilter) {
-    return function(input, params) {
+    return function(input, params, cb) {
             // Store search properties on an array to loop through
             // [0] = searchCtrl, [1] = home.extras[0]
         var searchProps = [

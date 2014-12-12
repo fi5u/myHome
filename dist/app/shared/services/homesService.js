@@ -1,8 +1,11 @@
-myHomeApp.service('Homes', ['$http', '$sessionStorage', 'removeSpaceFilter', function($http, $sessionStorage, removeSpaceFilter) {
+myHomeApp.service('Homes', ['$http', '$sessionStorage', 'resultsFilter', 'removeSpaceFilter', function($http, $sessionStorage, resultsFilter, removeSpaceFilter) {
 
     var self = this;
     this.homes = [];
+    this.filteredHomes = {};
+    this.filteredCount = 0;
     this.liveCount = {};
+    this.toCount = ['area', 'type'];
 
     $storage = $sessionStorage.$default({
         homes: {
@@ -10,9 +13,9 @@ myHomeApp.service('Homes', ['$http', '$sessionStorage', 'removeSpaceFilter', fun
         }
     });
 
-    this.fetch = function(searchReset, cb) {
+    this.fetch = function() {
         $http.get('app/shared/data/homes.json').success(function(data) {
-            self.set(searchReset, data, cb);
+            self.set(data);
         });
     };
 
@@ -20,15 +23,16 @@ myHomeApp.service('Homes', ['$http', '$sessionStorage', 'removeSpaceFilter', fun
         return this.homes;
     };
 
-    this.set = function(searchReset, homes, cb) {
+    this.set = function(homes) {
         this.homes = homes;
         var areas = this.getUnique('area');
         // Only reset toSelect areas if search/areas have been reset by user
-        if (!searchReset) {
+        if (!$sessionStorage.searchReset) {
             $sessionStorage.homes.toSelect = areas;
             $sessionStorage.params.areas = [];
+            this.setMaxPrice();
         }
-        cb();
+        this.filterHomes();
     };
 
     this.getUnique = function(key) {
@@ -87,5 +91,30 @@ myHomeApp.service('Homes', ['$http', '$sessionStorage', 'removeSpaceFilter', fun
 
     this.getCounts = function() {
         return this.liveCount;
+    };
+
+    this.filterHomes = function() {
+        this.filteredHomes = resultsFilter(this.homes, $sessionStorage.params);
+        for (var i = this.toCount.length - 1; i >= 0; i--) {
+            this.setCounts(this.filteredHomes, this.toCount[i]);
+        }
+        this.filteredCount = this.filteredHomes.length;
+    };
+
+    this.getFilteredHomes = function() {
+        return this.filteredHomes;
+    };
+
+    this.setMaxPrice = function() {
+        var maxPrice = 0;
+        for (var i = 0; i < this.homes.length; i++) {
+            if (this.homes[i].rentalCost > maxPrice) {
+                maxPrice = this.homes[i].rentalCost;
+            }
+        }
+        $sessionStorage.paramsInit.priceRange.max = maxPrice;
+        $sessionStorage.paramsInit.priceRange.ceil = maxPrice;
+        $sessionStorage.params.priceRange.max = maxPrice;
+        $sessionStorage.params.priceRange.ceil = maxPrice;
     };
 }]);

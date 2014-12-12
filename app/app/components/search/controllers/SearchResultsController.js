@@ -1,57 +1,35 @@
-myHomeApp.controller('SearchResultsController', ['$scope', 'resultsFilter', 'Homes', function($scope, resultsFilter, Homes) {
+myHomeApp.controller('SearchResultsController', ['$scope', 'Homes', function($scope, Homes) {
 
     /**
      * CONTROLLER VARIABLE DEFINITIONS
      */
 
     var searchSelf = this;
-    searchSelf.filteredHomes = [];
-    $scope.results.count = 0;
-
+    searchSelf.filteredHomes = {};
+    $scope.results.count = Homes.filteredCount;
 
     /**
      * CONTROLLER FUNCTIONS
      */
 
-    // Set the slider's max price to be the maximum available from unfiltered homes
-    $scope.setMaxPrice = function() {
-        var maxPrice = 0;
-        for (var i = 0; i < Homes.homes.length; i++) {
-            if (Homes.homes[i].rentalCost > maxPrice) {
-                maxPrice = Homes.homes[i].rentalCost;
-            }
-        };
-        $scope.$storage.paramsInit.priceRange.max = maxPrice;
-        $scope.$storage.paramsInit.priceRange.ceil = maxPrice;
-        $scope.$storage.params.priceRange.max = maxPrice;
-        $scope.$storage.params.priceRange.ceil = maxPrice;
-    };
 
 
     /**
      * CONTROLLER FUNCTION CALLS
      */
 
-    Homes.fetch($scope.$storage.searchReset, function() {
-        searchSelf.filteredHomes = resultsFilter(Homes.homes, $scope.$storage.params);
-        $scope.results.count = searchSelf.filteredHomes.length;
-
-        // Emit the filtered homes upward
-        $scope.$emit('filteredHomes', searchSelf.filteredHomes);
-
-        if (!$scope.$storage.searchReset) {
-            $scope.setMaxPrice();
-        }
-    });
+    Homes.fetch();
 
     $scope.$watch('$storage.params', function (newParams) {
         if (newParams) {
-            searchSelf.filteredHomes = resultsFilter(Homes.homes, newParams);
-            $scope.results.count = searchSelf.filteredHomes.length;
-
-            // Emit the filtered homes upward
-            $scope.$emit('filteredHomes', searchSelf.filteredHomes);
+            Homes.filterHomes();
         }
     }, true); // true needed for watching objects
 
+    $scope.$watch(function(){
+        return Homes.filteredHomes;
+    }, function (newValue) {
+        searchSelf.filteredHomes = newValue;
+        $scope.results.count = Homes.filteredCount;
+    });
 }]);

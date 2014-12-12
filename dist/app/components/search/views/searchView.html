@@ -1,6 +1,6 @@
 <div class="main-wrap--search" ng-controller="SearchController as searchCtrl">
     <form class="search" name="seachForm" novalidate>
-
+{{searchCtrl.count.filtered}}
         <search-input-block type="is" type-pos="before" property="available" ng-model="$storage.params.isAvailable"></search-input-block>
 
         <hr>
@@ -8,7 +8,7 @@
         <section class="search__types">
             <div class="search__types-header">
                 <h3 class="search__types-title">Home types</h3>
-                <a href class="search__types-reset" ng-click="resetHomeTypes()" ng-hide="allHomeTypes">Reset home types</a>
+                <a href class="search__types-reset" ng-click="resetHomeTypes()" ng-hide="isSearchAllTypes()">Reset home types</a>
             </div>
 
             <div class="search__types-inputs">
@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <p class="search__types-init-msg" ng-show="allHomeTypes">Currently searching all home types.</p>
+            <p class="search__types-init-msg" ng-show="isSearchAllTypes()">Currently searching all home types.</p>
         </section>
 
         <hr>
