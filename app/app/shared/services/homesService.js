@@ -1,7 +1,9 @@
-myHomeApp.service('Homes', ['$http', '$sessionStorage', function($http, $sessionStorage) {
+myHomeApp.service('Homes', ['$http', '$sessionStorage', 'removeSpaceFilter', function($http, $sessionStorage, removeSpaceFilter) {
 
     var self = this;
     this.homes = [];
+    this.liveCount = {};
+
     $storage = $sessionStorage.$default({
         homes: {
             toSelect: []
@@ -68,5 +70,22 @@ myHomeApp.service('Homes', ['$http', '$sessionStorage', function($http, $session
     this.resetSelected = function() {
         $sessionStorage.params.areas = [];
         $sessionStorage.homes.toSelect = this.getUnique('area');
+    };
+
+    this.setCounts = function(data, key) {
+        var propCount;
+        var matchObj = {};
+        // Set the key as an object key
+        this.liveCount[key] = {};
+        for (var i = 0; i < data.length; i++) {
+            this.liveCount[key][removeSpaceFilter(data[i][key])] = [];
+            matchObj[key] = data[i][key];
+            propCount = _.countBy(data, matchObj);
+            this.liveCount[key][removeSpaceFilter(data[i][key])] = propCount.true;
+        }
+    };
+
+    this.getCounts = function() {
+        return this.liveCount;
     };
 }]);

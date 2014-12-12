@@ -165,7 +165,11 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
         $scope.filteredHomes = data;
         $scope.allHomeTypes = $scope.isSearchAllTypes();
 
-        $scope.setPropCounts(data, 'area');
-        $scope.setPropCounts(data, 'type');
+        /*$scope.setPropCounts(data, 'area');
+        $scope.setPropCounts(data, 'type');*/
+
+        Homes.setCounts(data, 'area');
+        Homes.setCounts(data, 'type');
+        $scope.liveCount = Homes.getCounts();
     });
 }]);
