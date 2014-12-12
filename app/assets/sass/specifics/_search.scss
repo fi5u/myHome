@@ -137,6 +137,7 @@
                 @extend %single-link;
 
                 float: right;
+                margin-right: 2em;
             }
 
         &__area-choose {
@@ -226,6 +227,16 @@
 
                 .search__result-area:hover & {
                     display: inline-block;
+                }
+
+                .search__result-area--null & {
+                    &:after {
+                        color: palette(black);
+                    }
+
+                    &:hover:after {
+                        color: palette(primary);
+                    }
                 }
             }
 
