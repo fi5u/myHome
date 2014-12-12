@@ -674,11 +674,11 @@ img {
     .like--has .like__symbol:before {
       color: #d24; }
 
-.search__types-reset, .search__reset-areas, .search__area-link, .search__reset {
+.search__types-reset, .search__reset-areas, .search__area-link, .search__reset, .favorites__reset, .favorites__address-link {
   font-size: smaller;
   text-decoration: none;
   color: #d24; }
-  .search__types-reset:hover, .search__reset-areas:hover, .search__area-link:hover, .search__reset:hover {
+  .search__types-reset:hover, .search__reset-areas:hover, .search__area-link:hover, .search__reset:hover, .favorites__reset:hover, .favorites__address-link:hover {
     text-decoration: underline; }
 
 .search__input-label, .search__result-area {
@@ -1026,16 +1026,18 @@ img {
 .favorites__title {
   float: left; }
 .favorites__reset {
-  float: right;
-  font-size: smaller; }
+  float: right; }
 .favorites__areas {
   margin-top: 20px; }
 .favorites__area-data {
   width: 100%;
-  margin-bottom: 20px; }
+  border-bottom: 1px solid #eee; }
+  .favorites__area-data:last-of-type {
+    border-bottom: none; }
 .favorites__area {
   width: 50%;
-  vertical-align: top; }
+  vertical-align: top;
+  font-size: smaller; }
 
 .main {
   padding: 30px; }

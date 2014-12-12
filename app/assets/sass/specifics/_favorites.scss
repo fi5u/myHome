@@ -8,9 +8,9 @@
         }
 
         &__reset {
-            float: right;
+            @extend %single-link;
 
-            font-size: smaller;
+            float: right;
         }
 
     &__init-msg {
@@ -23,16 +23,26 @@
 
         &__area-data {
             width: 100%;
-            margin-bottom: 20px;
+
+            border-bottom: 1px solid palette(gray, lightest);
+
+            &:last-of-type {
+                border-bottom: none;
+            }
         }
 
             &__area {
                 width: 50%;
 
                 vertical-align: top;
+                font-size: smaller;
             }
 
             &__address {
 
             }
+
+                &__address-link {
+                    @extend %single-link;
+                }
 }
