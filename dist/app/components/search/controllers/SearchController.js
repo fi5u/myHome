@@ -58,28 +58,6 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
      */
 
     // Home types
-    /**
-     * Generates an object of categories that contain objects of keys and count values
-     * @param {object} data The data from which to search for the values
-     * @param {string} key  The key to search for
-     */
-    $scope.setPropCounts = function(data, key) {
-        var propCount;
-        var matchObj = {};
-        // Set the key as an object key
-        $scope.liveCount[key] = {};
-        for (var i = 0; i < data.length; i++) {
-            $scope.liveCount[key][removeSpaceFilter(data[i][key])] = [];
-            matchObj[key] = data[i][key];
-            propCount = $scope.countFilteredProp(data, matchObj);
-            $scope.liveCount[key][removeSpaceFilter(data[i][key])] = propCount.true;
-        }
-    };
-
-    $scope.countFilteredProp = function(filteredHomes, matchObj) {
-        return _.countBy(filteredHomes, matchObj);
-    };
-
     $scope.resetHomeTypes = function() {
         $scope.$storage.params.types = {
             studio: false,
