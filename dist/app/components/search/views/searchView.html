@@ -62,7 +62,7 @@
             </div>
             <div class="search__area-results">
                 <p class="search__result-init-msg" ng-hide="selectedAreas.length">Currently searching all areas, narrow your search down by adding areas.</p>
-                <span class="search__result-area" ng-repeat="area in selectedAreas">{{area}} ({{liveCount.area[area] || 0}})</a> <a href class="search__result-area-remove" ng-click="removeArea(area)">remove</a><br></span>
+                <span class="search__result-area" ng-repeat="area in selectedAreas" ng-class="{ 'search__result-area--null':!liveCount.area[area] }">{{area}} ({{liveCount.area[area] || 0}})</a> <a href class="search__result-area-remove" ng-click="removeArea(area)">remove</a><br></span>
             </div>
         </section>
 

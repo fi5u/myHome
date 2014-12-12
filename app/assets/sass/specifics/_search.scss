@@ -27,7 +27,7 @@
             @extend %label;
 
             &--null {
-                color: palette(gray, light);
+                @extend %null-val;
             }
         }
 
@@ -192,6 +192,7 @@
 
             &__result-area {
                 @include clearfix;
+                @extend %label;
 
                 display: block;
                 position: relative;
@@ -199,6 +200,10 @@
 
                 &:hover {
                     background-color: #eee;
+                }
+
+                &--null {
+                    @extend %null-val;
                 }
             }
 
@@ -210,6 +215,8 @@
                 width: 0;
                 height: 1em;
                 overflow: hidden;
+
+                font-size: 1.2em;
 
                 &:after {
                     position: absolute;
