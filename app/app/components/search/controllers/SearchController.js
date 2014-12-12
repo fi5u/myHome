@@ -40,9 +40,9 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     $scope.results = {};
     $scope.results.count = 0;
     $scope.filteredHomes = {};
+    $scope.liveCount = {};
 
     // Types
-    $scope.liveCount = {};
     $scope.allHomeTypes = null;
 
 
@@ -58,19 +58,26 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
      */
 
     // Home types
+    /**
+     * Generates an object of categories that contain objects of keys and count values
+     * @param {object} data The data from which to search for the values
+     * @param {string} key  The key to search for
+     */
+    $scope.setPropCounts = function(data, key) {
+        var propCount;
+        var matchObj = {};
+        // Set the key as an object key
+        $scope.liveCount[key] = {};
+        for (var i = 0; i < data.length; i++) {
+            $scope.liveCount[key][removeSpaceFilter(data[i][key])] = [];
+            matchObj[key] = data[i][key];
+            propCount = $scope.countFilteredProp(data, matchObj);
+            $scope.liveCount[key][removeSpaceFilter(data[i][key])] = propCount.true;
+        }
+    };
+
     $scope.countFilteredProp = function(filteredHomes, matchObj) {
         return _.countBy(filteredHomes, matchObj);
-    };
-
-    this.populateTypeCount = function(data, type) {
-        var typeCount = $scope.countFilteredProp(data, {type: type});
-        $scope.liveCount[removeSpaceFilter(type)] = typeCount.true ? typeCount.true : 0;
-    };
-
-    this.populatePropCount = function(data, matchObj) {
-        var propCount = $scope.countFilteredProp(data, matchObj);
-        var keys = Object.keys(matchObj);
-        $scope.liveCount[removeSpaceFilter(matchObj[keys[0]])] = propCount.true ? propCount.true : 0;
     };
 
     $scope.resetHomeTypes = function() {
@@ -157,13 +164,8 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     $scope.$on('filteredHomes', function(event, data) {
         $scope.filteredHomes = data;
         $scope.allHomeTypes = $scope.isSearchAllTypes();
-        searchSelf.populateTypeCount(data, 'studio');
-        searchSelf.populateTypeCount(data, 'apartment');
-        searchSelf.populateTypeCount(data, 'row house');
-        searchSelf.populateTypeCount(data, 'house');
 
-        searchSelf.populatePropCount(data, {area: 'Porvoo'});
-        searchSelf.populatePropCount(data, {area: 'Järvenpää'});
-        searchSelf.populatePropCount(data, {area: 'Bemböle'});
+        $scope.setPropCounts(data, 'area');
+        $scope.setPropCounts(data, 'type');
     });
 }]);
