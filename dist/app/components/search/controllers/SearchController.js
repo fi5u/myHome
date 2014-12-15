@@ -26,6 +26,16 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
                 ceil: 2000,
                 floor: 0,
                 step: 50
+            },
+            views: {
+                last: 'grid',
+                map: {
+                    location: {
+                        latitude: 60.173964,
+                        longitude: 24.941025
+                    },
+                    zoom: 14
+                }
             }
         }
     });

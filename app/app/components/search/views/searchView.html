@@ -110,8 +110,21 @@
         </section>
     </form>
     <div class="results" ng-controller="SearchResultsController as resCtrl">
-        <single-result></single-result>
-        <p ng-show="results.count === 0">No homes match your search requirements,<br>
-        try <a href ng-click="resetSearch()">broadening your search</a>.</p>
+        {{currentTab}}
+        <div class="tab-bar" ng-controller="TabBarController">
+            <a href class="tab-bar__tab" ng-class="{ 'tab-bar__tab--current' : $storage.params.views.last === 'grid' }" ng-click="changeTab('grid')">Grid view</a>
+            <a href class="tab-bar__tab" ng-class="{ 'tab-bar__tab--current' : $storage.params.views.last === 'map' }" ng-click="changeTab('map')">Map view</a>
+        </div>
+        <section class="results__grid-view" ng-controller="GridViewController" ng-if="$storage.params.views.last === 'grid'">
+            <single-result></single-result>
+            <p ng-show="results.count === 0">No homes match your search requirements,<br>
+            try <a href ng-click="resetSearch()">broadening your search</a>.</p>
+        </section>
+        <section class="results__map-view" ng-controller="MapViewController" ng-if="$storage.params.views.last === 'map'">
+            <ui-gmap-google-map center="{latitude: 60.162580, longitude: 24.801832}" zoom="14" draggable="true" options="options">
+                <ui-gmap-marker ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : $storage.params.orderby : $storage.params.reverseOrder)" coords="{latitude: home.location.latitude, longitude: home.location.longitude}" idkey="home.homeId">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </section>
     </div>
 </div>
