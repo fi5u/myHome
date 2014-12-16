@@ -910,6 +910,8 @@ img {
   margin-right: 2.5641%;
   float: right;
   margin-right: 0; }
+  .results__map-view .angular-google-map-container {
+    height: 400px; }
 
 .result {
   display: inline-block;
@@ -1038,6 +1040,21 @@ img {
   width: 50%;
   vertical-align: top;
   font-size: smaller; }
+
+.tab-bar__tab {
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+  display: inline-block;
+  padding: 5px 10px 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: #f1a7b4; }
+  .tab-bar__tab:hover {
+    background: #d24; }
+  .tab-bar__tab--current {
+    background: #d24; }
 
 .main {
   padding: 30px; }

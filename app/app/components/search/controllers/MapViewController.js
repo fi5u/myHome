@@ -1,16 +1,36 @@
 myHomeApp.controller('MapViewController', ['$scope', 'uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi) {
+    $scope.map = {};
+
+    $scope.setBounds = function() {
+
+    };
 
     uiGmapGoogleMapApi.then(function(maps) {
         $scope.map = {
-            center: {
-                "latitude": 60.162580,
-                "longitude": 24.801832
+            center: $scope.$storage.params.views.map.location,
+            zoom: $scope.$storage.params.views.map.zoom,
+            events: {
+               zoom_changed: function(map) {
+                    $scope.$storage.params.views.map.zoom = map.getZoom();
+                },
+                click: function() {
+                    var bounds = new google.maps.LatLngBounds();
+                    for (var i in $scope.filteredHomes) {
+                        bounds.extend($scope.filteredHomes[i].location);
+                    }
+                    $scope.map.fitBounds(bounds);
+                }
             },
-            zoom: 14
+            bounds: {}
         };
         $scope.options = {
-            scrollwheel: false
+            scrollwheel: true
         };
+
     });
+
+    $scope.resetBounds = function() {
+        $scope.setBounds();
+    };
 
 }]);

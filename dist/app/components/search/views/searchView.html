@@ -110,7 +110,6 @@
         </section>
     </form>
     <div class="results" ng-controller="SearchResultsController as resCtrl">
-        {{currentTab}}
         <div class="tab-bar" ng-controller="TabBarController">
             <a href class="tab-bar__tab" ng-class="{ 'tab-bar__tab--current' : $storage.params.views.last === 'grid' }" ng-click="changeTab('grid')">Grid view</a>
             <a href class="tab-bar__tab" ng-class="{ 'tab-bar__tab--current' : $storage.params.views.last === 'map' }" ng-click="changeTab('map')">Map view</a>
@@ -121,10 +120,11 @@
             try <a href ng-click="resetSearch()">broadening your search</a>.</p>
         </section>
         <section class="results__map-view" ng-controller="MapViewController" ng-if="$storage.params.views.last === 'map'">
-            <ui-gmap-google-map center="{latitude: 60.162580, longitude: 24.801832}" zoom="14" draggable="true" options="options">
-                <ui-gmap-marker ng-repeat="home in filteredHomes = (resCtrl.filteredHomes | orderBy : $storage.params.orderby : $storage.params.reverseOrder)" coords="{latitude: home.location.latitude, longitude: home.location.longitude}" idkey="home.homeId">
-                </ui-gmap-marker>
+            <ui-gmap-google-map events="map.events" center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
+                <ui-gmap-markers models="filteredHomes" coords="'location'" idKey="'homeId'">
+                </ui-gmap-markers>
             </ui-gmap-google-map>
+            <a href class="results__map-reset-bounds" ng-click="resetBounds()">Place all markers in view</a>
         </section>
     </div>
 </div>
