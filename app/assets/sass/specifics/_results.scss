@@ -21,7 +21,15 @@ $c-primary: #d24;
                     @extend %single-link;
                 }
 
-            &__map-info-text {
-                text-decoration: none;
+            &__map-info-details {
+                @include clearfix;
             }
+
+                &__map-info-text {
+                    text-decoration: none;
+                }
+
+                &__map-info-price {
+
+                }
 }

@@ -917,6 +917,10 @@ img {
     height: 400px; }
   .results__map-info {
     display: block; }
+  .results__map-info-details:after {
+    content: "";
+    display: table;
+    clear: both; }
   .results__map-info-text {
     text-decoration: none; }
 
