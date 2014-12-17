@@ -644,6 +644,9 @@ img {
  *
  * @param       $sprite The list of sprite attributes
  */
+.angular-google-map img {
+  max-width: none !important; }
+
 .page-header {
   padding: 10px 30px;
   border-bottom: 2px solid #d24; }
@@ -674,11 +677,11 @@ img {
     .like--has .like__symbol:before {
       color: #d24; }
 
-.search__types-reset, .search__reset-areas, .search__area-link, .search__reset, .favorites__reset, .favorites__address-link {
+.search__types-reset, .search__reset-areas, .search__area-link, .search__reset, .results__map-info-title-link, .single__back-link, .favorites__reset, .favorites__address-link {
   font-size: smaller;
   text-decoration: none;
   color: #d24; }
-  .search__types-reset:hover, .search__reset-areas:hover, .search__area-link:hover, .search__reset:hover, .favorites__reset:hover, .favorites__address-link:hover {
+  .search__types-reset:hover, .search__reset-areas:hover, .search__area-link:hover, .search__reset:hover, .results__map-info-title-link:hover, .single__back-link:hover, .favorites__reset:hover, .favorites__address-link:hover {
     text-decoration: underline; }
 
 .search__input-label, .search__result-area {
@@ -910,6 +913,16 @@ img {
   margin-right: 2.5641%;
   float: right;
   margin-right: 0; }
+  .results__map-view .angular-google-map-container {
+    height: 400px; }
+  .results__map-info {
+    display: block; }
+  .results__map-info-details:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .results__map-info-text {
+    text-decoration: none; }
 
 .result {
   display: inline-block;
@@ -953,21 +966,21 @@ img {
     color: #d24; }
   .like--has .like__symbol:before {
     color: #d24; }
+.single__back {
+  clear: both; }
 .single__title {
-  float: left; }
+  float: left;
+  margin-top: 20px; }
 .single__price {
   float: right;
   margin-left: 20px;
   font-size: larger; }
-.single__back {
-  clear: both;
-  padding-top: 20px; }
-.single__back-link {
-  font-size: smaller; }
 .single__extras {
   width: 23.07692%;
   float: left;
   margin-right: 2.5641%; }
+.single__subtitle--side {
+  margin-bottom: 20px; }
 .single__main {
   width: 74.35897%;
   float: left;
@@ -1038,6 +1051,21 @@ img {
   width: 50%;
   vertical-align: top;
   font-size: smaller; }
+
+.tab-bar__tab {
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+  display: inline-block;
+  padding: 5px 10px 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: #f1a7b4; }
+  .tab-bar__tab:hover {
+    background: #d24; }
+  .tab-bar__tab--current {
+    background: #d24; }
 
 .main {
   padding: 30px; }

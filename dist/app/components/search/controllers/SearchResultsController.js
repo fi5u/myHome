@@ -7,6 +7,7 @@ myHomeApp.controller('SearchResultsController', ['$scope', 'Homes', function($sc
     var searchSelf = this;
     searchSelf.filteredHomes = {};
     $scope.results.count = Homes.filteredCount;
+    $scope.filteredHomes = {};
 
     /**
      * CONTROLLER FUNCTIONS
@@ -30,6 +31,9 @@ myHomeApp.controller('SearchResultsController', ['$scope', 'Homes', function($sc
         return Homes.filteredHomes;
     }, function (newValue) {
         searchSelf.filteredHomes = newValue;
+        $scope.filteredHomes = newValue;
         $scope.results.count = Homes.filteredCount;
+        // Broadcast down to child scope (map view)
+        $scope.$broadcast('filterHomesUpdate', newValue);
     });
 }]);
