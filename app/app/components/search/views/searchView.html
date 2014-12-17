@@ -124,7 +124,9 @@
 
                 <ui-gmap-window options="window.options" show="window.show" coords="marker.active.location">
                     <div class="results__map-info" style="white-space:nowrap" ng-cloak>
-                        <h3 class="results__map-info-title"><a class="results__map-info-title-link" href="#/homes/{{marker.active.homeId}}">{{marker.active.address}}</a></h3>
+                        <div class="results__map-info-header">
+                            <h3 class="results__map-info-title"><a class="results__map-info-title-link" href="#/homes/{{marker.active.homeId}}">{{marker.active.address}}</a></h3>
+                        </div>
                         <div class="results__map-info-details">
                             <span class="results__map-info-text" ng-cloak>{{marker.active.type | upperFirst}}</span><br>
                             <span class="results__map-info-price">{{marker.active.rentalCost | currency}}</span>

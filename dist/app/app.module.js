@@ -19,7 +19,7 @@ myHomeApp.controller('MyHomeController', ['$scope', '$sessionStorage', '$localSt
     });
 
     // Likes
-    if (!$scope.$storage.searchReset) {
+    if ($scope.$storage.searchReset) {
         $scope.$storage.local.likes = [];
     }
     $scope.sortedLikes = Likes.get(true);
@@ -34,6 +34,7 @@ myHomeApp.controller('MyHomeController', ['$scope', '$sessionStorage', '$localSt
     };
 
     $scope.toggleLike = function(homeId, area, address) {
+        console.log('toggles');
         Likes.toggle(homeId, area, address);
         $scope.$storage.local.likes = Likes.get();
     };
