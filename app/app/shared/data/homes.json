@@ -298,4 +298,212 @@
         "latitude": 60.399800,
         "longitude": 25.666236
     }
+}, {
+    "homeId": "a0007",
+    "address": "Apinamäki 12 b 14",
+    "type": "house",
+    "area": "Tampere",
+    "rentalCost": 1860.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veniam saepe quis ducimus sit. Possimus repellat dolores beatae tenetur error ipsa. Deserunt autem assumenda repellendus commodi nihil, corrupti quae ipsa!",
+    "images": [
+        {
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_1+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_1+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_2+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_2+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_3+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_3+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_4+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_4+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_5+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_5+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_6+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_6+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_7+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_7+thumb"
+        }
+    ],
+    "available": true,
+    "extras": [
+        {
+            "sauna": false,
+            "pets": false,
+            "balcony": false,
+            "garden": true
+        }
+    ],
+    "dateAdded": 1417516896200,
+    "location": {
+        "latitude": 61.498228,
+        "longitude": 23.758311
+    }
+}, {
+    "homeId": "a0008",
+    "address": "Siilimäentie 142 b",
+    "type": "studio",
+    "area": "Turku",
+    "rentalCost": 390.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium totam, ea assumenda nemo quia expedita iusto aliquid veniam error necessitatibus placeat neque, aut at perspiciatis architecto deleniti praesentium repellendus culpa.",
+    "images": [
+        {
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_1+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_1+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_2+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_2+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_3+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_3+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_4+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_4+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_5+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_5+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_6+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_6+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_7+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_7+thumb"
+        }
+    ],
+    "available": false,
+    "extras": [
+        {
+            "sauna": false,
+            "pets": false,
+            "balcony": false,
+            "garden": false
+        }
+    ],
+    "dateAdded": 1417516896200,
+    "location": {
+        "latitude": 60.439004,
+        "longitude": 22.239132
+    }
+}, {
+    "homeId": "a0009",
+    "address": "Kotkakuja 289 a",
+    "type": "row house",
+    "area": "Westend",
+    "rentalCost": 2100.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id veniam saepe sapiente, debitis cum nobis, ex excepturi praesentium. Est quia expedita illum sint cupiditate, quasi odit minima enim alias soluta.",
+    "images": [
+        {
+            "full": "http://placehold.it/1200x900&text=Kotkakuja289a_1+full",
+            "medium": "http://placehold.it/600x450&text=Kotkakuja289a_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Kotkakuja289a_1+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Kotkakuja289a_2+full",
+            "medium": "http://placehold.it/600x450&text=Kotkakuja289a_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Kotkakuja289a_2+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Kotkakuja289a_3+full",
+            "medium": "http://placehold.it/600x450&text=Kotkakuja289a_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Kotkakuja289a_3+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Kotkakuja289a_4+full",
+            "medium": "http://placehold.it/600x450&text=Kotkakuja289a_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Kotkakuja289a_4+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Kotkakuja289a_5+full",
+            "medium": "http://placehold.it/600x450&text=Kotkakuja289a_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Kotkakuja289a_5+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Kotkakuja289a_6+full",
+            "medium": "http://placehold.it/600x450&text=Kotkakuja289a_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Kotkakuja289a_6+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Kotkakuja289a_7+full",
+            "medium": "http://placehold.it/600x450&text=Kotkakuja289a_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Kotkakuja289a_7+thumb"
+        }
+    ],
+    "available": true,
+    "extras": [
+        {
+            "sauna": true,
+            "pets": true,
+            "balcony": false,
+            "garden": true
+        }
+    ],
+    "dateAdded": 1417527896200,
+    "location": {
+        "latitude": 60.166493,
+        "longitude": 24.794075
+    }
+}, {
+    "homeId": "a0010",
+    "address": "Delfiinitie 14",
+    "type": "house",
+    "area": "Westend",
+    "rentalCost": 2650.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed praesentium facere consectetur vero consequuntur omnis, consequatur quisquam quas tempora! Odio reprehenderit porro iure quam explicabo a, vitae, earum aut.",
+    "images": [
+        {
+            "full": "http://placehold.it/1200x900&text=Delfiinitie14_1+full",
+            "medium": "http://placehold.it/600x450&text=Delfiinitie14_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Delfiinitie14_1+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Delfiinitie14_2+full",
+            "medium": "http://placehold.it/600x450&text=Delfiinitie14_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Delfiinitie14_2+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Delfiinitie14_3+full",
+            "medium": "http://placehold.it/600x450&text=Delfiinitie14_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Delfiinitie14_3+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Delfiinitie14_4+full",
+            "medium": "http://placehold.it/600x450&text=Delfiinitie14_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Delfiinitie14_4+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Delfiinitie14_5+full",
+            "medium": "http://placehold.it/600x450&text=Delfiinitie14_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Delfiinitie14_5+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Delfiinitie14_6+full",
+            "medium": "http://placehold.it/600x450&text=Delfiinitie14_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Delfiinitie14_6+thumb"
+        }, {
+            "full": "http://placehold.it/1200x900&text=Delfiinitie14_7+full",
+            "medium": "http://placehold.it/600x450&text=Delfiinitie14_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Delfiinitie14_7+thumb"
+        }
+    ],
+    "available": true,
+    "extras": [
+        {
+            "sauna": true,
+            "pets": true,
+            "balcony": true,
+            "garden": true
+        }
+    ],
+    "dateAdded": 1417528896200,
+    "location": {
+        "latitude": 60.162580,
+        "longitude": 24.801832
+    }
 }]

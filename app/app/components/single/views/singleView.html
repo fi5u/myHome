@@ -1,14 +1,14 @@
 <article class="main-wrap--single">
     <header class="single__header">
-        <h1 class="single__title">{{home.address}}, {{home.area}}</h1>
-        <div class="single__price">{{home.rentalCost | currency : "€"}}</div>
-        <a href class="like" ng-class="{ 'like--has':hasLike(home.homeId) }" ng-click="toggleLike(home.homeId, home.area, home.address)"><span class="like__symbol">Like</span></a>
         <div class="single__back">
             <a href="#/homes/" class="single__back-link" ng-click="$storage.searchReset = true">Back to search results</a>
         </div>
+        <h1 class="single__title">{{home.address}}, {{home.area}}</h1>
+        <div class="single__price">{{home.rentalCost | currency : "€"}}</div>
+        <a href class="like" ng-class="{ 'like--has':hasLike(home.homeId) }" ng-click="toggleLike(home.homeId, home.area, home.address)"><span class="like__symbol">Like</span></a>
     </header>
     <section class="single__extras">
-        <h2>Features</h2>
+        <h2 class="single__subtitle--side">Features</h2>
         <div class="single__extra" ng-class="{ 'single__extra--has':value }" ng-repeat="(extra, value) in home.extras[0]">{{extra}}: {{value | boolConvert}}</div>
     </section>
     <section class="single__main">

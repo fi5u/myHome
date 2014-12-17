@@ -19,7 +19,7 @@ myHomeApp.controller('MyHomeController', ['$scope', '$sessionStorage', '$localSt
     });
 
     // Likes
-    if (!$scope.$storage.searchReset) {
+    if ($scope.$storage.searchReset) {
         $scope.$storage.local.likes = [];
     }
     $scope.sortedLikes = Likes.get(true);

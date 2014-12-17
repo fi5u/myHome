@@ -1,0 +1,21 @@
+.tab-bar {
+    &__tab {
+        @include transition(background .2s ease-in);
+
+        display: inline-block;
+        padding: 5px 10px 5px;
+
+        font-weight: bold;
+        text-decoration: none;
+        color: palette(white);
+        background: palette(primary, lightest);
+
+        &:hover {
+            background: palette(primary);
+        }
+
+        &--current {
+            background: palette(primary);
+        }
+    }
+}

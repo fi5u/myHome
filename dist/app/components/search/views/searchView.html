@@ -110,8 +110,34 @@
         </section>
     </form>
     <div class="results" ng-controller="SearchResultsController as resCtrl">
-        <single-result></single-result>
-        <p ng-show="results.count === 0">No homes match your search requirements,<br>
-        try <a href ng-click="resetSearch()">broadening your search</a>.</p>
+        <div class="tab-bar" ng-controller="TabBarController">
+            <a href class="tab-bar__tab" ng-class="{ 'tab-bar__tab--current' : $storage.params.views.last === 'grid' }" ng-click="changeTab('grid')">Grid view</a>
+            <a href class="tab-bar__tab" ng-class="{ 'tab-bar__tab--current' : $storage.params.views.last === 'map' }" ng-click="changeTab('map')">Map view</a>
+        </div>
+        <section class="results__grid-view" ng-controller="GridViewController" ng-if="$storage.params.views.last === 'grid'">
+            <single-result></single-result>
+            <p ng-show="results.count === 0">No homes match your search requirements,<br>
+            try <a href ng-click="resetSearch()">broadening your search</a>.</p>
+        </section>
+        <section class="results__map-view" ng-controller="MapViewController" ng-if="$storage.params.views.last === 'map'">
+            <ui-gmap-google-map events="map.events" center="map.center" zoom="map.zoom" draggable="true" options="map.options">
+
+                <ui-gmap-window options="window.options" show="window.show" coords="marker.active.location">
+                    <div class="results__map-info" style="white-space:nowrap" ng-cloak>
+                        <div class="results__map-info-header">
+                            <h3 class="results__map-info-title"><a class="results__map-info-title-link" href="#/homes/{{marker.active.homeId}}">{{marker.active.address}}</a></h3>
+                        </div>
+                        <div class="results__map-info-details">
+                            <span class="results__map-info-text" ng-cloak>{{marker.active.type | upperFirst}}</span><br>
+                            <span class="results__map-info-price">{{marker.active.rentalCost | currency}}</span>
+                        </div>
+                    </div>
+                </ui-gmap-window>
+
+                <ui-gmap-markers models="filteredHomes" coords="'location'" idKey="'homeId'" fit="map.fit" events="marker.events">
+                </ui-gmap-markers>
+
+            </ui-gmap-google-map>
+        </section>
     </div>
 </div>
