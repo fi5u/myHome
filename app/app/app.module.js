@@ -34,7 +34,6 @@ myHomeApp.controller('MyHomeController', ['$scope', '$sessionStorage', '$localSt
     };
 
     $scope.toggleLike = function(homeId, area, address) {
-        console.log('toggles');
         Likes.toggle(homeId, area, address);
         $scope.$storage.local.likes = Likes.get();
     };
