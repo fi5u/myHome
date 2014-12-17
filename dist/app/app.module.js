@@ -7,8 +7,8 @@ myHomeApp.controller('MyHomeController', ['$scope', '$sessionStorage', '$localSt
      */
 
     // Storage
-    $localStorage.$reset();
-    $sessionStorage.$reset();
+    //$localStorage.$reset();
+    //$sessionStorage.$reset();
 
     $scope.$storage = $sessionStorage.$default({
         searchReset: false
