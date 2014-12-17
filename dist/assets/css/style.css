@@ -644,6 +644,9 @@ img {
  *
  * @param       $sprite The list of sprite attributes
  */
+.angular-google-map img {
+  max-width: none !important; }
+
 .page-header {
   padding: 10px 30px;
   border-bottom: 2px solid #d24; }
@@ -674,11 +677,11 @@ img {
     .like--has .like__symbol:before {
       color: #d24; }
 
-.search__types-reset, .search__reset-areas, .search__area-link, .search__reset, .favorites__reset, .favorites__address-link {
+.search__types-reset, .search__reset-areas, .search__area-link, .search__reset, .results__map-info-title-link, .favorites__reset, .favorites__address-link {
   font-size: smaller;
   text-decoration: none;
   color: #d24; }
-  .search__types-reset:hover, .search__reset-areas:hover, .search__area-link:hover, .search__reset:hover, .favorites__reset:hover, .favorites__address-link:hover {
+  .search__types-reset:hover, .search__reset-areas:hover, .search__area-link:hover, .search__reset:hover, .results__map-info-title-link:hover, .favorites__reset:hover, .favorites__address-link:hover {
     text-decoration: underline; }
 
 .search__input-label, .search__result-area {
@@ -912,6 +915,10 @@ img {
   margin-right: 0; }
   .results__map-view .angular-google-map-container {
     height: 400px; }
+  .results__map-info {
+    display: block; }
+  .results__map-info-text {
+    text-decoration: none; }
 
 .result {
   display: inline-block;

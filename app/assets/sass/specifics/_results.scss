@@ -9,4 +9,19 @@ $c-primary: #d24;
             height: 400px;
         }
     }
+
+        &__map-info {
+            display: block;
+        }
+
+            &__map-info-title {
+
+            }
+                &__map-info-title-link {
+                    @extend %single-link;
+                }
+
+            &__map-info-text {
+                text-decoration: none;
+            }
 }
