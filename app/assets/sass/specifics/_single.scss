@@ -24,8 +24,17 @@
         }
     }
 
+        &__back {
+            clear: both;
+        }
+
+            &__back-link {
+                @extend %single-link;
+            }
+
         &__title {
             float: left;
+            margin-top: 20px;
         }
 
         &__price {
@@ -35,18 +44,13 @@
             font-size: larger;
         }
 
-        &__back {
-            clear: both;
-            padding-top: 20px;
-        }
-
-            &__back-link {
-                font-size: smaller;
-            }
-
     &__extras {
         @include span(3 of 12);
     }
+
+        &__subtitle--side {
+            margin-bottom: 20px;
+        }
 
     &__main {
         @include span(9 of 12);
