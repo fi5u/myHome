@@ -12,11 +12,6 @@ myHomeApp.controller('MapViewController', ['$scope', 'uiGmapGoogleMapApi', funct
             center: $scope.$storage.params.views.map.location,
             zoom: $scope.$storage.params.views.map.zoom,
             events: {
-                tilesloaded: function (map) {
-                    $scope.$apply(function () {
-                        $scope.mapInstance = map;
-                    });
-                },
                 zoom_changed: function(map) {
                     $scope.$storage.params.views.map.zoom = map.getZoom();
                 }
