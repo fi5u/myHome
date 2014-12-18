@@ -91,28 +91,34 @@
             vertical-align: middle;
         }
 
-        &__lightbox-advance {
-            @include icon("\e806");
+        &__lightbox-advance-wrap {
             display: inline-block;
-
-            width: 1em;
-            height: 0;
-
-            color: palette(black);
-            text-align: right;
-            font-size: 6em;
-            line-height: 0;
-
-            &:after {
-
-            }
-
-            &:last-of-type {
-                @include icon("\e807");
-
-                text-align: left;
-            }
+            position: relative;
         }
+
+            &__lightbox-advance {
+                @include icon("\e806");
+
+                float: right;
+                width: 0;
+                height: 1em;
+                overflow: hidden;
+
+                font-size: 3em;
+
+                &:after {
+                    position: absolute;
+                    left: -60px;
+                }
+
+                .single__lightbox-advance-wrap:last-of-type & {
+                    @include icon("\e807");
+
+                    &:after {
+                        left: 0;
+                    }
+                }
+            }
 }
 
 .angular-google-map-container { height: 240px; }

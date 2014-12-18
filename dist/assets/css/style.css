@@ -1028,16 +1028,17 @@ img {
   display: inline-block;
   max-height: 80%;
   vertical-align: middle; }
+.single__lightbox-advance-wrap {
+  display: inline-block;
+  position: relative; }
 .single__lightbox-advance {
   color: inherit;
   text-decoration: none;
-  display: inline-block;
-  width: 1em;
-  height: 0;
-  color: #000;
-  text-align: right;
-  font-size: 6em;
-  line-height: 0; }
+  float: right;
+  width: 0;
+  height: 1em;
+  overflow: hidden;
+  font-size: 3em; }
   .single__lightbox-advance:after {
     display: inline-block;
     width: 1em;
@@ -1055,11 +1056,13 @@ img {
     content: ""; }
   .single__lightbox-advance:hover {
     color: #d24; }
-  .single__lightbox-advance:last-of-type {
+  .single__lightbox-advance:after {
+    position: absolute;
+    left: -60px; }
+  .single__lightbox-advance-wrap:last-of-type .single__lightbox-advance {
     color: inherit;
-    text-decoration: none;
-    text-align: left; }
-    .single__lightbox-advance:last-of-type:after {
+    text-decoration: none; }
+    .single__lightbox-advance-wrap:last-of-type .single__lightbox-advance:after {
       display: inline-block;
       width: 1em;
       margin-right: .2em;
@@ -1074,8 +1077,10 @@ img {
       line-height: 1.4em;
       speak: none;
       content: ""; }
-    .single__lightbox-advance:last-of-type:hover {
+    .single__lightbox-advance-wrap:last-of-type .single__lightbox-advance:hover {
       color: #d24; }
+    .single__lightbox-advance-wrap:last-of-type .single__lightbox-advance:after {
+      left: 0; }
 
 .angular-google-map-container {
   height: 240px; }
