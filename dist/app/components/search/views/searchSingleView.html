@@ -7,7 +7,7 @@
     <div class="result__type">{{home.type | upperFirst}}</div>
     <div class="result__cost">{{home.rentalCost | currency : "€"}}</div>
     <div class="result__image-wrap">
-        <img ng-src="{{home.images[0].thumb}}" alt="{{home.address}}">
+        <a href="#/homes/{{home.homeId}}" class="result__image-link"><img ng-src="{{home.images[0].thumb}}" alt="{{home.address}}"></a>
     </div>
     <div class="result__extras">
         <div class="result__extra" ng-class="{ 'result__extra--has':value }" ng-repeat="(extra, value) in home.extras[0]">{{extra}}: {{value | boolConvert}}</div>
