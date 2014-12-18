@@ -102,7 +102,7 @@
                             <h4>{{area}}</h4>
                         </td>
                         <td class="favorites__address">
-                            <a href="#/homes/{{homeData.homeId}}" class="favorites__address-link">{{homeData.address}}</a>
+                            <a href="#/homes/{{homeData.homeId}}" class="favorites__address-link">{{homeData.address}}</a> <a href class="favorites__address-remove" ng-click="removeFavorite(homeData.homeId)">remove</a>
                         </td>
                     </tr>
                 </table>

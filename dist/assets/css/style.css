@@ -1063,6 +1063,43 @@ img {
   width: 50%;
   vertical-align: top;
   font-size: smaller; }
+.favorites__address {
+  position: relative;
+  padding-left: 2px; }
+  .favorites__address:hover {
+    background-color: #eee; }
+.favorites__address-remove {
+  color: inherit;
+  text-decoration: none;
+  display: none;
+  float: right;
+  width: 0;
+  height: 1em;
+  overflow: hidden;
+  font-size: 1em; }
+  .favorites__address-remove:after {
+    display: inline-block;
+    width: 1em;
+    margin-right: .2em;
+    margin-left: .2em;
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-decoration: inherit;
+    text-align: center;
+    text-transform: none;
+    line-height: 1.4em;
+    speak: none;
+    content: ""; }
+  .favorites__address-remove:hover {
+    color: #d24; }
+  .favorites__address-remove:after {
+    position: absolute;
+    top: 1px;
+    right: 0; }
+  .favorites__address:hover .favorites__address-remove {
+    display: inline-block; }
 
 .tab-bar__tab {
   -webkit-transition: background 0.2s ease-in;
