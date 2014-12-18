@@ -32,6 +32,7 @@ $no-like-symbol: "\e801";
         padding-right: 1px;
 
         color: palette(primary, lighter);
+        line-height: 1.2em;
 
         &:before {
             content: "";

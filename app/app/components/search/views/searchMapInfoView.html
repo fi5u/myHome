@@ -1,0 +1,10 @@
+<div class="results__map-info" style="white-space:nowrap" ng-cloak>
+    <div class="results__map-info-header">
+        <h3 class="results__map-info-title"><a class="results__map-info-title-link" href="#/homes/{{parameter.marker.active.homeId}}">{{parameter.marker.active.address}}</a></h3>
+    </div>
+    <div class="results__map-info-details">
+        <span class="results__map-info-text">{{parameter.marker.active.type | upperFirst}}</span><br>
+        <span class="results__map-info-price">{{parameter.marker.active.rentalCost | currency}}</span>
+        <a href class="like" ng-class="{ 'like--has':parameter.hasLike(parameter.marker.active.homeId) }" ng-click="parameter.toggleLike(parameter.marker.active.homeId, parameter.marker.active.area, parameter.marker.active.address)"><span class="like__symbol">Like</span></a>
+    </div>
+</div>
