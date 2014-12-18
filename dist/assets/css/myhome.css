@@ -815,6 +815,8 @@ img {
     padding: 0 10px; }
     .search__area:hover {
       background: #eee; }
+  .search__area-link--null {
+    color: #ccc; }
   .search__result-area {
     display: block;
     position: relative;

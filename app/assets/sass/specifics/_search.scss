@@ -181,6 +181,10 @@
 
                 &__area-link {
                     @extend %single-link;
+
+                    &--null {
+                        color: palette(gray, lighter);
+                    }
                 }
 
         &__area-results {
