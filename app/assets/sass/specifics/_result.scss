@@ -4,7 +4,7 @@
     margin: 0 gutter() gutter() 0;
     padding: 10px;
 
-    color: #eee;
+    color: palette(gray, lightest);
     background-color: rgba(0,0,0,0.8);
 
     &:nth-child(4n) {
@@ -17,13 +17,13 @@
 
     &:hover {
         .like__symbol:before {
-            @include symbol-like(false);;
+            @include symbol-like(false);
         }
     }
 
     &__title-link {
         text-decoration: none;
-        color: #eee;
+        color: palette(gray, lightest);;
 
         &:hover {
             text-decoration: underline;

@@ -65,6 +65,60 @@
             @include span(4 of 9);
             @include last;
         }
+
+    &__lightbox {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+        background-color: rgba(255,255,255,0.8);
+
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -0.25em;
+        }
+    }
+
+        &__lightbox-img {
+            display: inline-block;
+            max-height: 80%;
+            vertical-align: middle;
+        }
+
+        &__lightbox-advance-wrap {
+            display: inline-block;
+            position: relative;
+        }
+
+            &__lightbox-advance {
+                @include icon("\e806");
+
+                float: right;
+                width: 0;
+                height: 1em;
+                overflow: hidden;
+
+                font-size: 3em;
+
+                &:after {
+                    position: absolute;
+                    left: -60px;
+                }
+
+                .single__lightbox-advance-wrap:last-of-type & {
+                    @include icon("\e807");
+
+                    &:after {
+                        left: 0;
+                    }
+                }
+            }
 }
 
 .angular-google-map-container { height: 240px; }

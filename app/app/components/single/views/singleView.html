@@ -23,4 +23,16 @@
             </ui-gmap-google-map>
         </div>
     </section>
+
+    <div class="single__lightbox" ng-if="isShowLightbox" ng-click="hideLightbox()">
+        <div class="single__lightbox-advance-wrap">
+            <a href class="single__lightbox-advance" ng-click="lightboxAdvance('prev', index.active, home.images.length); $event.stopPropagation();">&laquo;xxxxx</a>
+        </div>
+
+        <img class="single__lightbox-img" ng-src="{{home.images[index.active].full}}" alt="{{home.address}}">
+
+        <div class="single__lightbox-advance-wrap">
+            <a href class="single__lightbox-advance" ng-click="lightboxAdvance('next', index.active, home.images.length); $event.stopPropagation();">&raquo;xxxxx</a>
+        </div>
+    </div>
 </article>
