@@ -664,7 +664,8 @@ img {
     width: 1em;
     height: 1.2em;
     padding-right: 1px;
-    color: #e44e69; }
+    color: #e44e69;
+    line-height: 1.2em; }
     .like__symbol:before {
       content: "";
       display: block;
@@ -921,6 +922,15 @@ img {
     content: "";
     display: table;
     clear: both; }
+  .results__map-info-details .like__symbol {
+    position: relative;
+    right: -20px;
+    top: -21px; }
+    .results__map-info-details .like__symbol:before {
+      content: "";
+      color: #ccc; }
+    .results__map-info-details .like__symbol:hover:before {
+      color: #e44e69; }
   .results__map-info-text {
     text-decoration: none; }
 
@@ -961,7 +971,7 @@ img {
     clear: both; }
   .single__header .like__symbol:before {
     content: "";
-    color: #ddd; }
+    color: #ccc; }
   .single__header .like__symbol:hover:before {
     color: #d24; }
   .like--has .like__symbol:before {

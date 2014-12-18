@@ -9,7 +9,7 @@
             &:before {
                 @include symbol-like(false);
 
-                color: #ddd;
+                color: palette(gray, lighter);
             }
 
             &:hover {

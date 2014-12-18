@@ -3,9 +3,19 @@ myHomeApp.controller('MapViewController', ['$scope', 'uiGmapGoogleMapApi', funct
 
     $scope.marker = {};
     $scope.marker.events = {};
+    $scope.marker.like = function() {
+        console.log('likeylikey!');
+    };
 
-    $scope.window = {};
-    $scope.window.show = false;
+    $scope.window = {
+        options: {
+            maxWidth: 600,
+            visible: true
+        },
+        show: false,
+        templateUrl: 'app/components/search/views/searchMapInfoView.html',
+        templateParameter: $scope
+    };
 
     uiGmapGoogleMapApi.then(function(maps) {
         $scope.map = {
@@ -23,11 +33,6 @@ myHomeApp.controller('MapViewController', ['$scope', 'uiGmapGoogleMapApi', funct
             }
         };
 
-        $scope.window.options = {
-            maxWidth: 600,
-            visible: true
-        };
-
         $scope.marker.events = {
             click: function(marker) {
                 $scope.window.show = true;
@@ -40,4 +45,17 @@ myHomeApp.controller('MapViewController', ['$scope', 'uiGmapGoogleMapApi', funct
         $scope.setBounds();
     };
 
+    /*$scope.hasLike = function(homeId) {
+        console.log('hasLike');
+        console.log(homeId);
+    };*/
+
+   /* $scope.toggleLike = function(homeId, area, address) {
+        console.log('toggleLike');
+        console.log(homeId, area, address);
+    };
+
+    $scope.test = function() {
+        alert('test');
+    };*/
 }]);

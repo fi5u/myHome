@@ -23,6 +23,21 @@ $c-primary: #d24;
 
             &__map-info-details {
                 @include clearfix;
+
+                .like__symbol {
+                    position: relative;
+                    right: -20px;
+                    top: -21px;
+
+                    &:before {
+                        @include symbol-like(false);
+                        color: palette(gray, lighter);
+                    }
+
+                    &:hover:before {
+                        color: palette(primary, lighter);
+                    }
+               }
             }
 
                 &__map-info-text {
