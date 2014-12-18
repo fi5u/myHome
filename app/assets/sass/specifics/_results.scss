@@ -1,8 +1,10 @@
 $c-primary: #d24;
 
 .results {
-    @include span(9 of 12);
-    @include last;
+    @include breakpoint(m) {
+        @include span(9 of 12);
+        @include last;
+    }
 
     &__map-view {
         .angular-google-map-container {
