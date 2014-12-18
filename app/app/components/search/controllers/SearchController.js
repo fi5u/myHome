@@ -1,4 +1,4 @@
-myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 'removeSpaceFilter', function($scope, $sessionStorage, Homes, removeSpaceFilter) {
+myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 'Likes', 'removeSpaceFilter', function($scope, $sessionStorage, Homes, Likes, removeSpaceFilter) {
 
     /**
      * CONTROLLER VARIABLE DEFINITIONS
@@ -127,6 +127,11 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     // Likes
     $scope.resetLikes = function() {
         $scope.$storage.local.likes = [];
+    };
+
+    $scope.removeFavorite = function(homeId) {
+        Likes.remove(homeId);
+        $scope.$storage.local.likes = Likes.get()
     };
 
     // Price slider

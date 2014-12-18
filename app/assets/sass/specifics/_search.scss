@@ -181,6 +181,10 @@
 
                 &__area-link {
                     @extend %single-link;
+
+                    &--null {
+                        color: palette(gray, lighter);
+                    }
                 }
 
         &__area-results {
@@ -200,7 +204,7 @@
                 padding-left: 2px;
 
                 &:hover {
-                    background-color: #eee;
+                    background-color: palette(gray, lightest);
                 }
 
                 &--null {

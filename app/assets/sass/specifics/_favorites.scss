@@ -39,10 +39,37 @@
             }
 
             &__address {
+                position: relative;
+                padding-left: 2px;
 
+                &:hover {
+                    background-color: palette(gray, lightest);
+                }
             }
 
                 &__address-link {
                     @extend %single-link;
+                }
+
+                &__address-remove {
+                    @include icon("\e804");
+
+                    display: none;
+                    float: right;
+                    width: 0;
+                    height: 1em;
+                    overflow: hidden;
+
+                    font-size: 1em;
+
+                    &:after {
+                        position: absolute;
+                        top: 1px;
+                        right: 0;
+                    }
+
+                    .favorites__address:hover & {
+                        display: inline-block;
+                    }
                 }
 }
