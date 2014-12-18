@@ -248,7 +248,7 @@
     }
 }, {
     "homeId": "a0006",
-    "address": "Hevonentie 3b",
+    "address": "Hevonentie 3 b",
     "type": "apartment",
     "area": "Porvoo",
     "rentalCost": 2200.00,
@@ -300,40 +300,40 @@
     }
 }, {
     "homeId": "a0007",
-    "address": "Apinamäki 12 b 14",
+    "address": "Apinamäki 12 b",
     "type": "house",
     "area": "Tampere",
     "rentalCost": 1860.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia veniam saepe quis ducimus sit. Possimus repellat dolores beatae tenetur error ipsa. Deserunt autem assumenda repellendus commodi nihil, corrupti quae ipsa!",
     "images": [
         {
-            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_1+full",
-            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_1+medium",
-            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b_1+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b_1+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_2+full",
-            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_2+medium",
-            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b_2+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b_2+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_3+full",
-            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_3+medium",
-            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b_3+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b_3+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_4+full",
-            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_4+medium",
-            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b_4+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b_4+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_5+full",
-            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_5+medium",
-            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_5+thumb"
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b_5+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b_5+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_6+full",
-            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_6+medium",
-            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_6+thumb"
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b_6+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b_6+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Apinamäki12b14_7+full",
-            "medium": "http://placehold.it/600x450&text=Apinamäki12b14_7+medium",
-            "thumb": "http://placehold.it/300x200&text=Apinamäki12b14_7+thumb"
+            "full": "http://placehold.it/1200x900&text=Apinamäki12b_7+full",
+            "medium": "http://placehold.it/600x450&text=Apinamäki12b_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Apinamäki12b_7+thumb"
         }
     ],
     "available": true,
@@ -352,40 +352,40 @@
     }
 }, {
     "homeId": "a0008",
-    "address": "Siilimäentie 142 b",
+    "address": "Siilimäentie 142",
     "type": "studio",
     "area": "Turku",
     "rentalCost": 390.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium totam, ea assumenda nemo quia expedita iusto aliquid veniam error necessitatibus placeat neque, aut at perspiciatis architecto deleniti praesentium repellendus culpa.",
     "images": [
         {
-            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_1+full",
-            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_1+medium",
-            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142_1+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142_1+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_2+full",
-            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_2+medium",
-            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142_2+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142_2+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_3+full",
-            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_3+medium",
-            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142_3+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142_3+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_4+full",
-            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_4+medium",
-            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142_4+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142_4+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_5+full",
-            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_5+medium",
-            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_5+thumb"
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142_5+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142_5+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_6+full",
-            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_6+medium",
-            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_6+thumb"
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142_6+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142_6+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Siilimäentie142b_7+full",
-            "medium": "http://placehold.it/600x450&text=Siilimäentie142b_7+medium",
-            "thumb": "http://placehold.it/300x200&text=Siilimäentie142b_7+thumb"
+            "full": "http://placehold.it/1200x900&text=Siilimäentie142_7+full",
+            "medium": "http://placehold.it/600x450&text=Siilimäentie142_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Siilimäentie142_7+thumb"
         }
     ],
     "available": false,
@@ -560,40 +560,40 @@
     }
 }, {
     "homeId": "a0012",
-    "address": "Marsumäki 90 b 14",
+    "address": "Marsumäki 90 b",
     "type": "studio",
     "area": "Porvoo",
     "rentalCost": 595.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nisi quia, ea dolorum ratione tenetur est, fugit amet maxime nobis eos esse iste alias aut earum, ipsum illo vel vero.",
     "images": [
         {
-            "full": "http://placehold.it/1200x900&text=Marsumäki90b14_1+full",
-            "medium": "http://placehold.it/600x450&text=Marsumäki90b14_1+medium",
-            "thumb": "http://placehold.it/300x200&text=Marsumäki90b14_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Marsumäki90b_1+full",
+            "medium": "http://placehold.it/600x450&text=Marsumäki90b_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Marsumäki90b_1+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Marsumäki90b14_2+full",
-            "medium": "http://placehold.it/600x450&text=Marsumäki90b14_2+medium",
-            "thumb": "http://placehold.it/300x200&text=Marsumäki90b14_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Marsumäki90b_2+full",
+            "medium": "http://placehold.it/600x450&text=Marsumäki90b_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Marsumäki90b_2+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Marsumäki90b14_3+full",
-            "medium": "http://placehold.it/600x450&text=Marsumäki90b14_3+medium",
-            "thumb": "http://placehold.it/300x200&text=Marsumäki90b14_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Marsumäki90b_3+full",
+            "medium": "http://placehold.it/600x450&text=Marsumäki90b_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Marsumäki90b_3+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Marsumäki90b14_4+full",
-            "medium": "http://placehold.it/600x450&text=Marsumäki90b14_4+medium",
-            "thumb": "http://placehold.it/300x200&text=Marsumäki90b14_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Marsumäki90b_4+full",
+            "medium": "http://placehold.it/600x450&text=Marsumäki90b_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Marsumäki90b_4+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Marsumäki90b14_5+full",
-            "medium": "http://placehold.it/600x450&text=Marsumäki90b14_5+medium",
-            "thumb": "http://placehold.it/300x200&text=Marsumäki90b14_5+thumb"
+            "full": "http://placehold.it/1200x900&text=Marsumäki90b_5+full",
+            "medium": "http://placehold.it/600x450&text=Marsumäki90b_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Marsumäki90b_5+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Marsumäki90b14_6+full",
-            "medium": "http://placehold.it/600x450&text=Marsumäki90b14_6+medium",
-            "thumb": "http://placehold.it/300x200&text=Marsumäki90b14_6+thumb"
+            "full": "http://placehold.it/1200x900&text=Marsumäki90b_6+full",
+            "medium": "http://placehold.it/600x450&text=Marsumäki90b_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Marsumäki90b_6+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Marsumäki90b14_7+full",
-            "medium": "http://placehold.it/600x450&text=Marsumäki90b14_7+medium",
-            "thumb": "http://placehold.it/300x200&text=Marsumäki90b14_7+thumb"
+            "full": "http://placehold.it/1200x900&text=Marsumäki90b_7+full",
+            "medium": "http://placehold.it/600x450&text=Marsumäki90b_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Marsumäki90b_7+thumb"
         }
     ],
     "available": true,
@@ -768,40 +768,40 @@
     }
 }, {
     "homeId": "a0016",
-    "address": "Lammaskuja 120 a",
+    "address": "Lammastie 12 a",
     "type": "apartment",
     "area": "Hankoo",
     "rentalCost": 395.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem distinctio dolor modi neque excepturi labore reprehenderit iste itaque explicabo accusamus, alias, molestias tenetur saepe nam molestiae veniam, hic laudantium facilis!",
     "images": [
         {
-            "full": "http://placehold.it/1200x900&text=Lammaskuja120a_1+full",
-            "medium": "http://placehold.it/600x450&text=Lammaskuja120a_1+medium",
-            "thumb": "http://placehold.it/300x200&text=Lammaskuja120a_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Lammastie12a_1+full",
+            "medium": "http://placehold.it/600x450&text=Lammastie12a_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Lammastie12a_1+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Lammaskuja120a_2+full",
-            "medium": "http://placehold.it/600x450&text=Lammaskuja120a_2+medium",
-            "thumb": "http://placehold.it/300x200&text=Lammaskuja120a_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Lammastie12a_2+full",
+            "medium": "http://placehold.it/600x450&text=Lammastie12a_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Lammastie12a_2+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Lammaskuja120a_3+full",
-            "medium": "http://placehold.it/600x450&text=Lammaskuja120a_3+medium",
-            "thumb": "http://placehold.it/300x200&text=Lammaskuja120a_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Lammastie12a_3+full",
+            "medium": "http://placehold.it/600x450&text=Lammastie12a_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Lammastie12a_3+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Lammaskuja120a_4+full",
-            "medium": "http://placehold.it/600x450&text=Lammaskuja120a_4+medium",
-            "thumb": "http://placehold.it/300x200&text=Lammaskuja120a_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Lammastie12a_4+full",
+            "medium": "http://placehold.it/600x450&text=Lammastie12a_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Lammastie12a_4+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Lammaskuja120a_5+full",
-            "medium": "http://placehold.it/600x450&text=Lammaskuja120a_5+medium",
-            "thumb": "http://placehold.it/300x200&text=Lammaskuja120a_5+thumb"
+            "full": "http://placehold.it/1200x900&text=Lammastie12a_5+full",
+            "medium": "http://placehold.it/600x450&text=Lammastie12a_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Lammastie12a_5+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Lammaskuja120a_6+full",
-            "medium": "http://placehold.it/600x450&text=Lammaskuja120a_6+medium",
-            "thumb": "http://placehold.it/300x200&text=Lammaskuja120a_6+thumb"
+            "full": "http://placehold.it/1200x900&text=Lammastie12a_6+full",
+            "medium": "http://placehold.it/600x450&text=Lammastie12a_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Lammastie12a_6+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Lammaskuja120a_7+full",
-            "medium": "http://placehold.it/600x450&text=Lammaskuja120a_7+medium",
-            "thumb": "http://placehold.it/300x200&text=Lammaskuja120a_7+thumb"
+            "full": "http://placehold.it/1200x900&text=Lammastie12a_7+full",
+            "medium": "http://placehold.it/600x450&text=Lammastie12a_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Lammastie12a_7+thumb"
         }
     ],
     "available": true,
@@ -820,40 +820,40 @@
     }
 }, {
     "homeId": "a0017",
-    "address": "Sikakatu 4 a 23",
+    "address": "Sikakatu 4 a",
     "type": "apartment",
     "area": "Järvenpää",
     "rentalCost": 565.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus delectus quis reiciendis quidem voluptate? Doloribus praesentium, a natus sunt iste quis quasi omnis vel, eius. Vel, eaque quam eius eveniet?",
     "images": [
         {
-            "full": "http://placehold.it/1200x900&text=Sikakatu4a23_1+full",
-            "medium": "http://placehold.it/600x450&text=Sikakatu4a23_1+medium",
-            "thumb": "http://placehold.it/300x200&text=Sikakatu4a23_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Sikakatu4a_1+full",
+            "medium": "http://placehold.it/600x450&text=Sikakatu4a_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Sikakatu4a_1+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Sikakatu4a23_2+full",
-            "medium": "http://placehold.it/600x450&text=Sikakatu4a23_2+medium",
-            "thumb": "http://placehold.it/300x200&text=Sikakatu4a23_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Sikakatu4a_2+full",
+            "medium": "http://placehold.it/600x450&text=Sikakatu4a_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Sikakatu4a_2+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Sikakatu4a23_3+full",
-            "medium": "http://placehold.it/600x450&text=Sikakatu4a23_3+medium",
-            "thumb": "http://placehold.it/300x200&text=Sikakatu4a23_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Sikakatu4a_3+full",
+            "medium": "http://placehold.it/600x450&text=Sikakatu4a_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Sikakatu4a_3+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Sikakatu4a23_4+full",
-            "medium": "http://placehold.it/600x450&text=Sikakatu4a23_4+medium",
-            "thumb": "http://placehold.it/300x200&text=Sikakatu4a23_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Sikakatu4a_4+full",
+            "medium": "http://placehold.it/600x450&text=Sikakatu4a_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Sikakatu4a_4+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Sikakatu4a23_5+full",
-            "medium": "http://placehold.it/600x450&text=Sikakatu4a23_5+medium",
-            "thumb": "http://placehold.it/300x200&text=Sikakatu4a23_5+thumb"
+            "full": "http://placehold.it/1200x900&text=Sikakatu4a_5+full",
+            "medium": "http://placehold.it/600x450&text=Sikakatu4a_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Sikakatu4a_5+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Sikakatu4a23_6+full",
-            "medium": "http://placehold.it/600x450&text=Sikakatu4a23_6+medium",
-            "thumb": "http://placehold.it/300x200&text=Sikakatu4a23_6+thumb"
+            "full": "http://placehold.it/1200x900&text=Sikakatu4a_6+full",
+            "medium": "http://placehold.it/600x450&text=Sikakatu4a_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Sikakatu4a_6+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Sikakatu4a23_7+full",
-            "medium": "http://placehold.it/600x450&text=Sikakatu4a23_7+medium",
-            "thumb": "http://placehold.it/300x200&text=Sikakatu4a23_7+thumb"
+            "full": "http://placehold.it/1200x900&text=Sikakatu4a_7+full",
+            "medium": "http://placehold.it/600x450&text=Sikakatu4a_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Sikakatu4a_7+thumb"
         }
     ],
     "available": true,
@@ -924,40 +924,40 @@
     }
 }, {
     "homeId": "a0019",
-    "address": "Alpakkakatu 19 b",
+    "address": "Alpakkakatu 19",
     "type": "row house",
     "area": "Westend",
     "rentalCost": 1395.00,
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellat qui illo maiores similique officia omnis ab doloremque illum magnam perspiciatis, iusto est, porro mollitia fuga quos reprehenderit optio. Maxime.",
     "images": [
         {
-            "full": "http://placehold.it/1200x900&text=Alpakkakatu19b_1+full",
-            "medium": "http://placehold.it/600x450&text=Alpakkakatu19b_1+medium",
-            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19b_1+thumb"
+            "full": "http://placehold.it/1200x900&text=Alpakkakatu19_1+full",
+            "medium": "http://placehold.it/600x450&text=Alpakkakatu19_1+medium",
+            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19_1+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Alpakkakatu19b_2+full",
-            "medium": "http://placehold.it/600x450&text=Alpakkakatu19b_2+medium",
-            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19b_2+thumb"
+            "full": "http://placehold.it/1200x900&text=Alpakkakatu19_2+full",
+            "medium": "http://placehold.it/600x450&text=Alpakkakatu19_2+medium",
+            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19_2+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Alpakkakatu19b_3+full",
-            "medium": "http://placehold.it/600x450&text=Alpakkakatu19b_3+medium",
-            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19b_3+thumb"
+            "full": "http://placehold.it/1200x900&text=Alpakkakatu19_3+full",
+            "medium": "http://placehold.it/600x450&text=Alpakkakatu19_3+medium",
+            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19_3+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Alpakkakatu19b_4+full",
-            "medium": "http://placehold.it/600x450&text=Alpakkakatu19b_4+medium",
-            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19b_4+thumb"
+            "full": "http://placehold.it/1200x900&text=Alpakkakatu19_4+full",
+            "medium": "http://placehold.it/600x450&text=Alpakkakatu19_4+medium",
+            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19_4+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Alpakkakatu19b_5+full",
-            "medium": "http://placehold.it/600x450&text=Alpakkakatu19b_5+medium",
-            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19b_5+thumb"
+            "full": "http://placehold.it/1200x900&text=Alpakkakatu19_5+full",
+            "medium": "http://placehold.it/600x450&text=Alpakkakatu19_5+medium",
+            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19_5+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Alpakkakatu19b_6+full",
-            "medium": "http://placehold.it/600x450&text=Alpakkakatu19b_6+medium",
-            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19b_6+thumb"
+            "full": "http://placehold.it/1200x900&text=Alpakkakatu19_6+full",
+            "medium": "http://placehold.it/600x450&text=Alpakkakatu19_6+medium",
+            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19_6+thumb"
         }, {
-            "full": "http://placehold.it/1200x900&text=Alpakkakatu19b_7+full",
-            "medium": "http://placehold.it/600x450&text=Alpakkakatu19b_7+medium",
-            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19b_7+thumb"
+            "full": "http://placehold.it/1200x900&text=Alpakkakatu19_7+full",
+            "medium": "http://placehold.it/600x450&text=Alpakkakatu19_7+medium",
+            "thumb": "http://placehold.it/300x200&text=Alpakkakatu19_7+thumb"
         }
     ],
     "available": true,

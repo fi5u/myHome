@@ -1,13 +1,13 @@
 .result {
     display: inline-block;
-    width: span(3 of 12);
+    width: span(4 of 12);
     margin: 0 gutter() gutter() 0;
     padding: 10px;
 
     color: palette(gray, lightest);
     background-color: rgba(0,0,0,0.8);
 
-    &:nth-child(4n) {
+    &:nth-child(3n) {
         margin-right: 0;
     }
 
@@ -21,14 +21,30 @@
         }
     }
 
-    &__title-link {
-        text-decoration: none;
-        color: palette(gray, lightest);;
+    @include breakpoint(l) {
+        width: span(3 of 12);
 
-        &:hover {
-            text-decoration: underline;
+        &:nth-child(3n) {
+            margin-right: gutter();
+        }
+
+        &:nth-child(4n) {
+            margin-right: 0;
         }
     }
+
+    &__title {
+        @extend %title;
+    }
+
+        &__title-link {
+            text-decoration: none;
+            color: palette(gray, lightest);;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
 
     &__extra--has {
         font-weight: bold;

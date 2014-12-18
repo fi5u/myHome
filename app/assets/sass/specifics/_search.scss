@@ -1,7 +1,3 @@
-%title {
-
-}
-
 %single-link {
     font-size: smaller;
     text-decoration: none;
@@ -17,7 +13,9 @@
 }
 
 .search {
-    @include span(3 of 12);
+    @include breakpoint(m) {
+        @include span(3 of 12);
+    }
 
     &__input-block {
         @include clearfix;
