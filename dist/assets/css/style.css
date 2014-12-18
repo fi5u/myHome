@@ -1200,6 +1200,8 @@ img {
     background: #d24; }
   .tab-bar__tab--current {
     background: #d24; }
+[class^="tab-bar__specific--"] {
+  float: right; }
 
 .main {
   padding: 30px; }

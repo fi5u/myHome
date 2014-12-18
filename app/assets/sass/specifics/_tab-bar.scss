@@ -18,4 +18,8 @@
             background: palette(primary);
         }
     }
+
+    @at-root [class^="tab-bar__specific--"] {
+        float: right;
+    }
 }
