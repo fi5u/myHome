@@ -949,24 +949,41 @@ img {
 
 .result {
   display: inline-block;
-  width: 31.62393%;
-  margin: 0 2.5641% 2.5641% 0;
+  width: 100%;
+  margin-bottom: 2.5641%;
   padding: 10px;
   color: #eee;
   background-color: rgba(0, 0, 0, 0.8); }
-  .result:nth-child(3n) {
+  .result:nth-child(2n) {
     margin-right: 0; }
-  .result:nth-last-child(-n +4) {
-    margin-bottom: 0; }
   .result:hover .like__symbol:before {
     content: ""; }
+  @media (min-width: 30em) {
+    .result {
+      width: 48.71795%;
+      margin-right: 2.5641%; }
+      .result:nth-child(2n) {
+        margin-right: 0; }
+      .result:nth-last-child(-n +2) {
+        margin-bottom: 0; } }
+  @media (min-width: 48em) {
+    .result {
+      width: 31.62393%; }
+      .result:nth-child(2n) {
+        margin-right: 2.5641%; }
+      .result:nth-child(3n) {
+        margin-right: 0; }
+      .result:nth-last-child(-n +3) {
+        margin-bottom: 0; } }
   @media (min-width: 64em) {
     .result {
       width: 23.07692%; }
       .result:nth-child(3n) {
         margin-right: 2.5641%; }
       .result:nth-child(4n) {
-        margin-right: 0; } }
+        margin-right: 0; }
+      .result:nth-last-child(-n +4) {
+        margin-bottom: 0; } }
   .result__title-link {
     text-decoration: none;
     color: #eee; }
