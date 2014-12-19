@@ -9,9 +9,17 @@
         @include span(6 of 9);
     }
 
-        &__main-img {
-            display: block;
+        &__main-link {
+            cursor: default;
+
+            @include breakpoint(m) {
+                cursor: auto;
+            }
         }
+
+            &__main-img {
+                display: block;
+            }
 
     &__thumbs {
         @include span(3 of 9);
