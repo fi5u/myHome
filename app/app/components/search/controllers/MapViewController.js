@@ -1,6 +1,8 @@
 myHomeApp.controller('MapViewController', ['$scope', 'uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi) {
     var boundsChanged = 0,
         boundsForce = false;
+    $scope.bounds.isFit = true;
+
 
     $scope.map = {};
     $scope.maps = {};
@@ -9,7 +11,6 @@ myHomeApp.controller('MapViewController', ['$scope', 'uiGmapGoogleMapApi', funct
     $scope.marker = {};
     $scope.marker.events = {};
 
-    $scope.isFitBounds = true;
 
     $scope.window = {
         options: {
@@ -35,10 +36,10 @@ myHomeApp.controller('MapViewController', ['$scope', 'uiGmapGoogleMapApi', funct
                 },
                 bounds_changed: function() {
                     if (boundsChanged > 0) {
-                        $scope.isFitBounds = false;
+                        $scope.bounds.isFit = false;
                     }
                     if (boundsForce === true) {
-                        $scope.isFitBounds = true;
+                        $scope.bounds.isFit = true;
                         boundsForce = false;
                     }
                     ++boundsChanged;
@@ -59,13 +60,13 @@ myHomeApp.controller('MapViewController', ['$scope', 'uiGmapGoogleMapApi', funct
         };
     });
 
-    $scope.resetBounds = function() {
+    $scope.bounds.reset = function() {
         var bounds = new $scope.maps.LatLngBounds();
         for (var i = 0; i < $scope.filteredHomes.length; i++) {
             var geoCode = new $scope.maps.LatLng($scope.filteredHomes[i].location.latitude, $scope.filteredHomes[i].location.longitude);
             bounds.extend(geoCode);
         }
-        $scope.isFitBounds = true;
+        $scope.bounds.isFit = true;
         boundsForce = true;
         $scope.mapInstance.fitBounds(bounds);
     };

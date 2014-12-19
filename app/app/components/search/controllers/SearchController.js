@@ -60,6 +60,9 @@ myHomeApp.controller('SearchController', ['$scope', '$sessionStorage', 'Homes', 
     // Likes
     $scope.likes = $scope.$storage.local.likes;
 
+    // Map
+    $scope.bounds = {};
+
 
     /**
      * CONTROLLER FUNCTIONS

@@ -49,12 +49,4 @@ $c-primary: #d24;
                 &__map-info-price {
 
                 }
-
-        &__map-fit-link {
-            @extend %single-link;
-
-            &--disabled {
-                @extend %null-val;
-            }
-        }
 }
