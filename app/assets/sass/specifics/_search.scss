@@ -1,6 +1,10 @@
 .search {
+    margin-bottom: 50px;
+
     @include breakpoint(m) {
         @include span(3 of 12);
+
+        margin-bottom: 0;
     }
 
     &__input-block {
