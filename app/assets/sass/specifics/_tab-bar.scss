@@ -1,4 +1,6 @@
 .tab-bar {
+    @include clearfix;
+
     &__tab {
         @include transition(background .2s ease-in);
 

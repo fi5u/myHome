@@ -1213,6 +1213,10 @@ img {
   .favorites__address:hover .favorites__address-remove {
     display: inline-block; }
 
+.tab-bar:after {
+  content: "";
+  display: table;
+  clear: both; }
 .tab-bar__tab {
   -webkit-transition: background 0.2s ease-in;
   -moz-transition: background 0.2s ease-in;
