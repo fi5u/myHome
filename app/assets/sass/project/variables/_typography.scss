@@ -20,3 +20,38 @@ $font-size: (
 );
 
 $em-base: $base-font-size; // for Bourbon functions
+
+%title {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+%subline {
+    font-size: smaller;
+    line-height: 1.1;
+}
+
+%single-link {
+    font-size: smaller;
+    text-decoration: none;
+    color: palette(primary);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+%null-val {
+    font-size: smaller;
+    text-decoration: none;
+    color: palette(gray, light);
+    cursor: default;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+%label {
+    font-size: smaller;
+}

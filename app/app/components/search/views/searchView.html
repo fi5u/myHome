@@ -113,7 +113,7 @@
                 </div>
             </div>
             <div class="tab-bar__specific--map" ng-show="$storage.params.views.last === 'map'">
-                Map
+                <a href class="tab-bar__tab">Center map on results</a>
             </div>
         </div>
         <section class="results__grid-view" ng-controller="GridViewController" ng-if="$storage.params.views.last === 'grid'">
@@ -131,6 +131,7 @@
                 </ui-gmap-markers>
 
             </ui-gmap-google-map>
+            <a href ng-class="{ 'results__map-fit-link--disabled':isFitBounds, 'results__map-fit-link':!isFitBounds }" ng-click="resetBounds()">Fit all markers</a>
         </section>
     </div>
 </div>

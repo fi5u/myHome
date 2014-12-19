@@ -573,6 +573,32 @@ rzslider span.bubble.selection {
 rzslider span.bubble.limit {
   color: #67b700; }
 
+.result__title {
+  font-size: 1em;
+  font-weight: bold; }
+
+.search__types-init-msg, .search__result-init-msg, .favorites__init-msg {
+  font-size: smaller;
+  line-height: 1.1; }
+
+.search__types-reset, .search__reset-areas, .search__area-link, .search__reset, .results__map-info-title-link, .results__map-fit-link, .single__back-link, .favorites__reset, .favorites__address-link {
+  font-size: smaller;
+  text-decoration: none;
+  color: #d24; }
+  .search__types-reset:hover, .search__reset-areas:hover, .search__area-link:hover, .search__reset:hover, .results__map-info-title-link:hover, .results__map-fit-link:hover, .single__back-link:hover, .favorites__reset:hover, .favorites__address-link:hover {
+    text-decoration: underline; }
+
+.search__input-label--null, .search__result-area--null, .results__map-fit-link--disabled {
+  font-size: smaller;
+  text-decoration: none;
+  color: #aaa;
+  cursor: default; }
+  .search__input-label--null:hover, .search__result-area--null:hover, .results__map-fit-link--disabled:hover {
+    text-decoration: none; }
+
+.search__input-label, .search__result-area {
+  font-size: smaller; }
+
 @font-face {
   font-family: "fontello";
   src: url("/live/font/dir/not/set/fontello.eot");
@@ -605,17 +631,6 @@ body {
 body ::selection, body ::-moz-selection {
   color: #fff;
   background: #e44e69; }
-.result__title {
-  font-size: 1em;
-  font-weight: bold; }
-
-.search__types-init-msg, .search__result-init-msg, .favorites__init-msg {
-  font-size: smaller;
-  line-height: 1.1; }
-
-.search__input-label--null, .search__result-area--null {
-  color: #aaa; }
-
 h1,
 h2,
 h3,
@@ -681,16 +696,6 @@ img {
       content: "" !important; }
     .like--has .like__symbol:before {
       color: #d24; }
-
-.search__types-reset, .search__reset-areas, .search__area-link, .search__reset, .results__map-info-title-link, .single__back-link, .favorites__reset, .favorites__address-link {
-  font-size: smaller;
-  text-decoration: none;
-  color: #d24; }
-  .search__types-reset:hover, .search__reset-areas:hover, .search__area-link:hover, .search__reset:hover, .results__map-info-title-link:hover, .single__back-link:hover, .favorites__reset:hover, .favorites__address-link:hover {
-    text-decoration: underline; }
-
-.search__input-label, .search__result-area {
-  font-size: smaller; }
 
 @media (min-width: 48em) {
   .search {
