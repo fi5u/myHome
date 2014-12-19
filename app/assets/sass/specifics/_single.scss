@@ -45,7 +45,13 @@
         }
 
     &__extras {
-        @include span(3 of 12);
+        margin-bottom: 50px;
+
+        @include breakpoint(m) {
+            @include span(3 of 12);
+
+            margin-bottom: 0;
+        }
     }
 
         &__subtitle--side {
@@ -53,20 +59,27 @@
         }
 
     &__main {
-        @include span(9 of 12);
-        @include last;
+        @include breakpoint(m) {
+            @include span(9 of 12);
+            @include last;
+        }
     }
 
         &__description {
-            @include span(5 of 9);
+            @include breakpoint(m) {
+                @include span(5 of 9);
+            }
         }
 
         &__map {
-            @include span(4 of 9);
-            @include last;
+            @include breakpoint(m) {
+                @include span(4 of 9);
+                @include last;
+            }
         }
 
     &__lightbox {
+        display: none;
         position: fixed;
         top: 0;
         right: 0;
@@ -83,12 +96,17 @@
             vertical-align: middle;
             margin-right: -0.25em;
         }
+
+        @include breakpoint(m) {
+            display: block;
+        }
     }
 
         &__lightbox-img {
             display: inline-block;
-            max-height: 80%;
+
             vertical-align: middle;
+            max-height: 80%;
         }
 
         &__lightbox-advance-wrap {
