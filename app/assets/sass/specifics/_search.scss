@@ -1,17 +1,3 @@
-%single-link {
-    font-size: smaller;
-    text-decoration: none;
-    color: palette(primary);
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-%label {
-    font-size: smaller;
-}
-
 .search {
     @include breakpoint(m) {
         @include span(3 of 12);

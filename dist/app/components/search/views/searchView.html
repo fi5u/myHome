@@ -67,19 +67,6 @@
 
         <hr>
 
-        <div class="search__input-block">
-            <label for="orderby">Order by:</label>
-            <a href class="search__orderby-toggle" ng-class="{ 'search__orderby-toggle--reversed':isReversed() }" ng-click="reverseOrder()"></a>
-            <select id="orderby" ng-model="$storage.params.orderby" class="search__select--orderby">
-                <option value="">Select order</option>
-                <option value="rentalCost">Price</option>
-                <option value="dateAdded">Date added</option>
-                <option value="address">Alphabetical</option>
-            </select>
-        </div>
-
-        <hr>
-
         <div class="search__results-block">
             <span class="search__results" ng-pluralize count="results.count" when="{'0': 'No homes found', '1': '1 home found', 'other': '{} homes found'}"></span>
             <a href="" ng-click="resetSearch()" class="search__reset">Reset search</a>
@@ -113,6 +100,21 @@
         <div class="tab-bar" ng-controller="TabBarController">
             <a href class="tab-bar__tab" ng-class="{ 'tab-bar__tab--current' : $storage.params.views.last === 'grid' }" ng-click="changeTab('grid')">Grid view</a>
             <a href class="tab-bar__tab" ng-class="{ 'tab-bar__tab--current' : $storage.params.views.last === 'map' }" ng-click="changeTab('map')">Map view</a>
+            <div class="tab-bar__specific--grid" ng-show="$storage.params.views.last === 'grid'">
+                <div class="search__input-block">
+                    <label for="orderby">Order by&nbsp;</label>
+                    <a href class="search__orderby-toggle" ng-class="{ 'search__orderby-toggle--reversed':isReversed() }" ng-click="reverseOrder()"></a>
+                    <select id="orderby" ng-model="$storage.params.orderby" class="search__select--orderby">
+                        <option value="">Select order</option>
+                        <option value="rentalCost">Price</option>
+                        <option value="dateAdded">Date added</option>
+                        <option value="address">Alphabetical</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tab-bar__specific--map" ng-show="$storage.params.views.last === 'map'">
+                <a href class="tab-bar__tab" ng-class="{ 'tab-bar__tab--disabled':bounds.isFit }" ng-click="bounds.reset()">Fit all markers</a>
+            </div>
         </div>
         <section class="results__grid-view" ng-controller="GridViewController" ng-if="$storage.params.views.last === 'grid'">
             <single-result></single-result>

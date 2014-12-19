@@ -17,5 +17,18 @@
         &--current {
             background: palette(primary);
         }
+
+        &--disabled {
+            background: palette(gray, lightest);
+
+            &:hover {
+                background: palette(gray, lightest);
+                cursor: default;
+            }
+        }
+    }
+
+    @at-root [class^="tab-bar__specific--"] {
+        float: right;
     }
 }
