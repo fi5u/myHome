@@ -671,6 +671,11 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic optio, voluptates amet aliquam. Tempora iusto ratione provident voluptas nostrum sed dolorem ea perspiciatis totam fuga commodi, quaerat culpa facere nobis?",
     "images": [
         {
+            "full": "assets/images/lepp1_full.jpg",
+            "medium": "assets/images/lepp1_med.jpg",
+            "thumb": "assets/images/lepp1_thumb.jpg"
+        },
+        {
             "full": "http://placehold.it/1200x900&text=Biisonitie9d_1+full",
             "medium": "http://placehold.it/600x450&text=Biisonitie9d_1+medium",
             "thumb": "http://placehold.it/300x200&text=Biisonitie9d_1+thumb"
